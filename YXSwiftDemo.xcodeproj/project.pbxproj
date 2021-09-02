@@ -1,0 +1,856 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		845B0EBD26DF82B400A38012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B0EBC26DF82B400A38012 /* AppDelegate.swift */; };
+		845B0EBF26DF82B400A38012 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B0EBE26DF82B400A38012 /* SceneDelegate.swift */; };
+		845B0EC126DF82B400A38012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B0EC026DF82B400A38012 /* ViewController.swift */; };
+		845B0EC626DF82B600A38012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845B0EC526DF82B600A38012 /* Assets.xcassets */; };
+		845B0EC926DF82B600A38012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845B0EC726DF82B600A38012 /* LaunchScreen.storyboard */; };
+		845B0ED426DF82B700A38012 /* YXSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B0ED326DF82B700A38012 /* YXSwiftDemoTests.swift */; };
+		845B0EDF26DF82B700A38012 /* YXSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B0EDE26DF82B700A38012 /* YXSwiftDemoUITests.swift */; };
+		84E899B026E05FF10092CF86 /* YXBaseNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899A726E05FF10092CF86 /* YXBaseNavigationVC.swift */; };
+		84E899B126E05FF10092CF86 /* YXBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899A826E05FF10092CF86 /* YXBaseVC.swift */; };
+		84E899B226E05FF10092CF86 /* YXBaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899A926E05FF10092CF86 /* YXBaseTabBar.swift */; };
+		84E899B326E05FF10092CF86 /* YXBaseTabBarItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899AB26E05FF10092CF86 /* YXBaseTabBarItemModel.swift */; };
+		84E899B426E05FF10092CF86 /* YXBaseTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899AD26E05FF10092CF86 /* YXBaseTabBarView.swift */; };
+		84E899B526E05FF10092CF86 /* YXBaseNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899AE26E05FF10092CF86 /* YXBaseNavigationView.swift */; };
+		84E899B626E05FF10092CF86 /* YXBaseTabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899AF26E05FF10092CF86 /* YXBaseTabBarItemView.swift */; };
+		84E899D026E061360092CF86 /* YXToolPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899BD26E061360092CF86 /* YXToolPageControl.swift */; };
+		84E899D126E061360092CF86 /* YXToolFuncCycleScrollInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899BF26E061360092CF86 /* YXToolFuncCycleScrollInfoModel.swift */; };
+		84E899D226E061360092CF86 /* YXToolFuncCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899C126E061360092CF86 /* YXToolFuncCycleScrollView.swift */; };
+		84E899D326E061360092CF86 /* YXAlertViewControllerFadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899C426E061360092CF86 /* YXAlertViewControllerFadeAnimation.swift */; };
+		84E899D426E061360092CF86 /* YXAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899C526E061360092CF86 /* YXAlertViewController.swift */; };
+		84E899D526E061360092CF86 /* YXAlertViewControllerBaseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899C626E061360092CF86 /* YXAlertViewControllerBaseAnimation.swift */; };
+		84E899D626E061360092CF86 /* YXAlertViewControllerAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899C726E061360092CF86 /* YXAlertViewControllerAutoLayout.swift */; };
+		84E899D726E061360092CF86 /* YXAlertViewControllerTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899C826E061360092CF86 /* YXAlertViewControllerTransitionAnimation.swift */; };
+		84E899D826E061360092CF86 /* YXAlertViewControllerDropDownAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899C926E061360092CF86 /* YXAlertViewControllerDropDownAnimation.swift */; };
+		84E899D926E061360092CF86 /* YXAlertViewControllerScaleFadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899CA26E061360092CF86 /* YXAlertViewControllerScaleFadeAnimation.swift */; };
+		84E899DA26E061360092CF86 /* YXSizeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899CD26E061360092CF86 /* YXSizeCategory.swift */; };
+		84E899DB26E061360092CF86 /* YXColorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899CF26E061360092CF86 /* YXColorCategory.swift */; };
+		84E899DE26E0620A0092CF86 /* BasicDataFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899DD26E0620A0092CF86 /* BasicDataFirst.swift */; };
+		84E899E026E07B0C0092CF86 /* BasicDataSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899DF26E07B0C0092CF86 /* BasicDataSecond.swift */; };
+		84E899E226E09B8C0092CF86 /* BasicDataThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899E126E09B8C0092CF86 /* BasicDataThird.swift */; };
+		84E899E426E0BCB40092CF86 /* BasicDataFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899E326E0BCB40092CF86 /* BasicDataFour.swift */; };
+		AFC1CAFE075CBA3DA0C62C3D /* libPods-YXSwiftDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86488A5CBC0051AA5D071A8C /* libPods-YXSwiftDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		845B0ED026DF82B700A38012 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 845B0EB126DF82B400A38012 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 845B0EB826DF82B400A38012;
+			remoteInfo = YXSwiftDemo;
+		};
+		845B0EDB26DF82B700A38012 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 845B0EB126DF82B400A38012 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 845B0EB826DF82B400A38012;
+			remoteInfo = YXSwiftDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		30E6050B3709305C087A32FB /* Pods-YXSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-YXSwiftDemo/Pods-YXSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		845B0EB926DF82B400A38012 /* YXSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		845B0EBC26DF82B400A38012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		845B0EBE26DF82B400A38012 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		845B0EC026DF82B400A38012 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		845B0EC526DF82B600A38012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		845B0EC826DF82B600A38012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		845B0ECA26DF82B600A38012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		845B0ECF26DF82B700A38012 /* YXSwiftDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YXSwiftDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		845B0ED326DF82B700A38012 /* YXSwiftDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSwiftDemoTests.swift; sourceTree = "<group>"; };
+		845B0ED526DF82B700A38012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		845B0EDA26DF82B700A38012 /* YXSwiftDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YXSwiftDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		845B0EDE26DF82B700A38012 /* YXSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSwiftDemoUITests.swift; sourceTree = "<group>"; };
+		845B0EE026DF82B700A38012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84E899A726E05FF10092CF86 /* YXBaseNavigationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXBaseNavigationVC.swift; sourceTree = "<group>"; };
+		84E899A826E05FF10092CF86 /* YXBaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXBaseVC.swift; sourceTree = "<group>"; };
+		84E899A926E05FF10092CF86 /* YXBaseTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXBaseTabBar.swift; sourceTree = "<group>"; };
+		84E899AB26E05FF10092CF86 /* YXBaseTabBarItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXBaseTabBarItemModel.swift; sourceTree = "<group>"; };
+		84E899AD26E05FF10092CF86 /* YXBaseTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXBaseTabBarView.swift; sourceTree = "<group>"; };
+		84E899AE26E05FF10092CF86 /* YXBaseNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXBaseNavigationView.swift; sourceTree = "<group>"; };
+		84E899AF26E05FF10092CF86 /* YXBaseTabBarItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXBaseTabBarItemView.swift; sourceTree = "<group>"; };
+		84E899BD26E061360092CF86 /* YXToolPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXToolPageControl.swift; sourceTree = "<group>"; };
+		84E899BF26E061360092CF86 /* YXToolFuncCycleScrollInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXToolFuncCycleScrollInfoModel.swift; sourceTree = "<group>"; };
+		84E899C126E061360092CF86 /* YXToolFuncCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXToolFuncCycleScrollView.swift; sourceTree = "<group>"; };
+		84E899C426E061360092CF86 /* YXAlertViewControllerFadeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXAlertViewControllerFadeAnimation.swift; sourceTree = "<group>"; };
+		84E899C526E061360092CF86 /* YXAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXAlertViewController.swift; sourceTree = "<group>"; };
+		84E899C626E061360092CF86 /* YXAlertViewControllerBaseAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXAlertViewControllerBaseAnimation.swift; sourceTree = "<group>"; };
+		84E899C726E061360092CF86 /* YXAlertViewControllerAutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXAlertViewControllerAutoLayout.swift; sourceTree = "<group>"; };
+		84E899C826E061360092CF86 /* YXAlertViewControllerTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXAlertViewControllerTransitionAnimation.swift; sourceTree = "<group>"; };
+		84E899C926E061360092CF86 /* YXAlertViewControllerDropDownAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXAlertViewControllerDropDownAnimation.swift; sourceTree = "<group>"; };
+		84E899CA26E061360092CF86 /* YXAlertViewControllerScaleFadeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXAlertViewControllerScaleFadeAnimation.swift; sourceTree = "<group>"; };
+		84E899CD26E061360092CF86 /* YXSizeCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXSizeCategory.swift; sourceTree = "<group>"; };
+		84E899CF26E061360092CF86 /* YXColorCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXColorCategory.swift; sourceTree = "<group>"; };
+		84E899DD26E0620A0092CF86 /* BasicDataFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDataFirst.swift; sourceTree = "<group>"; };
+		84E899DF26E07B0C0092CF86 /* BasicDataSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDataSecond.swift; sourceTree = "<group>"; };
+		84E899E126E09B8C0092CF86 /* BasicDataThird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDataThird.swift; sourceTree = "<group>"; };
+		84E899E326E0BCB40092CF86 /* BasicDataFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDataFour.swift; sourceTree = "<group>"; };
+		86488A5CBC0051AA5D071A8C /* libPods-YXSwiftDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXSwiftDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAB39D44EF9F7E617C982C7F /* Pods-YXSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-YXSwiftDemo/Pods-YXSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		845B0EB626DF82B400A38012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFC1CAFE075CBA3DA0C62C3D /* libPods-YXSwiftDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845B0ECC26DF82B700A38012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845B0ED726DF82B700A38012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		479A1D1FE743B20F18ABAC1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86488A5CBC0051AA5D071A8C /* libPods-YXSwiftDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E9594CFAF1426E4626DCFA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30E6050B3709305C087A32FB /* Pods-YXSwiftDemo.debug.xcconfig */,
+				BAB39D44EF9F7E617C982C7F /* Pods-YXSwiftDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		845B0EB026DF82B400A38012 = {
+			isa = PBXGroup;
+			children = (
+				845B0EBB26DF82B400A38012 /* YXSwiftDemo */,
+				845B0ED226DF82B700A38012 /* YXSwiftDemoTests */,
+				845B0EDD26DF82B700A38012 /* YXSwiftDemoUITests */,
+				845B0EBA26DF82B400A38012 /* Products */,
+				5E9594CFAF1426E4626DCFA4 /* Pods */,
+				479A1D1FE743B20F18ABAC1F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		845B0EBA26DF82B400A38012 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				845B0EB926DF82B400A38012 /* YXSwiftDemo.app */,
+				845B0ECF26DF82B700A38012 /* YXSwiftDemoTests.xctest */,
+				845B0EDA26DF82B700A38012 /* YXSwiftDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		845B0EBB26DF82B400A38012 /* YXSwiftDemo */ = {
+			isa = PBXGroup;
+			children = (
+				84E899B726E061360092CF86 /* Common */,
+				84E899A526E05FF10092CF86 /* Base */,
+				84E899DC26E061BA0092CF86 /* BasicData */,
+				845B0EBC26DF82B400A38012 /* AppDelegate.swift */,
+				845B0EBE26DF82B400A38012 /* SceneDelegate.swift */,
+				845B0EC026DF82B400A38012 /* ViewController.swift */,
+				845B0EC726DF82B600A38012 /* LaunchScreen.storyboard */,
+				845B0EC526DF82B600A38012 /* Assets.xcassets */,
+				845B0ECA26DF82B600A38012 /* Info.plist */,
+			);
+			path = YXSwiftDemo;
+			sourceTree = "<group>";
+		};
+		845B0ED226DF82B700A38012 /* YXSwiftDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				845B0ED326DF82B700A38012 /* YXSwiftDemoTests.swift */,
+				845B0ED526DF82B700A38012 /* Info.plist */,
+			);
+			path = YXSwiftDemoTests;
+			sourceTree = "<group>";
+		};
+		845B0EDD26DF82B700A38012 /* YXSwiftDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				845B0EDE26DF82B700A38012 /* YXSwiftDemoUITests.swift */,
+				845B0EE026DF82B700A38012 /* Info.plist */,
+			);
+			path = YXSwiftDemoUITests;
+			sourceTree = "<group>";
+		};
+		84E899A526E05FF10092CF86 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				84E899A626E05FF10092CF86 /* Controller */,
+				84E899AC26E05FF10092CF86 /* View */,
+				84E899AA26E05FF10092CF86 /* Model */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		84E899A626E05FF10092CF86 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84E899A726E05FF10092CF86 /* YXBaseNavigationVC.swift */,
+				84E899A926E05FF10092CF86 /* YXBaseTabBar.swift */,
+				84E899A826E05FF10092CF86 /* YXBaseVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84E899AA26E05FF10092CF86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84E899AB26E05FF10092CF86 /* YXBaseTabBarItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84E899AC26E05FF10092CF86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84E899AE26E05FF10092CF86 /* YXBaseNavigationView.swift */,
+				84E899AF26E05FF10092CF86 /* YXBaseTabBarItemView.swift */,
+				84E899AD26E05FF10092CF86 /* YXBaseTabBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84E899B726E061360092CF86 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				84E899B826E061360092CF86 /* YXTools */,
+				84E899CB26E061360092CF86 /* YXCategorys */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		84E899B826E061360092CF86 /* YXTools */ = {
+			isa = PBXGroup;
+			children = (
+				84E899B926E061360092CF86 /* YXToolFuncScroll */,
+				84E899C326E061360092CF86 /* YXAlertViewController */,
+			);
+			path = YXTools;
+			sourceTree = "<group>";
+		};
+		84E899B926E061360092CF86 /* YXToolFuncScroll */ = {
+			isa = PBXGroup;
+			children = (
+				84E899BB26E061360092CF86 /* YXToolFuncCycleScrollView */,
+			);
+			path = YXToolFuncScroll;
+			sourceTree = "<group>";
+		};
+		84E899BB26E061360092CF86 /* YXToolFuncCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				84E899BC26E061360092CF86 /* Controller */,
+				84E899BE26E061360092CF86 /* Model */,
+				84E899C026E061360092CF86 /* View */,
+			);
+			path = YXToolFuncCycleScrollView;
+			sourceTree = "<group>";
+		};
+		84E899BC26E061360092CF86 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84E899BD26E061360092CF86 /* YXToolPageControl.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84E899BE26E061360092CF86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84E899BF26E061360092CF86 /* YXToolFuncCycleScrollInfoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84E899C026E061360092CF86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84E899C126E061360092CF86 /* YXToolFuncCycleScrollView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84E899C326E061360092CF86 /* YXAlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84E899C526E061360092CF86 /* YXAlertViewController.swift */,
+				84E899C726E061360092CF86 /* YXAlertViewControllerAutoLayout.swift */,
+				84E899C626E061360092CF86 /* YXAlertViewControllerBaseAnimation.swift */,
+				84E899C926E061360092CF86 /* YXAlertViewControllerDropDownAnimation.swift */,
+				84E899C426E061360092CF86 /* YXAlertViewControllerFadeAnimation.swift */,
+				84E899CA26E061360092CF86 /* YXAlertViewControllerScaleFadeAnimation.swift */,
+				84E899C826E061360092CF86 /* YXAlertViewControllerTransitionAnimation.swift */,
+			);
+			path = YXAlertViewController;
+			sourceTree = "<group>";
+		};
+		84E899CB26E061360092CF86 /* YXCategorys */ = {
+			isa = PBXGroup;
+			children = (
+				84E899CC26E061360092CF86 /* YXCategoryNSObject */,
+				84E899CE26E061360092CF86 /* YXCategoryColor */,
+			);
+			path = YXCategorys;
+			sourceTree = "<group>";
+		};
+		84E899CC26E061360092CF86 /* YXCategoryNSObject */ = {
+			isa = PBXGroup;
+			children = (
+				84E899CD26E061360092CF86 /* YXSizeCategory.swift */,
+			);
+			path = YXCategoryNSObject;
+			sourceTree = "<group>";
+		};
+		84E899CE26E061360092CF86 /* YXCategoryColor */ = {
+			isa = PBXGroup;
+			children = (
+				84E899CF26E061360092CF86 /* YXColorCategory.swift */,
+			);
+			path = YXCategoryColor;
+			sourceTree = "<group>";
+		};
+		84E899DC26E061BA0092CF86 /* BasicData */ = {
+			isa = PBXGroup;
+			children = (
+				84E899DD26E0620A0092CF86 /* BasicDataFirst.swift */,
+				84E899DF26E07B0C0092CF86 /* BasicDataSecond.swift */,
+				84E899E126E09B8C0092CF86 /* BasicDataThird.swift */,
+				84E899E326E0BCB40092CF86 /* BasicDataFour.swift */,
+			);
+			path = BasicData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		845B0EB826DF82B400A38012 /* YXSwiftDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 845B0EE326DF82B700A38012 /* Build configuration list for PBXNativeTarget "YXSwiftDemo" */;
+			buildPhases = (
+				234C361FAD750293BA77B6A7 /* [CP] Check Pods Manifest.lock */,
+				845B0EB526DF82B400A38012 /* Sources */,
+				845B0EB626DF82B400A38012 /* Frameworks */,
+				845B0EB726DF82B400A38012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YXSwiftDemo;
+			productName = YXSwiftDemo;
+			productReference = 845B0EB926DF82B400A38012 /* YXSwiftDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		845B0ECE26DF82B700A38012 /* YXSwiftDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 845B0EE626DF82B700A38012 /* Build configuration list for PBXNativeTarget "YXSwiftDemoTests" */;
+			buildPhases = (
+				845B0ECB26DF82B700A38012 /* Sources */,
+				845B0ECC26DF82B700A38012 /* Frameworks */,
+				845B0ECD26DF82B700A38012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				845B0ED126DF82B700A38012 /* PBXTargetDependency */,
+			);
+			name = YXSwiftDemoTests;
+			productName = YXSwiftDemoTests;
+			productReference = 845B0ECF26DF82B700A38012 /* YXSwiftDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		845B0ED926DF82B700A38012 /* YXSwiftDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 845B0EE926DF82B700A38012 /* Build configuration list for PBXNativeTarget "YXSwiftDemoUITests" */;
+			buildPhases = (
+				845B0ED626DF82B700A38012 /* Sources */,
+				845B0ED726DF82B700A38012 /* Frameworks */,
+				845B0ED826DF82B700A38012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				845B0EDC26DF82B700A38012 /* PBXTargetDependency */,
+			);
+			name = YXSwiftDemoUITests;
+			productName = YXSwiftDemoUITests;
+			productReference = 845B0EDA26DF82B700A38012 /* YXSwiftDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		845B0EB126DF82B400A38012 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					845B0EB826DF82B400A38012 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					845B0ECE26DF82B700A38012 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 845B0EB826DF82B400A38012;
+					};
+					845B0ED926DF82B700A38012 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 845B0EB826DF82B400A38012;
+					};
+				};
+			};
+			buildConfigurationList = 845B0EB426DF82B400A38012 /* Build configuration list for PBXProject "YXSwiftDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 845B0EB026DF82B400A38012;
+			productRefGroup = 845B0EBA26DF82B400A38012 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				845B0EB826DF82B400A38012 /* YXSwiftDemo */,
+				845B0ECE26DF82B700A38012 /* YXSwiftDemoTests */,
+				845B0ED926DF82B700A38012 /* YXSwiftDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		845B0EB726DF82B400A38012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845B0EC926DF82B600A38012 /* LaunchScreen.storyboard in Resources */,
+				845B0EC626DF82B600A38012 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845B0ECD26DF82B700A38012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845B0ED826DF82B700A38012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		234C361FAD750293BA77B6A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YXSwiftDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		845B0EB526DF82B400A38012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E899E026E07B0C0092CF86 /* BasicDataSecond.swift in Sources */,
+				84E899D726E061360092CF86 /* YXAlertViewControllerTransitionAnimation.swift in Sources */,
+				84E899B126E05FF10092CF86 /* YXBaseVC.swift in Sources */,
+				84E899B626E05FF10092CF86 /* YXBaseTabBarItemView.swift in Sources */,
+				84E899B326E05FF10092CF86 /* YXBaseTabBarItemModel.swift in Sources */,
+				84E899DE26E0620A0092CF86 /* BasicDataFirst.swift in Sources */,
+				84E899B226E05FF10092CF86 /* YXBaseTabBar.swift in Sources */,
+				84E899D226E061360092CF86 /* YXToolFuncCycleScrollView.swift in Sources */,
+				84E899DB26E061360092CF86 /* YXColorCategory.swift in Sources */,
+				84E899B026E05FF10092CF86 /* YXBaseNavigationVC.swift in Sources */,
+				84E899D526E061360092CF86 /* YXAlertViewControllerBaseAnimation.swift in Sources */,
+				84E899B426E05FF10092CF86 /* YXBaseTabBarView.swift in Sources */,
+				84E899E426E0BCB40092CF86 /* BasicDataFour.swift in Sources */,
+				84E899DA26E061360092CF86 /* YXSizeCategory.swift in Sources */,
+				84E899D026E061360092CF86 /* YXToolPageControl.swift in Sources */,
+				84E899B526E05FF10092CF86 /* YXBaseNavigationView.swift in Sources */,
+				845B0EC126DF82B400A38012 /* ViewController.swift in Sources */,
+				84E899D926E061360092CF86 /* YXAlertViewControllerScaleFadeAnimation.swift in Sources */,
+				845B0EBD26DF82B400A38012 /* AppDelegate.swift in Sources */,
+				84E899D126E061360092CF86 /* YXToolFuncCycleScrollInfoModel.swift in Sources */,
+				84E899E226E09B8C0092CF86 /* BasicDataThird.swift in Sources */,
+				84E899D426E061360092CF86 /* YXAlertViewController.swift in Sources */,
+				845B0EBF26DF82B400A38012 /* SceneDelegate.swift in Sources */,
+				84E899D326E061360092CF86 /* YXAlertViewControllerFadeAnimation.swift in Sources */,
+				84E899D626E061360092CF86 /* YXAlertViewControllerAutoLayout.swift in Sources */,
+				84E899D826E061360092CF86 /* YXAlertViewControllerDropDownAnimation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845B0ECB26DF82B700A38012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845B0ED426DF82B700A38012 /* YXSwiftDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845B0ED626DF82B700A38012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845B0EDF26DF82B700A38012 /* YXSwiftDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		845B0ED126DF82B700A38012 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 845B0EB826DF82B400A38012 /* YXSwiftDemo */;
+			targetProxy = 845B0ED026DF82B700A38012 /* PBXContainerItemProxy */;
+		};
+		845B0EDC26DF82B700A38012 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 845B0EB826DF82B400A38012 /* YXSwiftDemo */;
+			targetProxy = 845B0EDB26DF82B700A38012 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		845B0EC726DF82B600A38012 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				845B0EC826DF82B600A38012 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		845B0EE126DF82B700A38012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		845B0EE226DF82B700A38012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		845B0EE426DF82B700A38012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30E6050B3709305C087A32FB /* Pods-YXSwiftDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2HSQ24Z864;
+				INFOPLIST_FILE = YXSwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yhx.YXSwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		845B0EE526DF82B700A38012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAB39D44EF9F7E617C982C7F /* Pods-YXSwiftDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2HSQ24Z864;
+				INFOPLIST_FILE = YXSwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yhx.YXSwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		845B0EE726DF82B700A38012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YXSwiftDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yhx.YXSwiftDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YXSwiftDemo.app/YXSwiftDemo";
+			};
+			name = Debug;
+		};
+		845B0EE826DF82B700A38012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YXSwiftDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yhx.YXSwiftDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YXSwiftDemo.app/YXSwiftDemo";
+			};
+			name = Release;
+		};
+		845B0EEA26DF82B700A38012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YXSwiftDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yhx.YXSwiftDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YXSwiftDemo;
+			};
+			name = Debug;
+		};
+		845B0EEB26DF82B700A38012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YXSwiftDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yhx.YXSwiftDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YXSwiftDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		845B0EB426DF82B400A38012 /* Build configuration list for PBXProject "YXSwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845B0EE126DF82B700A38012 /* Debug */,
+				845B0EE226DF82B700A38012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		845B0EE326DF82B700A38012 /* Build configuration list for PBXNativeTarget "YXSwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845B0EE426DF82B700A38012 /* Debug */,
+				845B0EE526DF82B700A38012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		845B0EE626DF82B700A38012 /* Build configuration list for PBXNativeTarget "YXSwiftDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845B0EE726DF82B700A38012 /* Debug */,
+				845B0EE826DF82B700A38012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		845B0EE926DF82B700A38012 /* Build configuration list for PBXNativeTarget "YXSwiftDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845B0EEA26DF82B700A38012 /* Debug */,
+				845B0EEB26DF82B700A38012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 845B0EB126DF82B400A38012 /* Project object */;
+}
