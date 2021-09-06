@@ -8,6 +8,7 @@ def pods
     pod 'SwiftyJSON' #json解析
     pod 'SwiftyUserDefaults' #NSUserdefaults
     pod 'Alamofire' #网络基础库
+    pod 'Kingfisher' #图片加载
 end
 
 target 'YXSwiftDemo' do

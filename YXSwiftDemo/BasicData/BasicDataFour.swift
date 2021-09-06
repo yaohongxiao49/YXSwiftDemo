@@ -26,6 +26,7 @@ class BasicDataFour: YXBaseVC {
         self.initArr()
         self.getArrDemo()
         self.initSetDemo()
+        self.initDicDemo()
     }
 
     //MARK:- 初始化数组
@@ -132,6 +133,37 @@ class BasicDataFour: YXBaseVC {
         print("判断一个集合中的所有值是否也被包含在另外一个集合中 \(oddDigits.isSubset(of: singleDigitPrimeNumbers))")
         print("判断一个集合是否包含另一个集合中所有的值 \(oddDigits.isSuperset(of: singleDigitPrimeNumbers))")
         print("判断两个集合是否不含有相同的值（是否没有交集） \(oddDigits.isDisjoint(with: singleDigitPrimeNumbers))")
+    }
+    
+    //MARK:- 初始化字典
+    func initDicDemo() {
+        
+        var baseDic = [Int : String]()
+        baseDic[16] = "sixteen"
+        print("字典 == \(baseDic)")
+        baseDic = [:]
+        print("字典 == \(baseDic)")
+        
+        var moreDic = ["title":"1", "value":"2", "obj":"3"]
+        //添加、更新
+        moreDic.updateValue("4", forKey: "title")
+        moreDic.updateValue("5", forKey: "key")
+        print("moreDic == \(moreDic)")
+        //移除
+        moreDic["title"] = nil
+        moreDic.removeValue(forKey: "value")
+        print("moreDic == \(moreDic)")
+        
+        //循环键值对
+        for (key, value) in moreDic {
+            print("key == \(key), value == \(value)")
+        }
+        
+        //直接获取字典key或value组成新数组
+        let newKeyArr = [String](moreDic.keys)
+        let newValueArr = [String](moreDic.values)
+        print("keyArr == \(newKeyArr), valueArr == \(newValueArr)")
+        
     }
     
 }

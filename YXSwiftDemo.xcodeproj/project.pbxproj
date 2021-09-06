@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8403555E26E5E844002C8DE0 /* BasicDataFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403555D26E5E844002C8DE0 /* BasicDataFive.swift */; };
+		8403556026E5FD8F002C8DE0 /* BasicDataSix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403555F26E5FD8F002C8DE0 /* BasicDataSix.swift */; };
 		845B0EBD26DF82B400A38012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B0EBC26DF82B400A38012 /* AppDelegate.swift */; };
 		845B0EBF26DF82B400A38012 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B0EBE26DF82B400A38012 /* SceneDelegate.swift */; };
 		845B0EC126DF82B400A38012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B0EC026DF82B400A38012 /* ViewController.swift */; };
@@ -59,6 +61,8 @@
 
 /* Begin PBXFileReference section */
 		30E6050B3709305C087A32FB /* Pods-YXSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-YXSwiftDemo/Pods-YXSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8403555D26E5E844002C8DE0 /* BasicDataFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDataFive.swift; sourceTree = "<group>"; };
+		8403555F26E5FD8F002C8DE0 /* BasicDataSix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDataSix.swift; sourceTree = "<group>"; };
 		845B0EB926DF82B400A38012 /* YXSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845B0EBC26DF82B400A38012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		845B0EBE26DF82B400A38012 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -342,6 +346,8 @@
 				84E899DF26E07B0C0092CF86 /* BasicDataSecond.swift */,
 				84E899E126E09B8C0092CF86 /* BasicDataThird.swift */,
 				84E899E326E0BCB40092CF86 /* BasicDataFour.swift */,
+				8403555D26E5E844002C8DE0 /* BasicDataFive.swift */,
+				8403555F26E5FD8F002C8DE0 /* BasicDataSix.swift */,
 			);
 			path = BasicData;
 			sourceTree = "<group>";
@@ -505,6 +511,7 @@
 				84E899D726E061360092CF86 /* YXAlertViewControllerTransitionAnimation.swift in Sources */,
 				84E899B126E05FF10092CF86 /* YXBaseVC.swift in Sources */,
 				84E899B626E05FF10092CF86 /* YXBaseTabBarItemView.swift in Sources */,
+				8403555E26E5E844002C8DE0 /* BasicDataFive.swift in Sources */,
 				84E899B326E05FF10092CF86 /* YXBaseTabBarItemModel.swift in Sources */,
 				84E899DE26E0620A0092CF86 /* BasicDataFirst.swift in Sources */,
 				84E899B226E05FF10092CF86 /* YXBaseTabBar.swift in Sources */,
@@ -517,6 +524,7 @@
 				84E899DA26E061360092CF86 /* YXSizeCategory.swift in Sources */,
 				84E899D026E061360092CF86 /* YXToolPageControl.swift in Sources */,
 				84E899B526E05FF10092CF86 /* YXBaseNavigationView.swift in Sources */,
+				8403556026E5FD8F002C8DE0 /* BasicDataSix.swift in Sources */,
 				845B0EC126DF82B400A38012 /* ViewController.swift in Sources */,
 				84E899D926E061360092CF86 /* YXAlertViewControllerScaleFadeAnimation.swift in Sources */,
 				845B0EBD26DF82B400A38012 /* AppDelegate.swift in Sources */,
