@@ -23,6 +23,8 @@ class BasicDataSix: YXBaseVC {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationView.titleLab.text = "函数"
+        self.navigationView.backBtn.isHidden = false
         
         var firstOldDic = ["key":"value"]
         firstOldDic = self.funcFirst(dic: firstOldDic)

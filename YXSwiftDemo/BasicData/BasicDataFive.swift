@@ -21,6 +21,9 @@ class BasicDataFive: YXBaseVC {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationView.titleLab.text = "控制流"
+        self.navigationView.backBtn.isHidden = false
+        
         self.forLoopDemo()
         self.whileLoopDemo()
         self.switchDemo()
