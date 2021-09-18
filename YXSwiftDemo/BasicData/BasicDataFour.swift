@@ -31,7 +31,6 @@ class BasicDataFour: YXBaseVC {
 
     //MARK:- 初始化数组
     func initArr() {
-        
         //初始化
         var firstArr = [Int]()
         print("数组数量 == \(firstArr.count)")
@@ -59,7 +58,6 @@ class BasicDataFour: YXBaseVC {
     
     //MARK:- 获取数组元素
     func getArrDemo() {
-        
         var valueArr: [String] = ["a", "b", "c", "d"]
         
         //索引取值
@@ -98,7 +96,6 @@ class BasicDataFour: YXBaseVC {
     
     //MARK:- 集合
     func initSetDemo() {
-        
         //初始指定元素为字符串的集合，也可以不指定var sets: Set = ["1", "2", "3"]
         var sets: Set<String> = ["1", "2", "3"]
         
@@ -137,7 +134,6 @@ class BasicDataFour: YXBaseVC {
     
     //MARK:- 初始化字典
     func initDicDemo() {
-        
         var baseDic = [Int : String]()
         baseDic[16] = "sixteen"
         print("字典 == \(baseDic)")

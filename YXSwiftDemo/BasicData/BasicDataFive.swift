@@ -33,7 +33,6 @@ class BasicDataFive: YXBaseVC {
     
     //MARK:- for循环
     func forLoopDemo() {
-        
         //数组循环
         let arr = ["1", "2", "3"]
         for value in arr {
@@ -75,7 +74,6 @@ class BasicDataFive: YXBaseVC {
 
     //MARK:- While循环
     func whileLoopDemo() {
-        
         let finalSquare = 25
         var board = [Int](repeating: 0, count: finalSquare + 1)
         board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
@@ -99,7 +97,6 @@ class BasicDataFive: YXBaseVC {
     
     //MARK:- switch
     func switchDemo() {
-        
         //默认为单独执行
         let value: Character = "三"
         switch value {
@@ -129,7 +126,6 @@ class BasicDataFive: YXBaseVC {
     
     //MARK:- guard
     func guardDemo(person: [String:String]) {
-        
         guard let name = person["name"] else {
             return
         }
@@ -138,7 +134,6 @@ class BasicDataFive: YXBaseVC {
     
     //MARK:- 版本可用性
     func versionState() {
-        
         if #available(iOS 10, macOS 10.12, *) {
             //在 iOS 使用 iOS 10 的 API, 在 macOS 使用 macOS 10.12 的 API
         }

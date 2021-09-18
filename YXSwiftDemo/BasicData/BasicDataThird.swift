@@ -34,7 +34,6 @@ class BasicDataThird: YXBaseVC {
     
     //MARK:- 字符串字面量及字符串换行
     func literalDemo() {
-        
         //单行字符串使用""
         let single = "abcde"
         print("单行字符串 == \(single)")
@@ -52,7 +51,6 @@ class BasicDataThird: YXBaseVC {
     
     //MAKR:- 字符串初始化
     func initString() {
-        
         let emptyStr = ""
         var anotherEmptyStr = String()
         
@@ -73,7 +71,6 @@ class BasicDataThird: YXBaseVC {
     
     //MARK:- Character使用
     func characterDemo() {
-        
         let character: [Character] = ["H", "e", "l", "l", "o"]
         let characterValue = String(character)
         print("character == \(characterValue)")
@@ -84,7 +81,6 @@ class BasicDataThird: YXBaseVC {
     
     //MARK:- 字符串拼接
     func stringAppendDemo() {
-        
         let hello = "hello"
         var space = hello + " "
         space += "world"
@@ -97,7 +93,6 @@ class BasicDataThird: YXBaseVC {
     
     //MARK:- 字符串索引
     func stringIndexDemo() {
-        
         var hello = "hello world"
         
         //取值

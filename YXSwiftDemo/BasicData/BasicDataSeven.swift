@@ -33,7 +33,6 @@ class BasicDataSeven: YXBaseVC {
     
     //MARK:- sorted排序闭包
     func sortedDemo() {
-        
         let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
         let reversedNames = names.sorted(by: self.sortedDemoMethod(first:second:))
         print("sorted排序闭包 == \(reversedNames)")
@@ -50,32 +49,26 @@ class BasicDataSeven: YXBaseVC {
         print("sorted排序缩写闭包 == \(sortedAbb)")
     }
     func sortedDemoMethod(first: String, second: String) -> Bool {
-        
         return first > second
     }
     
     //MARK:- 尾随闭包
     func followingBlockDemo() {
-        
         //不使用尾随闭包函数调用
         self.followingBlockDemoMethod(closure: {
-            
             print("不使用尾随闭包函数调用")
         })
         //使用尾随闭包函数调用
         self.followingBlockDemoMethod {
-            
             print("使用尾随闭包函数调用")
         }
     }
     func followingBlockDemoMethod(closure: () -> Void) {
-        
 //        print("尾随闭包函数体")
     }
     
     //MARK:- 值捕获嵌套函数
     func makeIncrementer(forIncrement amount: Int) -> () -> Int {
-        
         var runningTotal = 0
         func incrementer() -> Int {
             runningTotal += amount
@@ -92,7 +85,6 @@ class BasicDataSeven: YXBaseVC {
     }
     
     func doClosuresMethod() {
-        
         self.escapeClosureMethod {
             self.x += 1
         }
