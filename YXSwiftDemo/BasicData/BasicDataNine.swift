@@ -11,7 +11,7 @@
 
 import UIKit
 
-class BasicDataRight: YXBaseVC {
+class BasicDataNine: YXBaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -59,7 +59,7 @@ class ViewController: YXBaseVC, UITableViewDelegate, UITableViewDataSource {
             let vc = BasicDataEight.init()
             self.pushToSonVC(vc: vc, animated: true)
         case 8:
-            let vc = BasicDataRight.init()
+            let vc = BasicDataNine.init()
             self.pushToSonVC(vc: vc, animated: true)
         default:
             break
