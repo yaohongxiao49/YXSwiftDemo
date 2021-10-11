@@ -29,10 +29,12 @@ class BasicDataFive: YXBaseVC {
         self.switchDemo()
         self.guardDemo(person: ["name":"1"])
         self.versionState()
+        
     }
     
     //MARK:- for循环
     func forLoopDemo() {
+        
         //数组循环
         let arr = ["1", "2", "3"]
         for value in arr {
@@ -70,10 +72,12 @@ class BasicDataFive: YXBaseVC {
         for tickMark in stride(from: 0, to: minutes, by: timeInterval) {
             print("以5为间刻 == \(tickMark)")
         }
+        
     }
 
     //MARK:- While循环
     func whileLoopDemo() {
+        
         let finalSquare = 25
         var board = [Int](repeating: 0, count: finalSquare + 1)
         board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
@@ -93,10 +97,12 @@ class BasicDataFive: YXBaseVC {
             }
         }
         print("Game over!")
+        
     }
     
     //MARK:- switch
     func switchDemo() {
+        
         //默认为单独执行
         let value: Character = "三"
         switch value {
@@ -122,23 +128,29 @@ class BasicDataFive: YXBaseVC {
         default:
             break
         }
+        
     }
     
     //MARK:- guard
     func guardDemo(person: [String:String]) {
+        
         guard let name = person["name"] else {
             return
         }
         print("Hello \(name)!")
+        
     }
     
     //MARK:- 版本可用性
     func versionState() {
+        
         if #available(iOS 10, macOS 10.12, *) {
             //在 iOS 使用 iOS 10 的 API, 在 macOS 使用 macOS 10.12 的 API
         }
         else {
             //使用先前版本的 iOS 和 macOS 的 API
         }
+        
     }
+    
 }

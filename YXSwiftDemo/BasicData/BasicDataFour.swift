@@ -27,10 +27,12 @@ class BasicDataFour: YXBaseVC {
         self.getArrDemo()
         self.initSetDemo()
         self.initDicDemo()
+        
     }
 
     //MARK:- 初始化数组
     func initArr() {
+        
         //初始化
         var firstArr = [Int]()
         print("数组数量 == \(firstArr.count)")
@@ -54,10 +56,12 @@ class BasicDataFour: YXBaseVC {
         
         //判断数组是否为空
         print("判断数组是否为空 == \(literalArr.isEmpty)")
+        
     }
     
     //MARK:- 获取数组元素
     func getArrDemo() {
+        
         var valueArr: [String] = ["a", "b", "c", "d"]
         
         //索引取值
@@ -92,10 +96,12 @@ class BasicDataFour: YXBaseVC {
         for (index, value) in valueArr.enumerated() {
             print("遍历获取数组中的值和索引 \(String(index)): \(value)")
         }
+        
     }
     
     //MARK:- 集合
     func initSetDemo() {
+        
         //初始指定元素为字符串的集合，也可以不指定var sets: Set = ["1", "2", "3"]
         var sets: Set<String> = ["1", "2", "3"]
         
@@ -130,10 +136,12 @@ class BasicDataFour: YXBaseVC {
         print("判断一个集合中的所有值是否也被包含在另外一个集合中 \(oddDigits.isSubset(of: singleDigitPrimeNumbers))")
         print("判断一个集合是否包含另一个集合中所有的值 \(oddDigits.isSuperset(of: singleDigitPrimeNumbers))")
         print("判断两个集合是否不含有相同的值（是否没有交集） \(oddDigits.isDisjoint(with: singleDigitPrimeNumbers))")
+        
     }
     
     //MARK:- 初始化字典
     func initDicDemo() {
+        
         var baseDic = [Int : String]()
         baseDic[16] = "sixteen"
         print("字典 == \(baseDic)")

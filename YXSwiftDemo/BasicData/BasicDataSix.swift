@@ -37,43 +37,56 @@ class BasicDataSix: YXBaseVC {
         
         let mathFunction: (Int, Int) -> Int = self.addTwoInts
         print("返回函数结果: \(mathFunction(2, 3))")
+        
     }
 
     //MARK:- 初始化函数，传入参数并返回参数
     func funcFirst(dic: [String : String]) -> [String : String] {
+        
         var newDic = dic
         newDic.updateValue("123", forKey: "key")
         return newDic
+        
     }
     
     //MARK:- 初始化函数，带函数名
     func funcSecond(for valueFirst: String, from valueSecond: String) {
+        
         print("带函数名的函数方法 == \(valueFirst) \(valueSecond)")
+        
     }
     
     //MARK:- 初始化函数，默认函数值
     func funcThird(varValue: Int, letValue: Int = 2) {
+        
         print("默认函数值的函数方法 == \(varValue) \(letValue)")
+        
     }
     
     //MARK:- 初始化函数，可变参数(可以当做一个叫 numbers 的 [Float] 型的数组常量)
     func funcFour(numbers: Float...) -> Float {
+        
         var total: Float = 0.0
         for number in numbers {
             total += number
         }
         return total / Float(numbers.count)
+        
     }
     
     //MARK:- 初始化函数，可变函数（输入输出参数）
     func funcFic(dic: inout [String : String]) -> [String : String] {
+        
         dic.updateValue("123", forKey: "key")
         return dic
+        
     }
     
     //MARK:- 变量相加
     func addTwoInts(_ a: Int, _ b: Int) -> Int {
+        
         return a + b
+        
     }
     
 }

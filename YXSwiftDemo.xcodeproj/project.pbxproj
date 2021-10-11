@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		304356BC26F5B00B0066869F /* BasicDataEight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304356BB26F5B00B0066869F /* BasicDataEight.swift */; };
 		304356C126F5BE240066869F /* BasicDataNine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304356C026F5BE240066869F /* BasicDataNine.swift */; };
+		304B77022713EBE300ADBE30 /* BasicDataTen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304B77012713EBE300ADBE30 /* BasicDataTen.swift */; };
 		8403555E26E5E844002C8DE0 /* BasicDataFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403555D26E5E844002C8DE0 /* BasicDataFive.swift */; };
 		8403556026E5FD8F002C8DE0 /* BasicDataSix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403555F26E5FD8F002C8DE0 /* BasicDataSix.swift */; };
 		8413426E26E705590007CE00 /* BasicDataSeven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413426D26E705590007CE00 /* BasicDataSeven.swift */; };
@@ -65,6 +66,7 @@
 /* Begin PBXFileReference section */
 		304356BB26F5B00B0066869F /* BasicDataEight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDataEight.swift; sourceTree = "<group>"; };
 		304356C026F5BE240066869F /* BasicDataNine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDataNine.swift; sourceTree = "<group>"; };
+		304B77012713EBE300ADBE30 /* BasicDataTen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDataTen.swift; sourceTree = "<group>"; };
 		30E6050B3709305C087A32FB /* Pods-YXSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-YXSwiftDemo/Pods-YXSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8403555D26E5E844002C8DE0 /* BasicDataFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDataFive.swift; sourceTree = "<group>"; };
 		8403555F26E5FD8F002C8DE0 /* BasicDataSix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDataSix.swift; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 				8413426D26E705590007CE00 /* BasicDataSeven.swift */,
 				304356BB26F5B00B0066869F /* BasicDataEight.swift */,
 				304356C026F5BE240066869F /* BasicDataNine.swift */,
+				304B77012713EBE300ADBE30 /* BasicDataTen.swift */,
 			);
 			path = BasicData;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				84E899D526E061360092CF86 /* YXAlertViewControllerBaseAnimation.swift in Sources */,
 				84E899B426E05FF10092CF86 /* YXBaseTabBarView.swift in Sources */,
 				84E899E426E0BCB40092CF86 /* BasicDataFour.swift in Sources */,
+				304B77022713EBE300ADBE30 /* BasicDataTen.swift in Sources */,
 				84E899DA26E061360092CF86 /* YXSizeCategory.swift in Sources */,
 				84E899D026E061360092CF86 /* YXToolPageControl.swift in Sources */,
 				84E899B526E05FF10092CF86 /* YXBaseNavigationView.swift in Sources */,
