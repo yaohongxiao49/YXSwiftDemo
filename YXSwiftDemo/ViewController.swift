@@ -10,7 +10,7 @@ import UIKit
 class ViewController: YXBaseVC, UITableViewDelegate, UITableViewDataSource {
     
     lazy var dataSourceArr: [String] = {
-        let dataSourceArr = ["基础部分", "基础运算符", "字符串与字符", "集合类型", "控制流", "函数", "闭包", "枚举", "结构体"]
+        let dataSourceArr = ["基础部分", "基础运算符", "字符串与字符", "集合类型", "控制流", "函数", "闭包", "枚举", "结构体", "属性"]
         return dataSourceArr
     }()
     
@@ -60,6 +60,9 @@ class ViewController: YXBaseVC, UITableViewDelegate, UITableViewDataSource {
             self.pushToSonVC(vc: vc, animated: true)
         case 8:
             let vc = BasicDataNine.init()
+            self.pushToSonVC(vc: vc, animated: true)
+        case 9:
+            let vc = BasicDataTen.init()
             self.pushToSonVC(vc: vc, animated: true)
         default:
             break

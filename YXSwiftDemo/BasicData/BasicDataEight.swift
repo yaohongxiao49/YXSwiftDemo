@@ -13,20 +13,16 @@ import UIKit
 
 //MARK:- 未设置原始值的，就不能赋予初始值
 enum BasicDataEightEnum {
-    
     case left(String)
     case right
     case top
     case bottom
-    
 }
 
 //MARK:- 设置了原始值，则可以设置初始值
 enum BasicDataEightOriginalEnum: String {
-    
     case first = "1"
     case second = "2"
-    
 }
 
 class BasicDataEight: YXBaseVC {
@@ -39,11 +35,9 @@ class BasicDataEight: YXBaseVC {
         self.navigationView.backBtn.isHidden = false
         
         self.enumDemo()
-        
     }
 
     func enumDemo() {
-        
         var value: BasicDataEightEnum!
         value = .right //BasicDataEightEnum.left("2")
         switch value {
@@ -58,7 +52,6 @@ class BasicDataEight: YXBaseVC {
         default:
             print("other")
         }
-        
     }
     
 }

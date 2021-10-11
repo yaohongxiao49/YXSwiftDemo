@@ -30,12 +30,10 @@ class BasicDataThird: YXBaseVC {
         self.characterDemo()
         self.stringAppendDemo()
         self.stringIndexDemo()
-        
     }
     
     //MARK:- 字符串字面量及字符串换行
     func literalDemo() {
-        
         //单行字符串使用""
         let single = "abcde"
         print("单行字符串 == \(single)")
@@ -49,12 +47,10 @@ class BasicDataThird: YXBaseVC {
             till you come to the end; then stop."
             """
         print("多行字符串 == \(more)")
-        
     }
     
     //MAKR:- 字符串初始化
     func initString() {
-        
         let emptyStr = ""
         var anotherEmptyStr = String()
         
@@ -71,24 +67,20 @@ class BasicDataThird: YXBaseVC {
         for value in anotherEmptyStr {
             print("遍历字符串字符 == \(value)")
         }
-        
     }
     
     //MARK:- Character使用
     func characterDemo() {
-        
         let character: [Character] = ["H", "e", "l", "l", "o"]
         let characterValue = String(character)
         print("character == \(characterValue)")
         
         let regionalIndicatorForUS: Character = "\u{1F1FA}\u{1F1F8}"
         print("character == \(regionalIndicatorForUS)")
-        
     }
     
     //MARK:- 字符串拼接
     func stringAppendDemo() {
-        
         let hello = "hello"
         var space = hello + " "
         space += "world"
@@ -97,12 +89,10 @@ class BasicDataThird: YXBaseVC {
         let append = "!"
         space.append(append)
         print("字符串拼接2 == \(space)")
-        
     }
     
     //MARK:- 字符串索引
     func stringIndexDemo() {
-        
         var hello = "hello world"
         
         //取值
@@ -147,7 +137,6 @@ class BasicDataThird: YXBaseVC {
             }
         }
         print("prefix == \(prefix), suffix == \(suffix)")
-        
     }
     
 }

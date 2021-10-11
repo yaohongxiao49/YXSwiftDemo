@@ -19,19 +19,16 @@ import UIKit
 
 //MARK:- 定义结构体
 struct FirstInitStruct {
-    
     var width = 0
     var height = 0
 }
 
 //MARK:- 定义类的实例
 class FirstInitClass {
-    
     var firstInitStruct = FirstInitStruct()
     var boolValue = false
     var frameRate = 0.0
     var name: String?
-    
 }
 
 class BasicDataNine: YXBaseVC {
@@ -45,12 +42,10 @@ class BasicDataNine: YXBaseVC {
         
         self.useStructAndClass()
         self.hengYunOperator()
-        
     }
     
     //MARK:- 使用结构体及类的实例
     func useStructAndClass() {
-        
         let firstInitStruct = FirstInitStruct()
         let firstInitClass = FirstInitClass()
         
@@ -63,12 +58,10 @@ class BasicDataNine: YXBaseVC {
         
         let firstInitStructVga = FirstInitStruct(width: 1, height: 2)
         print("结构体自动生成的成员逐一构造器 \(firstInitStructVga.width), \(firstInitStructVga.height)")
-        
     }
     
     //MARK:- 恒运算符（相同 ===）(不相同 !==)
     func hengYunOperator() {
-        
         let firstInitClass = FirstInitClass()
         let alsoFirstInitClass = firstInitClass
         alsoFirstInitClass.frameRate = 2.0
@@ -79,7 +72,6 @@ class BasicDataNine: YXBaseVC {
         else {
             print("不相同")
         }
-        
     }
 
 }
