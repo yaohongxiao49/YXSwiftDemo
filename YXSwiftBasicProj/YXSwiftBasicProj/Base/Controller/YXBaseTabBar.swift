@@ -42,11 +42,11 @@ class YXBaseTabBar: UITabBarController {
     
     lazy var itemModelArr: NSMutableArray = {
        
-        let homeVC = YXHomeVC.init()
-        let toolVC = YXHomeVC.init()
+        let tableVC = YXTableViewVC.init()
+        let collectionVC = YXCollectionViewVC.init()
         
         let itemModelArr = NSMutableArray.init()
-        let itemArr = [["vc": homeVC, "title": "首页", "norIcon": "YXHomeTabNorImg", "selIcon": "YXHomeTabSelImg"], ["vc": toolVC, "title": "工具", "norIcon": "YXHomeTabNorImg", "selIcon": "YXHomeTabSelImg"]]
+        let itemArr = [["vc": tableVC, "title": "TableView", "norIcon": "YXHomeTabNorImg", "selIcon": "YXHomeTabSelImg"], ["vc": collectionVC, "title": "CollectionView", "norIcon": "YXHomeTabNorImg", "selIcon": "YXHomeTabSelImg"]]
         
         //项目数据
         for i in 0 ..< itemArr.count {

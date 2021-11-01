@@ -61,7 +61,7 @@ class YXBaseTabBarItemView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        initView()
+        self.initView()
     }
     
     required init?(coder: NSCoder) {
