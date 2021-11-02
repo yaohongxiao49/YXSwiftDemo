@@ -1,5 +1,30 @@
 PODS:
   - Alamofire (5.4.4)
+  - HXPHPicker (1.2.4):
+    - HXPHPicker/Full (= 1.2.4)
+  - HXPHPicker/Camera (1.2.4):
+    - HXPHPicker/Core
+  - HXPHPicker/Core (1.2.4)
+  - HXPHPicker/Editor (1.2.4):
+    - HXPHPicker/Editor/KF (= 1.2.4)
+    - HXPHPicker/Editor/Lite (= 1.2.4)
+  - HXPHPicker/Editor/KF (1.2.4):
+    - HXPHPicker/Editor/Lite
+    - Kingfisher (~> 7.0)
+  - HXPHPicker/Editor/Lite (1.2.4):
+    - HXPHPicker/Core
+  - HXPHPicker/Full (1.2.4):
+    - HXPHPicker/Camera
+    - HXPHPicker/Editor
+    - HXPHPicker/Picker
+  - HXPHPicker/Picker (1.2.4):
+    - HXPHPicker/Picker/KF (= 1.2.4)
+    - HXPHPicker/Picker/Lite (= 1.2.4)
+  - HXPHPicker/Picker/KF (1.2.4):
+    - HXPHPicker/Picker/Lite
+    - Kingfisher (~> 7.0)
+  - HXPHPicker/Picker/Lite (1.2.4):
+    - HXPHPicker/Core
   - Kingfisher (7.1.1)
   - RxSwift (6.2.0)
   - SnapKit (5.0.1)
@@ -8,6 +33,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - HXPHPicker
   - Kingfisher
   - RxSwift
   - SnapKit
@@ -17,6 +43,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - HXPHPicker
     - Kingfisher
     - RxSwift
     - SnapKit
@@ -25,12 +52,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  HXPHPicker: 5b5f9a0b330fb7cbe050ac4a6cd15350a42f8cdd
   Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
 
-PODFILE CHECKSUM: 9b12e4416dceec030e657e7a2f2e0b09c87996d1
+PODFILE CHECKSUM: 579bfbe0beb9f226af9ad28b466adb087ebb2b48
 
 COCOAPODS: 1.11.2

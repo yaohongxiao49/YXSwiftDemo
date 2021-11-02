@@ -45,7 +45,7 @@ public class YXSegmentTitleCell: UICollectionViewCell {
     
 }
 
-//MAKR:- 显示
+//MARK:- 显示
 public extension YXSegmentTitleCell {
     
     func setCell(config: YXSegmentTitleView.Configuration, title: String, isMaxItem: Bool) {

@@ -10,7 +10,7 @@ import UIKit
 
 public extension YXSegmentTitleView {
     
-    //MAKR:- 风格
+    //MARK:- 风格
     enum PositionStyle: Int {
         
         /** 没有指示器 */
@@ -23,7 +23,7 @@ public extension YXSegmentTitleView {
         case bottom = 3
     }
     
-    //MAKR:- 指示器滚动风格
+    //MARK:- 指示器滚动风格
     enum IndicatorStyle: Int {
         
         /** 指示器位置需内容滚动结束时改变 */

@@ -8,8 +8,10 @@
 import UIKit
 
 struct YXTableViewVCStruct {
-    var YXTableViewVCStructFirst = "WkWebView"
-    var YXTableViewVCStructSecond = "SegmentVC"
+    var YXTableViewVCStructWKWebView = "WkWebView"
+    var YXTableViewVCStructSegmentVC = "SegmentVC"
+    var YXTableViewVCStructPickerVC = "拍照"
+    var YXTableViewVCStructPickerListVC = "相册选择"
 }
 
 class YXTableViewVC: YXBaseVC {
@@ -37,10 +39,21 @@ class YXTableViewVC: YXBaseVC {
     lazy var dataSourceArr: [String] = {
         
         var yxTableViewVCStruct = YXTableViewVCStruct()
-        let dataSourceArr = [yxTableViewVCStruct.YXTableViewVCStructFirst, yxTableViewVCStruct.YXTableViewVCStructSecond]
+        let dataSourceArr = [yxTableViewVCStruct.YXTableViewVCStructWKWebView, yxTableViewVCStruct.YXTableViewVCStructSegmentVC, yxTableViewVCStruct.YXTableViewVCStructPickerVC, yxTableViewVCStruct.YXTableViewVCStructPickerListVC]
         
         return dataSourceArr
     }()
+    
+    //MARK:- 视图加载完毕
+    override func viewDidLoad() {
+        
+        self.initView()
+    }
+
+}
+
+//MARK:- 私有方法
+private extension YXTableViewVC {
     
     //MARK:- 点击跳转
     func pushToCollectionView(index: Int) {
@@ -52,8 +65,55 @@ class YXTableViewVC: YXBaseVC {
         case 1:
             let segmentVC = YXSegmentVC.init()
             self.pushToSonVC(vc: segmentVC, animated: true)
+        case 2:
+            self.takingCamera()
+        case 3:
+            self.takingPhotoAlbum()
         default:
             print("跳转")
+        }
+    }
+    
+    //MAKR:- 相机
+    func takingCamera() {
+        
+        let config = CameraConfiguration()
+        CameraController.capture(
+            config: config, // 相机配置
+            type: .all // 相机类型
+        ) { result, location in
+            // result: 拍摄的结果
+            // location: 如果允许定位的情况则会有当前定位信息
+            switch result {
+            case .image(let image):
+                // image: 拍摄的图片
+                break
+            case .video(let videoURL):
+                // videoURL: 录制的视频地址
+                
+                break
+            }
+        }
+    }
+    
+    //MAKR:- 相册
+    func takingPhotoAlbum() {
+        
+        self.presentPickerController()
+        self.yxBaseVCPickerFinishedBlock = {(pickerController, result) ->() in
+            
+            result.getImage { (image, photoAsset, index) in
+                
+                if let image = image {
+                    print("success", image)
+                }
+                else {
+                    print("failed")
+                }
+            } completionHandler: { (images) in
+                
+                print(images)
+            }
         }
     }
     
@@ -63,12 +123,6 @@ class YXTableViewVC: YXBaseVC {
         self.tableView.reloadData()
     }
     
-    //MARK:- 视图加载完毕
-    override func viewDidLoad() {
-        
-        self.initView()
-    }
-
 }
 
 //MARK:- UITableViewDelegate, UITableViewDataSource

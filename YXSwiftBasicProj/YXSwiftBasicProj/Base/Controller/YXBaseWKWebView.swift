@@ -107,7 +107,7 @@ class YXBaseWKWebView: YXBaseVC {
         self.initView()
     }
     
-    //MAKR:- 销毁
+    //MARK:- 销毁
     deinit {
     
         self.wkWebView.configuration.userContentController.removeScriptMessageHandler(forName:"xxx")

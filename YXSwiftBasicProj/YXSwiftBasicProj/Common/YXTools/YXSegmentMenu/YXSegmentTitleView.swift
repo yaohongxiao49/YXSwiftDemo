@@ -73,7 +73,7 @@ public class YXSegmentTitleView: UIView {
     
 }
 
-//MAKR:- 设置参数值
+//MARK:- 设置参数值
 public extension YXSegmentTitleView {
     
     func setupSegmentTitleView(config: Configuration, titles: [String]) {
@@ -191,7 +191,7 @@ fileprivate extension YXSegmentTitleView {
         return size
     }
     
-    //MAKR:- 获取指示器位置
+    //MARK:- 获取指示器位置
     func rectIndicator(cell: YXSegmentTitleCell, index: Int) -> CGRect {
         if self.indicatorRects[index] != nil {
             return self.indicatorRects[index]!
@@ -248,7 +248,7 @@ fileprivate extension YXSegmentTitleView {
         self.setSelectedCell(cell: cell, at: indexPath, animated: animated)
     }
     
-    //MAKR:- 设置滚动条
+    //MARK:- 设置滚动条
     func setSelectedIndicator(cell: YXSegmentTitleCell, at index: Int, animated: Bool) {
         
         let indicatorFrame = self.rectIndicator(cell: cell, index: index)
