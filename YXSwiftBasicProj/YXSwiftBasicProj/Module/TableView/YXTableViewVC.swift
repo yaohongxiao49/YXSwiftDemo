@@ -8,8 +8,8 @@
 import UIKit
 
 struct YXTableViewVCStruct {
-    var YXTableViewVCStructFirst = "1"
-    var YXTableViewVCStructSecond = "2"
+    var YXTableViewVCStructFirst = "WkWebView"
+    var YXTableViewVCStructSecond = "SegmentVC"
 }
 
 class YXTableViewVC: YXBaseVC {
@@ -45,6 +45,16 @@ class YXTableViewVC: YXBaseVC {
     //MARK:- 点击跳转
     func pushToCollectionView(index: Int) {
         
+        switch index {
+        case 0:
+            let wekWebView = YXWkWebViewVC.init()
+            self.pushToSonVC(vc: wekWebView, animated: true)
+        case 1:
+            let segmentVC = YXSegmentVC.init()
+            self.pushToSonVC(vc: segmentVC, animated: true)
+        default:
+            print("跳转")
+        }
     }
     
     //MARK:- 初始化视图
@@ -75,6 +85,7 @@ extension YXTableViewVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: YXTableViewVCCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(YXTableViewVCCell.classForCoder()), for: indexPath) as! YXTableViewVCCell
+        cell.selectionStyle = .none
         cell.titleLab.text = self.dataSourceArr[indexPath.row]
         
         return cell
