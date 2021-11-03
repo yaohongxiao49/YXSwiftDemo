@@ -10,7 +10,7 @@ import WebKit
 
 class YXBaseWKWebView: YXBaseVC {
 
-    //MARK:- 初始化声明
+    //MARK: - 初始化声明
     var webUrl: String? {
         
         didSet {
@@ -72,7 +72,7 @@ class YXBaseWKWebView: YXBaseVC {
         return getH5MethodBtn
     }()
     
-    //MARK:- WKWebView调用JS方法
+    //MARK: - WKWebView调用JS方法
     func wkGetJsContents(jsMethods: String) {
         
         //jsMethods js方法名
@@ -82,32 +82,32 @@ class YXBaseWKWebView: YXBaseVC {
         }
     }
     
-    //MARK:- JS调用WKWebView方法
+    //MARK: - JS调用WKWebView方法
     func jsGetWkContents(value: String) {
         
         self.wkWebView.configuration.userContentController.add(self, name: value)
     }
     
-    //MARK:- progress
-    //MARK:- 点击调用h5按钮
+    //MARK: - progress
+    //MARK: - 点击调用h5按钮
     @objc func progressGetH5MethodBtn(_ button: UIButton) {
     
         self.wkGetJsContents(jsMethods: "document.getElementsByName('input')[0].attributes['value'].value")
     }
     
-    //MARK:- 初始化视图
+    //MARK: - 初始化视图
     func initView() {
         
     }
     
-    //MARK:- 视图加载完毕
+    //MARK: - 视图加载完毕
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.initView()
     }
     
-    //MARK:- 销毁
+    //MARK: - 销毁
     deinit {
     
         self.wkWebView.configuration.userContentController.removeScriptMessageHandler(forName:"xxx")
@@ -115,25 +115,25 @@ class YXBaseWKWebView: YXBaseVC {
 
 }
 
-//MARK:- WKNavigationDelegate
+//MARK: - WKNavigationDelegate
 extension YXBaseWKWebView: WKNavigationDelegate {
     
-    //MARK:- 监听网页加载进度
+    //MARK: - 监听网页加载进度
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
         self.progressView.progress = Float(self.wkWebView.estimatedProgress)
     }
-    //MARK:- 页面开始加载时调用
+    //MARK: - 页面开始加载时调用
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         
         print("开始加载")
     }
-    //MARK:- 当内容开始返回时调用
+    //MARK: - 当内容开始返回时调用
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         
         print("当内容开始返回")
     }
-    //MARK:- 页面加载完成之后调用
+    //MARK: - 页面加载完成之后调用
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         
         print("页面加载完成")
@@ -145,7 +145,7 @@ extension YXBaseWKWebView: WKNavigationDelegate {
             self.progressView.isHidden = true
         }
     }
-    //MARK:- 页面加载失败时调用
+    //MARK: - 页面加载失败时调用
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         
         print("页面加载失败")
@@ -166,10 +166,10 @@ extension YXBaseWKWebView: WKNavigationDelegate {
     }
 }
 
-//MARK:- WKUIDelegate
+//MARK: - WKUIDelegate
 extension YXBaseWKWebView: WKUIDelegate {
     
-    //MARK:- HTML页面Alert出内容
+    //MARK: - HTML页面Alert出内容
     func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: () -> Void) {
         
         let alertCtrl = UIAlertController(title: "温馨提示", message: message, preferredStyle: .alert)
@@ -181,7 +181,7 @@ extension YXBaseWKWebView: WKUIDelegate {
         alertCtrl.addAction(okAction)
         self.present(alertCtrl, animated: true, completion: nil)
     }
-    //MARK:- HTML页面弹出Confirm时调用此方法
+    //MARK: - HTML页面弹出Confirm时调用此方法
     func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
         
         let alertCtrl = UIAlertController(title: "温馨提示", message: message, preferredStyle: .alert)
@@ -199,7 +199,7 @@ extension YXBaseWKWebView: WKUIDelegate {
         alertCtrl.addAction(cancelAction)
         self.present(alertCtrl, animated: true, completion: nil)
     }
-    //MARK:- HTML页面弹出TextInpu时调用此方法
+    //MARK: - HTML页面弹出TextInpu时调用此方法
     func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
           
           let alertCtrl = UIAlertController(title: "温馨提示", message: "", preferredStyle: .alert)
@@ -225,10 +225,10 @@ extension YXBaseWKWebView: WKUIDelegate {
         
 }
 
-//MARK:- WKScriptMessageHandler
+//MARK: - WKScriptMessageHandler
 extension YXBaseWKWebView: WKScriptMessageHandler {
     
-    //MARK:- 获取JS传回的数据
+    //MARK: - 获取JS传回的数据
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         
         let nativeMethodName = message.name //name : nativeMethod

@@ -9,7 +9,7 @@ import UIKit
 
 class YXBaseTableView: UITableView {
     
-    //MARK:- 初始化视图
+    //MARK: - 初始化视图
     func initView() {
         
         self.estimatedRowHeight = 10
@@ -26,7 +26,7 @@ class YXBaseTableView: UITableView {
         }
     }
     
-    //MARK:- 初始化
+    //MARK: - 初始化
     required override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         
@@ -40,7 +40,7 @@ class YXBaseTableView: UITableView {
     
 }
 
-//MARK:- UITableViewDelegate, UITableViewDataSource
+//MARK: - UITableViewDelegate, UITableViewDataSource
 extension YXBaseTableView: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {

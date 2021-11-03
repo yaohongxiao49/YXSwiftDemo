@@ -9,13 +9,13 @@ import UIKit
 
 class YXBaseTableViewCell: UITableViewCell {
 
-    //MARK:- 初始化视图
+    //MARK: - 初始化视图
     func initView() {
         
         
     }
     
-    //MARK:- 初始化
+    //MARK: - 初始化
     required override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         

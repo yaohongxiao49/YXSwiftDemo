@@ -79,7 +79,7 @@ class YXBaseNavigationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK:- 返回按钮事件
+    //MARK: - 返回按钮事件
     @objc func progressBackBtn() {
         
         if (self.yxBaseNavigationViewBackBlock != nil) {
@@ -87,7 +87,7 @@ class YXBaseNavigationView: UIView {
         }
     }
     
-    //MARK:- 初始化视图
+    //MARK: - 初始化视图
     func initView() {
         
         self.titleLab.text = "标题"

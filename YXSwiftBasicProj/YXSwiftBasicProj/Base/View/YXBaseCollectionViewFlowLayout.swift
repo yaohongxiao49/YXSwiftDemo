@@ -64,7 +64,7 @@ class YXBaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
     /** 每个section的header与上个section的footer距离 */
     private var spacingWithLastSection: CGFloat = 0
     
-    //MARK:- 重绘
+    //MARK: - 重绘
     override func prepare() {
         super.prepare()
         

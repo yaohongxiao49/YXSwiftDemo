@@ -89,7 +89,7 @@ class YXAlertViewController: UIViewController, UIViewControllerTransitioningDele
         return YXAlertViewController.init().initWithAlertView(alertView: alertView, preferredStyle: preferredStyle, transitionAnimation: .YXAlertTransitionAnimationCustom, transitionAnimationClass: transitionAnimationClass) as! Self
     }
     
-    //MARK:- dealloc
+    //MARK: - dealloc
     deinit {
         
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -129,7 +129,7 @@ class YXAlertViewController: UIViewController, UIViewControllerTransitioningDele
         }
     }
     
-    //MARK:- sheet
+    //MARK: - sheet
     func layoutActionSheetStyleView() {
         
         self.view.addConstraintCenterXToView(centerXToView: self.alertView, centerYToView: nil)
@@ -139,7 +139,7 @@ class YXAlertViewController: UIViewController, UIViewControllerTransitioningDele
         }
     }
     
-    //MARK:- alert
+    //MARK: - alert
     func layoutAlertStyleView() {
         
         self.view.addConstraintCenterXToView(centerXToView: self.alertView, centerYToView: nil)
@@ -156,7 +156,7 @@ class YXAlertViewController: UIViewController, UIViewControllerTransitioningDele
         }
     }
     
-    //MARK:- alertViewWidth
+    //MARK: - alertViewWidth
     func configureAlertViewWidth() {
         
         if !__CGSizeEqualToSize(self.alertView!.frame.size, CGSize.zero) {
@@ -176,8 +176,8 @@ class YXAlertViewController: UIViewController, UIViewControllerTransitioningDele
         }
     }
     
-    //MARK:- 键盘监听
-    //MARK:- 显示
+    //MARK: - 键盘监听
+    //MARK: - 显示
     @objc func keyboardWillShow(notification: NSNotification) {
         
         let userInfo: NSDictionary = notification.userInfo! as NSDictionary
@@ -195,7 +195,7 @@ class YXAlertViewController: UIViewController, UIViewControllerTransitioningDele
         }
     }
     
-    //MARK:- 隐藏
+    //MARK: - 隐藏
     @objc func keyboardWillHide(notification: NSNotification) {
         
         self.alertViewCenterYConstraint!.constant = self.alertViewCenterYOffset
@@ -205,14 +205,14 @@ class YXAlertViewController: UIViewController, UIViewControllerTransitioningDele
         }
     }
     
-    //MARK:- progress
-    //MARK:- 点击事件
+    //MARK: - progress
+    //MARK: - 点击事件
     @objc func singleTop(gesture: UITapGestureRecognizer) {
         
         dismissViewControllerAnimated(animated: true)
     }
     
-    //MARK:- 初始化数据
+    //MARK: - 初始化数据
     func initViewController() {
         
         self.providesPresentationContextTransitionStyle = true
@@ -224,7 +224,7 @@ class YXAlertViewController: UIViewController, UIViewControllerTransitioningDele
         self.actionSheetStyleEdging = 0.0
     }
     
-    //MARK:- 初始化背景视图
+    //MARK: - 初始化背景视图
     func initBackGroundView() {
         
         self.backgroundView = UIView()
@@ -234,7 +234,7 @@ class YXAlertViewController: UIViewController, UIViewControllerTransitioningDele
         self.view.addConstraintToView(view: self.backgroundView!, edgeInset: UIEdgeInsets.zero)
     }
     
-    //MARK:- 初始化单击事件
+    //MARK: - 初始化单击事件
     func initSingleTapGesture() {
         
         self.view.isUserInteractionEnabled = true
@@ -245,7 +245,7 @@ class YXAlertViewController: UIViewController, UIViewControllerTransitioningDele
         self.singleTap = singleTap
     }
     
-    //MARK:- 初始化视图
+    //MARK: - 初始化视图
     func initView() {
         
         if self.alertView == nil {
@@ -278,7 +278,7 @@ class YXAlertViewController: UIViewController, UIViewControllerTransitioningDele
         return self
     }
     
-    //MARK:- 视图消失
+    //MARK: - 视图消失
     func dismissViewControllerAnimated(animated: Bool) {
         
         self.dismiss(animated: true, completion: self.dismissComplete)

@@ -68,14 +68,14 @@ class YXBaseTabBarItemView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK:- progress
-    //MARK:- 点击按钮
+    //MARK: - progress
+    //MARK: - 点击按钮
     @objc func progressBtn(sender: UIButton) {
         
         self.yxBaseTabBarItemViewTapBlock!(self)
     }
     
-    //MARK:- setting
+    //MARK: - setting
     public var itemModel : YXBaseTabBarItemModel? {
         
         didSet {
@@ -83,13 +83,13 @@ class YXBaseTabBarItemView: UIView {
         }
     }
     
-    //MARK:- 初始化视图
+    //MARK: - 初始化视图
     func initView() {
         
         self.btn.isHidden = false
     }
     
-    //MARK:- 更新视图
+    //MARK: - 更新视图
     func updateView() {
         
         switch self.itemModel?.type {

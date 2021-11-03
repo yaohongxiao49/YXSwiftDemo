@@ -20,7 +20,7 @@ struct YXCollectionViewVCStruct {
 
 class YXCollectionViewVC: YXBaseVC {
 
-    //MARK:- 初始化声明
+    //MARK: - 初始化声明
     lazy var collectionView: YXBaseCollectionViewHorizontal = {
        
         let layout = UICollectionViewFlowLayout()
@@ -57,13 +57,13 @@ class YXCollectionViewVC: YXBaseVC {
         return dataSourceArr
     }()
     
-    //MARK:- 初始化视图
+    //MARK: - 初始化视图
     func initView() {
         
         self.collectionView.reloadData()
     }
     
-    //MARK:- 视图加载完毕
+    //MARK: - 视图加载完毕
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -72,7 +72,7 @@ class YXCollectionViewVC: YXBaseVC {
 
 }
 
-//MARK:- UICollectionViewDelegate, UICollectionViewDataSource
+//MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension YXCollectionViewVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -91,6 +91,20 @@ extension YXCollectionViewVC: UICollectionViewDelegate, UICollectionViewDataSour
         
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let waterVC = YXCollectionVCWater.init()
+        switch indexPath.row {
+        case YXBaseCollectionViewEnum.YXBaseCollectionViewEnumWater.rawValue:
+            waterVC.showType = .YXBaseCollectionViewEnumWater
+        case YXBaseCollectionViewEnum.YXBaseCollectionViewEnumLine.rawValue:
+            waterVC.showType = .YXBaseCollectionViewEnumLine
+        default:
+            waterVC.showType = .YXBaseCollectionViewEnumBox
+        }
+        
+        self.pushToSonVC(vc: waterVC, animated: true)
+    }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         if kind == UICollectionView.elementKindSectionHeader {
@@ -104,23 +118,10 @@ extension YXCollectionViewVC: UICollectionViewDelegate, UICollectionViewDataSour
             return footerReusableView
         }
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        let waterVC = YXCollectionVCWater.init()
-        switch indexPath.row {
-        case YXBaseCollectionViewEnum.YXBaseCollectionViewEnumWater.rawValue:
-            waterVC.showType = .YXBaseCollectionViewEnumWater
-        case YXBaseCollectionViewEnum.YXBaseCollectionViewEnumLine.rawValue:
-            waterVC.showType = .YXBaseCollectionViewEnumLine
-        default:
-            waterVC.showType = .YXBaseCollectionViewEnumBox
-        }
-        
-        self.pushToSonVC(vc: waterVC, animated: true)  
-    }
+    
 }
 
-//MARK:- UICollectionViewDelegateFlowLayout
+//MARK: - UICollectionViewDelegateFlowLayout
 extension YXCollectionViewVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

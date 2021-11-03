@@ -9,7 +9,7 @@ import UIKit
 
 class YXAlertViewControllerDropDownAnimation: YXAlertViewControllerBaseAnimation {
 
-    //MARK:- UIViewControllerAnimatedTransitioning
+    //MARK: - UIViewControllerAnimatedTransitioning
     override func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
             
         if self.isPresenting! {

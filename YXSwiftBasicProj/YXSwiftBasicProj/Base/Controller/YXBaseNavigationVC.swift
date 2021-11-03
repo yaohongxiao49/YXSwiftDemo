@@ -15,7 +15,7 @@ class YXBaseNavigationVC: UINavigationController {
         initView()
     }
 
-    //MARK:- 初始化视图
+    //MARK: - 初始化视图
     func initView() {
         
         self.modalTransitionStyle = .coverVertical

@@ -88,7 +88,7 @@ public class YXSegmentPageView: UIView {
     
 }
 
-//MARK:- UICollectionViewDataSource, UICollectionViewDelegate
+//MARK: - UICollectionViewDataSource, UICollectionViewDelegate
 extension YXSegmentPageView: UICollectionViewDataSource, UICollectionViewDelegate {
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -119,7 +119,7 @@ extension YXSegmentPageView: UICollectionViewDataSource, UICollectionViewDelegat
     
 }
 
-//MARK:- UIScrollViewDelegate
+//MARK: - UIScrollViewDelegate
 extension YXSegmentPageView: UIScrollViewDelegate {
     
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {

@@ -10,13 +10,13 @@ import UIKit
 
 public extension UIColor {
     
-    //MARK:- 传入色值返回颜色
+    //MARK: - 传入色值返回颜色
     class func yxColorWithHexString(hex: NSString) -> UIColor {
         
         return yxColorWithHexString(hex: hex, alpha: 1)
     }
     
-    //MARK:- 传入色值返回颜色，带透明度
+    //MARK: - 传入色值返回颜色，带透明度
     class func yxColorWithHexString(hex: NSString, alpha: CGFloat) -> UIColor {
         
         var value : NSString = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased() as NSString

@@ -39,7 +39,7 @@ class YXAlertViewControllerBaseAnimation: NSObject, UIViewControllerAnimatedTran
         return self
     }
     
-    //MARK:- UIViewControllerAnimatedTransitioning
+    //MARK: - UIViewControllerAnimatedTransitioning
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
             
         return 0.4

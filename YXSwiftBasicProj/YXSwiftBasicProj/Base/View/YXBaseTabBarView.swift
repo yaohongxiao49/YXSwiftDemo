@@ -30,7 +30,7 @@ class YXBaseTabBarView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK:- 初始化视图
+    //MARK: - 初始化视图
     func initView() {
         
         let imgView = UIImageView.init(frame: self.bounds)

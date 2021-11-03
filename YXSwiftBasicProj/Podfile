@@ -3,15 +3,16 @@ install! 'cocoapods', :warn_for_unused_master_specs_repo => false
 platform :ios, "13.0"
 inhibit_all_warnings!
 
-
 def pods
     pod 'RxSwift' #线程
     pod 'SnapKit' #适配
     pod 'SwiftyJSON' #json解析
     pod 'SwiftyUserDefaults' #NSUserdefaults
     pod 'Alamofire' #网络基础库
+    pod 'Reachability' #网络状况监测
     pod 'Kingfisher' #图片加载
     pod 'HXPHPicker' #相册图片选择
+    pod 'SkeletonView' #骨架（待验证使用）
 end
 
 target 'YXSwiftBasicProj' do

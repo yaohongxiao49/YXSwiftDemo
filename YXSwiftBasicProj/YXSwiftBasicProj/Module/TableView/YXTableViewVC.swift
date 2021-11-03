@@ -10,13 +10,18 @@ import UIKit
 struct YXTableViewVCStruct {
     var YXTableViewVCStructWKWebView = "WkWebView"
     var YXTableViewVCStructSegmentVC = "SegmentVC"
-    var YXTableViewVCStructPickerVC = "拍照"
-    var YXTableViewVCStructPickerListVC = "相册选择"
+    var YXTableViewVCStructHXPickerVC = "HX拍照"
+    var YXTableViewVCStructHXPickerListVC = "HX相册选择"
+    var YXTableViewVCStructDiyPickerListVC = "自定义相册"
+    var YXTableViewVCStructLoadImgVC = "加载图片"
+    var YXTableViewVCStructLoadVideoVC = "加载视频"
+    var YXTableViewVCStructLoadMusicVC = "加载音乐"
+    var YXTableViewVCStructLoadVideoPlayerVC = "加载可自定义视图视频"
 }
 
 class YXTableViewVC: YXBaseVC {
     
-    //MARK:- 初始化声明
+    //MARK: - 初始化声明
     lazy var tableView: YXBaseTableView = {
        
         let tableView = YXBaseTableView.init(frame: self.view.bounds, style: UITableView.Style.plain)
@@ -39,12 +44,12 @@ class YXTableViewVC: YXBaseVC {
     lazy var dataSourceArr: [String] = {
         
         var yxTableViewVCStruct = YXTableViewVCStruct()
-        let dataSourceArr = [yxTableViewVCStruct.YXTableViewVCStructWKWebView, yxTableViewVCStruct.YXTableViewVCStructSegmentVC, yxTableViewVCStruct.YXTableViewVCStructPickerVC, yxTableViewVCStruct.YXTableViewVCStructPickerListVC]
+        let dataSourceArr = [yxTableViewVCStruct.YXTableViewVCStructWKWebView, yxTableViewVCStruct.YXTableViewVCStructSegmentVC, yxTableViewVCStruct.YXTableViewVCStructHXPickerVC, yxTableViewVCStruct.YXTableViewVCStructHXPickerListVC, yxTableViewVCStruct.YXTableViewVCStructDiyPickerListVC, yxTableViewVCStruct.YXTableViewVCStructLoadImgVC, yxTableViewVCStruct.YXTableViewVCStructLoadVideoVC, yxTableViewVCStruct.YXTableViewVCStructLoadMusicVC, yxTableViewVCStruct.YXTableViewVCStructLoadVideoPlayerVC]
         
         return dataSourceArr
     }()
     
-    //MARK:- 视图加载完毕
+    //MARK: - 视图加载完毕
     override func viewDidLoad() {
         
         self.initView()
@@ -52,26 +57,48 @@ class YXTableViewVC: YXBaseVC {
 
 }
 
-//MARK:- 私有方法
+//MARK: - 私有方法
 private extension YXTableViewVC {
     
-    //MARK:- 点击跳转
+    //MARK: - 点击跳转
     func pushToCollectionView(index: Int) {
         
         switch index {
         case 0:
-            let wekWebView = YXWkWebViewVC.init()
-            self.pushToSonVC(vc: wekWebView, animated: true)
+            self.pushToWKWebView()
         case 1:
-            let segmentVC = YXSegmentVC.init()
-            self.pushToSonVC(vc: segmentVC, animated: true)
+            self.pushToSegmentVC()
         case 2:
             self.takingCamera()
         case 3:
             self.takingPhotoAlbum()
+        case 4:
+            self.pushToDiyPhotoAlbum()
+        case 5:
+            fallthrough
+        case 6:
+            fallthrough
+        case 7:
+            self.loadMediaByIndex(index: index)
+        case 8:
+            self.pushToVideoPlayerVC()
         default:
             print("跳转")
         }
+    }
+    
+    //MARK: - WKWebView
+    func pushToWKWebView() {
+        
+        let wekWebView = YXWkWebViewVC.init()
+        self.pushToSonVC(vc: wekWebView, animated: true)
+    }
+    
+    //MARK: - 分段控制器
+    func pushToSegmentVC() {
+        
+        let segmentVC = YXSegmentVC.init()
+        self.pushToSonVC(vc: segmentVC, animated: true)
     }
     
     //MAKR:- 相机
@@ -117,7 +144,38 @@ private extension YXTableViewVC {
         }
     }
     
-    //MARK:- 初始化视图
+    //MARK: - 自定义相册
+    func pushToDiyPhotoAlbum() {
+        
+        let pickerVC = YXPhotoPickerVC.init()
+        self.pushToSonVC(vc: pickerVC, animated: true)
+    }
+    
+    //MARK: - 加载媒体
+    func loadMediaByIndex(index: Int) {
+        
+        switch index {
+        case 5:
+            YXPhotoPickerTool.shareTool.choosePicture(self, editor: false) { (image) in
+
+            }
+        case 6:
+            YXPhotoPickerTool.playVideoWithPath(video: "http://baobab.wdjcdn.com/14562919706254.mp4", viewController: self)
+        case 7:
+            YXPhotoPickerTool.playAudioWithPath(sound: "song.mp3")
+        default:
+            print("more")
+        }
+    }
+    
+    //MARK: - 可自定义播放视图视频
+    func pushToVideoPlayerVC() {
+        
+        let vc = YXVideoPlayerVC.init()
+        self.pushToSonVC(vc: vc, animated: true)
+    }
+    
+    //MARK: - 初始化视图
     func initView() {
         
         self.tableView.reloadData()
@@ -125,7 +183,7 @@ private extension YXTableViewVC {
     
 }
 
-//MARK:- UITableViewDelegate, UITableViewDataSource
+//MARK: - UITableViewDelegate, UITableViewDataSource
 extension YXTableViewVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {

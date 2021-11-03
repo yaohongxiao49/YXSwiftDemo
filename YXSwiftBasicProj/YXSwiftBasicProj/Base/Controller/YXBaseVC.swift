@@ -12,7 +12,7 @@ typealias YXBaseVCPickerFinishedBlock = (_ pickerController: PhotoPickerControll
 
 public class YXBaseVC: UIViewController {
     
-    //MARK:- 初始化声明
+    //MARK: - 初始化声明
     /** 相册选择闭包 */
     var yxBaseVCPickerFinishedBlock: YXBaseVCPickerFinishedBlock?
     
@@ -37,7 +37,7 @@ public class YXBaseVC: UIViewController {
         return navigationView
     }()
 
-    //MARK:- 视图将要显示
+    //MARK: - 视图将要显示
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -53,23 +53,23 @@ public class YXBaseVC: UIViewController {
     
 }
 
-//MARK:- 开放公共方法
+//MARK: - 开放公共方法
 public extension YXBaseVC {
     
-    //MARK:- 推送至子控制器
+    //MARK: - 推送至子控制器
     func pushToSonVC(vc: YXBaseVC, animated: Bool) {
         
         self.navigationController?.pushViewController(vc, animated: animated)
     }
     
-    //MARK:- 弹出子视图
+    //MARK: - 弹出子视图
     func presentToSonVC(vc: YXBaseVC, animated: Bool) {
     
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: animated, completion: nil)
     }
     
-    //MARK:- 弹出相册选择
+    //MARK: - 弹出相册选择
     func presentPickerController() {
         
         //设置与微信主题一致的配置
@@ -86,10 +86,10 @@ public extension YXBaseVC {
 }
 
 
-//MARK:- PhotoPickerControllerDelegate
+//MARK: - PhotoPickerControllerDelegate
 extension YXBaseVC: PhotoPickerControllerDelegate {
     
-    //MARK:- 选择完成之后调用
+    //MARK: - 选择完成之后调用
     /**
      *
      * pickerController: 对应的 PhotoPickerController
@@ -102,7 +102,7 @@ extension YXBaseVC: PhotoPickerControllerDelegate {
         self.yxBaseVCPickerFinishedBlock?(pickerController, result)
     }
     
-    //MARK:- 点击取消时调用
+    //MARK: - 点击取消时调用
     public func pickerController(didCancel pickerController: PhotoPickerController) {
         
     }

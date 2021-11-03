@@ -22,7 +22,7 @@ class YXBaseCollectionView: UICollectionView {
     var baseLayout: UICollectionViewLayout?
     let moduleArr: [YXBaseCollectionViewEnum] = [.YXBaseCollectionViewEnumWater, .YXBaseCollectionViewEnumLine, .YXBaseCollectionViewEnumBox]
     
-    //MARK:- 初始化视图
+    //MARK: - 初始化视图
     func initView() {
         
         let layout = YXBaseCollectionViewFlowLayout()
@@ -46,7 +46,7 @@ class YXBaseCollectionView: UICollectionView {
         }
     }
     
-    //MARK:- 初始化
+    //MARK: - 初始化
     required override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         
@@ -60,7 +60,7 @@ class YXBaseCollectionView: UICollectionView {
     
 }
 
-//MARK:- UICollectionViewDelegate, UICollectionViewDataSource
+//MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension YXBaseCollectionView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -78,6 +78,9 @@ extension YXBaseCollectionView: UICollectionViewDelegate, UICollectionViewDataSo
         
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         if kind == UICollectionView.elementKindSectionHeader {
@@ -91,13 +94,10 @@ extension YXBaseCollectionView: UICollectionViewDelegate, UICollectionViewDataSo
             return footerReusableView
         }
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
     
 }
 
-//MARK:- YXBaseCollectionViewDelegate
+//MARK: - YXBaseCollectionViewDelegate
 extension YXBaseCollectionView: YXBaseCollectionViewDelegate {
     
     func heightForRowAtIndexPath(collectionView collection: UICollectionView, layout: YXBaseCollectionViewFlowLayout, indexPath: IndexPath, itemWidth: CGFloat) -> CGFloat {

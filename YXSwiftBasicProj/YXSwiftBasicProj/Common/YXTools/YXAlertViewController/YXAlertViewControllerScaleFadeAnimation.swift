@@ -9,7 +9,7 @@ import UIKit
 
 class YXAlertViewControllerScaleFadeAnimation: YXAlertViewControllerBaseAnimation {
 
-    //MARK:- UIViewControllerAnimatedTransitioning
+    //MARK: - UIViewControllerAnimatedTransitioning
     override func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
             
         return 0.3

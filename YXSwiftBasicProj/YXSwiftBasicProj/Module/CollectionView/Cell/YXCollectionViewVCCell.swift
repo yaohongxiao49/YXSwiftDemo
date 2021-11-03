@@ -9,7 +9,7 @@ import UIKit
 
 class YXCollectionViewVCCell: UICollectionViewCell {
     
-    //MARK:- 初始化声明
+    //MARK: - 初始化声明
     lazy var titleLab: UILabel = {
        
         let titleLab = UILabel.init(frame: CGRect.zero);

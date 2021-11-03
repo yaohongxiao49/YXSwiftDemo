@@ -81,14 +81,14 @@ class YXBaseTabBar: UITabBarController {
         initView()
     }
 
-    //MARK:- 初始化视图
+    //MARK: - 初始化视图
     func initView() {
         
 //        self.baseTabBarView.isHidden = false
         self.baseTabBarView.itemModelArr = self.itemModelArr
     }
     
-    //MARK:- 初始化控制器
+    //MARK: - 初始化控制器
     func initVC() {
         
         for model : YXBaseTabBarItemModel in self.itemModelArr as! [YXBaseTabBarItemModel] {
@@ -96,7 +96,7 @@ class YXBaseTabBar: UITabBarController {
         }
     }
     
-    //MARK:- 添加控制器
+    //MARK: - 添加控制器
     func addChildrenVC(_ childController: UIViewController, title: String?, image: UIImage?, selectedImage: UIImage?) {
 
         addChild(YXBaseNavigationVC(rootViewController: childController))

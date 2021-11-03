@@ -34,7 +34,7 @@ typealias YXToolFuncCycleScrollMoveBloc = (NSInteger) ->(Void)
 
 class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
     
-    //MARK:- 开放属性
+    //MARK: - 开放属性
     /**
      * 显示边距（充满/卡片式效果时设置，优先设置）
      * 如显示为充满效果（宽度：视图宽度 - left - bottom，高度：视图高度 - top - bottom）
@@ -85,7 +85,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         }
     }
 
-    //MARK:- 定时器
+    //MARK: - 定时器
     /** 是否含有定时器（设置完成后，需要再设置timeInterval） */
     var boolContainTimer: Bool = false
     /** 时间间隔（需要先设置boolContainTimer） */
@@ -99,7 +99,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         }
     }
 
-    //MARK:- 分页控制器
+    //MARK: - 分页控制器
     /** 分页控制器坐标 */
     var pageframe: CGRect? {
         
@@ -189,11 +189,11 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         }
     }
     
-    //MARK:- 回调
+    //MARK: - 回调
     var yxToolFuncCycleScrollBlock: YXToolFuncCycleScrollBlock?
     var yxToolFuncCycleScrollMoveBlock: YXToolFuncCycleScrollMoveBloc?
     
-    //MARK:- 私有属性
+    //MARK: - 私有属性
     /** 显示类型 */
     private var showType: YXToolFuncCycleScrollType!
     private var boolHorizontal: Bool = false //滚动方向是否为水平滚动
@@ -214,7 +214,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
     private var alreadCurrent: NSInteger = 0 //上一次的下标
     private var offsetOrigin: CGFloat = 0.0 //滚动距离记录
     
-    //MARK:- 初始化视图
+    //MARK: - 初始化视图
     /**
      - Parameters: 初始化视图
      - frame: 尺寸
@@ -250,7 +250,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK:- 设置图片
+    //MARK: - 设置图片
     func setImageFromImageNames() {
         
         var i: NSInteger = 0
@@ -311,7 +311,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         scrollViewBlock()
     }
     
-    //MARK:- 根据显示类型更改图片显示位置
+    //MARK: - 根据显示类型更改图片显示位置
     func changeImgVShowFrame() {
         
         var judgeCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 2 : self.showType == .YXToolFuncCycleScrollType3DCard ? 2 : 1
@@ -419,7 +419,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         }
     }
     
-    //MARk:- 更改图片显示圆角
+    //MARK: - 更改图片显示圆角
     func changeImgVShowCornerRadius() {
         
         for imgV: UIImageView in self.imgViewsArr as! [UIImageView] {
@@ -428,7 +428,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         }
     }
     
-    //MARK:- 使用动画
+    //MARK: - 使用动画
     func useZoomAnimationByCurrent(current: NSInteger) {
         
         var i: NSInteger = 0
@@ -456,7 +456,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         }
     }
     
-    //MARK:- 滚动视图block
+    //MARK: - 滚动视图block
     func scrollViewBlock() {
         
         if (self.yxToolFuncCycleScrollMoveBlock != nil) {
@@ -464,7 +464,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         }
     }
     
-    //MARK:- 更新第一条数据
+    //MARK: - 更新第一条数据
     func updateFirstValueByBoolFirst(boolFirst: Bool) {
         
         if !self.boolCycle {
@@ -483,7 +483,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         }
     }
     
-    //MARK:- 更新最后一条数据
+    //MARK: - 更新最后一条数据
     func updateLastValue() {
         
         let infoModel: YXToolFuncCycleScrollInfoModel = imgValueArr!.firstObject as! YXToolFuncCycleScrollInfoModel
@@ -491,7 +491,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         imgValueArr?.add(infoModel)
     }
     
-    //MARK:- 放大缩小动画 0:放大 1:缩小
+    //MARK: - 放大缩小动画 0:放大 1:缩小
     func zoomAnimationByView(view: UIView, type: NSInteger, current: NSInteger) {
         
         if self.showType != .YXToolFuncCycleScrollType3DCard {
@@ -547,8 +547,8 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         }
     }
     
-    //MARK:- progress
-    //MARK:- 单击图片
+    //MARK: - progress
+    //MARK: - 单击图片
     @objc func singleTapAction(gesture: UITapGestureRecognizer) {
         
         if (self.yxToolFuncCycleScrollBlock != nil) {
@@ -558,31 +558,31 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         }
     }
     
-    //MARK:- 点击分页控制器
+    //MARK: - 点击分页控制器
     @objc func changePageControl(pageControl: UIPageControl) {
         
         currentPage = pageControl.currentPage
     }
     
-    //MARK:- Timer
-    //MARK:- 移除Timer
+    //MARK: - Timer
+    //MARK: - 移除Timer
     func stopTimer() {
         
         timer!.invalidate()
         timer = nil
     }
-    //MARK:- 关闭Timer
+    //MARK: - 关闭Timer
     func closeTimer() {
         
         timer?.fireDate = NSDate.distantFuture
     }
-    //MARK:- 开启Timer
+    //MARK: - 开启Timer
     func openTimer() {
         
         timer?.fireDate = NSDate.init(timeIntervalSinceNow: Double(timeInterval)) as Date
     }
     
-    //MARK:- 滚动切换
+    //MARK: - 滚动切换
     func scrollViewChangeImgByScrollView(scrollView: UIScrollView) {
         
         let judgeBigCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 3 : self.showType == .YXToolFuncCycleScrollType3DCard ? 3 : 2
@@ -650,7 +650,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         }
     }
     
-    //MARK:- <UIScrollViewDelegate>
+    //MARK: - <UIScrollViewDelegate>
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         scrollViewChangeImgByScrollView(scrollView: scrollView)
@@ -668,7 +668,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         }
     }
     
-    //MARK:- 初始化循环视图
+    //MARK: - 初始化循环视图
     func initViewByCycle() {
         
         let judgeCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 5 : self.showType == .YXToolFuncCycleScrollType3DCard ? 5 : 3
@@ -725,7 +725,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         useZoomAnimationByCurrent(current: judgeHiddenCount)
     }
 
-    //MARK:- 初始化不循环视图
+    //MARK: - 初始化不循环视图
     func initViewByNotCycle() {
         
         self.clipsToBounds = true
@@ -765,7 +765,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         self.pageBtn.isHidden = !self.boolPageBtn
     }
     
-    //MARK:- 初始化图片显示视图
+    //MARK: - 初始化图片显示视图
     func initImgVByCount(count: NSInteger) {
         
         if self.imgViewsArr.count != count {

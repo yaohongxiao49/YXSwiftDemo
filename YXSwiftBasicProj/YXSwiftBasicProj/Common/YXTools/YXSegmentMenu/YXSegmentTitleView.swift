@@ -16,7 +16,7 @@ import UIKit
 
 public class YXSegmentTitleView: UIView {
     
-    //MARK:- 初始化声明
+    //MARK: - 初始化声明
     public weak var delegate: YXSegmentTitleViewDelegate?
     private var config: Configuration!
     private var titles: [String] = []
@@ -73,7 +73,7 @@ public class YXSegmentTitleView: UIView {
     
 }
 
-//MARK:- 设置参数值
+//MARK: - 设置参数值
 public extension YXSegmentTitleView {
     
     func setupSegmentTitleView(config: Configuration, titles: [String]) {
@@ -84,13 +84,13 @@ public extension YXSegmentTitleView {
         self.updateConfiguration()
         self.setSelectIndex(at: 0)
     }
-    //MARK:- 设置选项卡位置
+    //MARK: - 设置选项卡位置
     func setSelectIndex(at index: Int, animated: Bool = false) {
         
         self.setSelectedCell(at: index, animated: animated)
         self.setSelectedIndicator(at: index, animated: animated)
     }
-    //MARK:- 联动视图调用
+    //MARK: - 联动视图调用
     func setSegmentTitleView(selectIndex: Int, willSelectIndex: Int, progress: CGFloat) {
         
         self.scrollTo(selectIndex: selectIndex, willSelectIndex: willSelectIndex, progress: progress)
@@ -117,10 +117,10 @@ public extension YXSegmentTitleView {
     
 }
 
-//MARK:- 设置视图
+//MARK: - 设置视图
 fileprivate extension YXSegmentTitleView {
     
-    //MARK:- 设置内容
+    //MARK: - 设置内容
     func setupSubviews() {
         
         self.addSubview(self.collectionView)
@@ -132,7 +132,7 @@ fileprivate extension YXSegmentTitleView {
         }
     }
     
-    //MARK:- 更新配置
+    //MARK: - 更新配置
     func updateConfiguration() {
         
         self.titlesSizes.removeAll()
@@ -168,7 +168,7 @@ fileprivate extension YXSegmentTitleView {
         }
     }
     
-    //MARK:- 计算获得cell的size
+    //MARK: - 计算获得cell的size
     func cellSize(cellForAt index: Int) -> CGSize {
         
         if self.cellsSizes[index] != nil {
@@ -191,7 +191,7 @@ fileprivate extension YXSegmentTitleView {
         return size
     }
     
-    //MARK:- 获取指示器位置
+    //MARK: - 获取指示器位置
     func rectIndicator(cell: YXSegmentTitleCell, index: Int) -> CGRect {
         if self.indicatorRects[index] != nil {
             return self.indicatorRects[index]!
@@ -221,7 +221,7 @@ fileprivate extension YXSegmentTitleView {
         return rect
     }
     
-    //MARK:- 设置选中项
+    //MARK: - 设置选中项
     func setSelectedCell(cell: YXSegmentTitleCell?, at indexPath: IndexPath, animated: Bool) {
         
         self.selectedIndex = indexPath.item
@@ -248,7 +248,7 @@ fileprivate extension YXSegmentTitleView {
         self.setSelectedCell(cell: cell, at: indexPath, animated: animated)
     }
     
-    //MARK:- 设置滚动条
+    //MARK: - 设置滚动条
     func setSelectedIndicator(cell: YXSegmentTitleCell, at index: Int, animated: Bool) {
         
         let indicatorFrame = self.rectIndicator(cell: cell, index: index)
@@ -269,7 +269,7 @@ fileprivate extension YXSegmentTitleView {
         guard cell != nil else { return }
         self.setSelectedIndicator(cell: cell!, at: index, animated: animated)
     }
-    //MARK:- 联动视图调用
+    //MARK: - 联动视图调用
     func scrollTo(selectIndex: Int, willSelectIndex: Int, progress: CGFloat) {
         
         let seleIndexPath = IndexPath(item: selectIndex, section: 0)
@@ -368,7 +368,7 @@ fileprivate extension YXSegmentTitleView {
     
 }
 
-//MARK:- UICollectionViewDataSource
+//MARK: - UICollectionViewDataSource
 extension YXSegmentTitleView: UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -386,7 +386,7 @@ extension YXSegmentTitleView: UICollectionViewDataSource {
     }
 }
 
-//MARK:- UICollectionViewDelegateFlowLayout
+//MARK: - UICollectionViewDelegateFlowLayout
 extension YXSegmentTitleView: UICollectionViewDelegateFlowLayout {
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

@@ -10,7 +10,7 @@ import UIKit
 
 public extension YXSegmentTitleView {
     
-    //MARK:- 风格
+    //MARK: - 风格
     enum PositionStyle: Int {
         
         /** 没有指示器 */
@@ -23,7 +23,7 @@ public extension YXSegmentTitleView {
         case bottom = 3
     }
     
-    //MARK:- 指示器滚动风格
+    //MARK: - 指示器滚动风格
     enum IndicatorStyle: Int {
         
         /** 指示器位置需内容滚动结束时改变 */
@@ -36,10 +36,10 @@ public extension YXSegmentTitleView {
         case dynamic = 3
     }
     
-    //MARK:- 配置
+    //MARK: - 配置
     class Configuration: NSObject {
         
-        //MARK:- YXSegmentView配置
+        //MARK: - YXSegmentView配置
         /** 位置风格 */
         public var positionStyle: PositionStyle = .bottom
         /** 弹性效果 */
@@ -59,7 +59,7 @@ public extension YXSegmentTitleView {
         /** 分割线宽度 */
         public var separatorWidth: CGFloat = 1.0
         
-        //MARK:- title属性配置
+        //MARK: - title属性配置
         /** 正常标题字体 */
         public var titleNormalFont: UIFont = .systemFont(ofSize: 15)
         /** 选中标题字体(不能和titleSelectedFontSize一起使用) */
@@ -79,7 +79,7 @@ public extension YXSegmentTitleView {
         /** 标题的固定宽度（默认0为动态宽度，大于0则设置为固定宽度） */
         public var titleFixedWidth: CGFloat = 0.0
         
-        //MARK:- 指示器属性
+        //MARK: - 指示器属性
         /** 指示器滚动风格 */
         public var indicatorStyle: IndicatorStyle = .dynamic
         /** 指示器颜色 */

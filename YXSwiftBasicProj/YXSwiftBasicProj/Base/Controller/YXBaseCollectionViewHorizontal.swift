@@ -9,7 +9,7 @@ import UIKit
 
 class YXBaseCollectionViewHorizontal: UICollectionView {
     
-    //MARK:- 初始化视图
+    //MARK: - 初始化视图
     func initView() {
         
         self.dataSource = self
@@ -24,7 +24,7 @@ class YXBaseCollectionViewHorizontal: UICollectionView {
         }
     }
     
-    //MARK:- 初始化
+    //MARK: - 初始化
     required override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         
@@ -37,7 +37,7 @@ class YXBaseCollectionViewHorizontal: UICollectionView {
     
 }
 
-//MARK:- UICollectionViewDelegate, UICollectionViewDataSource
+//MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension YXBaseCollectionViewHorizontal: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -54,6 +54,12 @@ extension YXBaseCollectionViewHorizontal: UICollectionViewDelegate, UICollection
         
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         if kind == UICollectionView.elementKindSectionHeader {
@@ -67,13 +73,10 @@ extension YXBaseCollectionViewHorizontal: UICollectionViewDelegate, UICollection
             return footerReusableView
         }
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
     
 }
 
-//MARK:- UICollectionViewDelegateFlowLayout
+//MARK: - UICollectionViewDelegateFlowLayout
 extension YXBaseCollectionViewHorizontal: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

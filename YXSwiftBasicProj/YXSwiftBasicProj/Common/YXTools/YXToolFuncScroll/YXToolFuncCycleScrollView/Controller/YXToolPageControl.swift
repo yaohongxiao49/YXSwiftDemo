@@ -14,7 +14,7 @@ class YXToolPageControl: UIPageControl {
     /** 选中分页图片 */
     var selImg: UIImage?
 
-    //MARK:- 设置当前页码
+    //MARK: - 设置当前页码
     override var currentPage: Int {
         
         didSet {

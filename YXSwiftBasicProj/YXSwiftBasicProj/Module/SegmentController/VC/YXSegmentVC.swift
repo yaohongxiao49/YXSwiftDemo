@@ -77,7 +77,7 @@ class YXSegmentVC: YXBaseVC {
     
 }
 
-//MARK:- YXSegmentPageViewDelegate
+//MARK: - YXSegmentPageViewDelegate
 extension YXSegmentVC: YXSegmentPageViewDelegate {
     
     func segmentPageView(_ segmentPageView: YXSegmentPageView, at index: Int) {
@@ -93,7 +93,7 @@ extension YXSegmentVC: YXSegmentPageViewDelegate {
     
 }
 
-//MARK:- YXSegmentTitleViewDelegate
+//MARK: - YXSegmentTitleViewDelegate
 extension YXSegmentVC: YXSegmentTitleViewDelegate {
     
     func segmentTitleView(_ page: YXSegmentTitleView, at index: Int) {

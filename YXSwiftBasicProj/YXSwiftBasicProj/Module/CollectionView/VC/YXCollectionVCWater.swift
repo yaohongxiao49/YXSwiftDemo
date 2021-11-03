@@ -17,7 +17,7 @@ class YXCollectionVCWater: YXBaseVC {
         }
     }
     
-    //MARK:- 初始化声明
+    //MARK: - 初始化声明
     lazy var collectionView: YXBaseCollectionView = {
        
         let layout = YXBaseCollectionViewFlowLayout()
@@ -49,7 +49,7 @@ class YXCollectionVCWater: YXBaseVC {
 
 }
 
-//MARK:- UICollectionViewDelegate, UICollectionViewDataSource
+//MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension YXCollectionVCWater: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -67,6 +67,9 @@ extension YXCollectionVCWater: UICollectionViewDelegate, UICollectionViewDataSou
         
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         if kind == UICollectionView.elementKindSectionHeader {
@@ -80,13 +83,10 @@ extension YXCollectionVCWater: UICollectionViewDelegate, UICollectionViewDataSou
             return footerReusableView
         }
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
     
 }
 
-//MARK:- YXBaseCollectionViewDelegate
+//MARK: - YXBaseCollectionViewDelegate
 extension YXCollectionVCWater: YXBaseCollectionViewDelegate {
     
     func heightForRowAtIndexPath(collectionView collection: UICollectionView, layout: YXBaseCollectionViewFlowLayout, indexPath: IndexPath, itemWidth: CGFloat) -> CGFloat {

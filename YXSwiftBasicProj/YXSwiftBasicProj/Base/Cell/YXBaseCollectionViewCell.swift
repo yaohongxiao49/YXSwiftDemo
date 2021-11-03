@@ -9,13 +9,13 @@ import UIKit
 
 class YXBaseCollectionViewCell: UICollectionViewCell {
  
-    //MARK:- 初始化视图
+    //MARK: - 初始化视图
     func initView() {
         
         
     }
     
-    //MARK:- 初始化
+    //MARK: - 初始化
     required override init(frame: CGRect) {
         super.init(frame: frame)
         
