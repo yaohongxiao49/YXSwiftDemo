@@ -17,6 +17,7 @@ struct YXTableViewVCStruct {
     var YXTableViewVCStructLoadVideoVC = "加载视频"
     var YXTableViewVCStructLoadMusicVC = "加载音乐"
     var YXTableViewVCStructLoadVideoPlayerVC = "加载可自定义视图视频"
+    var YXTableViewVCStructUserDefault = "UserDefault"
 }
 
 class YXTableViewVC: YXBaseVC {
@@ -44,7 +45,7 @@ class YXTableViewVC: YXBaseVC {
     lazy var dataSourceArr: [String] = {
         
         var yxTableViewVCStruct = YXTableViewVCStruct()
-        let dataSourceArr = [yxTableViewVCStruct.YXTableViewVCStructWKWebView, yxTableViewVCStruct.YXTableViewVCStructSegmentVC, yxTableViewVCStruct.YXTableViewVCStructHXPickerVC, yxTableViewVCStruct.YXTableViewVCStructHXPickerListVC, yxTableViewVCStruct.YXTableViewVCStructDiyPickerListVC, yxTableViewVCStruct.YXTableViewVCStructLoadImgVC, yxTableViewVCStruct.YXTableViewVCStructLoadVideoVC, yxTableViewVCStruct.YXTableViewVCStructLoadMusicVC, yxTableViewVCStruct.YXTableViewVCStructLoadVideoPlayerVC]
+        let dataSourceArr = [yxTableViewVCStruct.YXTableViewVCStructWKWebView, yxTableViewVCStruct.YXTableViewVCStructSegmentVC, yxTableViewVCStruct.YXTableViewVCStructHXPickerVC, yxTableViewVCStruct.YXTableViewVCStructHXPickerListVC, yxTableViewVCStruct.YXTableViewVCStructDiyPickerListVC, yxTableViewVCStruct.YXTableViewVCStructLoadImgVC, yxTableViewVCStruct.YXTableViewVCStructLoadVideoVC, yxTableViewVCStruct.YXTableViewVCStructLoadMusicVC, yxTableViewVCStruct.YXTableViewVCStructLoadVideoPlayerVC, yxTableViewVCStruct.YXTableViewVCStructUserDefault]
         
         return dataSourceArr
     }()
@@ -82,6 +83,8 @@ private extension YXTableViewVC {
             self.loadMediaByIndex(index: index)
         case 8:
             self.pushToVideoPlayerVC()
+        case 9:
+            self.pushToUserDefault()
         default:
             print("跳转")
         }
@@ -172,6 +175,13 @@ private extension YXTableViewVC {
     func pushToVideoPlayerVC() {
         
         let vc = YXVideoPlayerVC.init()
+        self.pushToSonVC(vc: vc, animated: true)
+    }
+    
+    //MARK: - 跳转数据存储
+    func pushToUserDefault() {
+        
+        let vc = YXUserDefaultVC.init()
         self.pushToSonVC(vc: vc, animated: true)
     }
     

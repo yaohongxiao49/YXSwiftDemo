@@ -62,7 +62,7 @@ class YXSegmentVC: YXBaseVC {
         var children: [YXBaseVC] = []
         for (index, title) in self.itemArr.enumerated() {
             
-            let vc: YXCollectionVCWater = YXCollectionVCWater.init()
+            let vc: YXCollectionViewVC = YXCollectionViewVC.init()
             children.append(vc)
         }
         return children
@@ -70,6 +70,9 @@ class YXSegmentVC: YXBaseVC {
 
     //视图已经加载完毕
     override func viewDidLoad() {
+        
+        self.navigationView.titleLab.text = "分页控制器"
+        self.navigationView.backBtn.isHidden = false
         
         self.segmentView.isHidden = false
         self.pageView.isHidden = false

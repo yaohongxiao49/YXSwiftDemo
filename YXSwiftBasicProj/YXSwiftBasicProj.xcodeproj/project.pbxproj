@@ -28,6 +28,9 @@
 		0035664727310CE600FBFE09 /* YXSegmentPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0035664627310CE600FBFE09 /* YXSegmentPageView.swift */; };
 		00356649273111CB00FBFE09 /* YXSegmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00356648273111CB00FBFE09 /* YXSegmentVC.swift */; };
 		003FD5422732596400391055 /* YXVideoPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FD5412732596400391055 /* YXVideoPlayerVC.swift */; };
+		0045A87627339BF200CF24B8 /* YXUserDefaultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045A87527339BF100CF24B8 /* YXUserDefaultVC.swift */; };
+		0045A87827339D5400CF24B8 /* YXSwiftyUserDefaultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045A87727339D5400CF24B8 /* YXSwiftyUserDefaultModel.swift */; };
+		00C02854273381AE0050953F /* YXBaseUserDefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C02853273381AE0050953F /* YXBaseUserDefaultsModel.swift */; };
 		00C7C61D272F70B600BA5C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7C61C272F70B600BA5C97 /* AppDelegate.swift */; };
 		00C7C61F272F70B600BA5C97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7C61E272F70B600BA5C97 /* SceneDelegate.swift */; };
 		00C7C626272F70B900BA5C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00C7C625272F70B900BA5C97 /* Assets.xcassets */; };
@@ -100,6 +103,9 @@
 		0035664627310CE600FBFE09 /* YXSegmentPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSegmentPageView.swift; sourceTree = "<group>"; };
 		00356648273111CB00FBFE09 /* YXSegmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSegmentVC.swift; sourceTree = "<group>"; };
 		003FD5412732596400391055 /* YXVideoPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXVideoPlayerVC.swift; sourceTree = "<group>"; };
+		0045A87527339BF100CF24B8 /* YXUserDefaultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXUserDefaultVC.swift; sourceTree = "<group>"; };
+		0045A87727339D5400CF24B8 /* YXSwiftyUserDefaultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSwiftyUserDefaultModel.swift; sourceTree = "<group>"; };
+		00C02853273381AE0050953F /* YXBaseUserDefaultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseUserDefaultsModel.swift; sourceTree = "<group>"; };
 		00C7C619272F70B600BA5C97 /* YXSwiftBasicProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXSwiftBasicProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C7C61C272F70B600BA5C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00C7C61E272F70B600BA5C97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -271,6 +277,15 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		0045A87427339B6300CF24B8 /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				0045A87527339BF100CF24B8 /* YXUserDefaultVC.swift */,
+				0045A87727339D5400CF24B8 /* YXSwiftyUserDefaultModel.swift */,
+			);
+			path = UserDefault;
+			sourceTree = "<group>";
+		};
 		00C7C610272F70B600BA5C97 = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +344,7 @@
 		00C7C650272F712E00BA5C97 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				0045A87427339B6300CF24B8 /* UserDefault */,
 				00F8BA992731246F00612B85 /* YXPhotoPicker */,
 				003566382730E54B00FBFE09 /* SegmentController */,
 				003566342730CEB100FBFE09 /* WKWebView */,
@@ -378,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				00C7C65A272F730600BA5C97 /* YXBaseTabBarItemModel.swift */,
+				00C02853273381AE0050953F /* YXBaseUserDefaultsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -736,6 +753,7 @@
 				00C7C685272F730600BA5C97 /* YXAlertViewControllerDropDownAnimation.swift in Sources */,
 				00C7C676272F730600BA5C97 /* YXBaseNavigationVC.swift in Sources */,
 				00C7C678272F730600BA5C97 /* YXBaseTabBar.swift in Sources */,
+				0045A87827339D5400CF24B8 /* YXSwiftyUserDefaultModel.swift in Sources */,
 				00C7C653272F724B00BA5C97 /* YXTableViewVC.swift in Sources */,
 				0021FA6F272FFA7400574525 /* YXCollectionVCWater.swift in Sources */,
 				0021FA6D272FF4CD00574525 /* YXBaseCollectionViewHorizontal.swift in Sources */,
@@ -761,10 +779,12 @@
 				00C7C67B272F730600BA5C97 /* YXBaseNavigationView.swift in Sources */,
 				0021FA64272FDCB400574525 /* YXBaseCollectionView.swift in Sources */,
 				00C7C687272F730600BA5C97 /* YXSizeCategory.swift in Sources */,
+				0045A87627339BF200CF24B8 /* YXUserDefaultVC.swift in Sources */,
 				00C7C67D272F730600BA5C97 /* YXToolPageControl.swift in Sources */,
 				00C7C67C272F730600BA5C97 /* YXBaseTabBarItemView.swift in Sources */,
 				00356649273111CB00FBFE09 /* YXSegmentVC.swift in Sources */,
 				003566332730C92800FBFE09 /* YXBaseWKWebView.swift in Sources */,
+				00C02854273381AE0050953F /* YXBaseUserDefaultsModel.swift in Sources */,
 				00C7C679272F730600BA5C97 /* YXBaseTabBarItemModel.swift in Sources */,
 				00C7C680272F730600BA5C97 /* YXAlertViewControllerFadeAnimation.swift in Sources */,
 				0021FA5C272FAC2C00574525 /* YXBaseTableViewCell.swift in Sources */,

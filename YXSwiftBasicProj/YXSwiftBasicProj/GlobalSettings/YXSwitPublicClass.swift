@@ -11,3 +11,4 @@ import Foundation
 @_exported import RxSwift
 @_exported import SnapKit
 @_exported import HXPHPicker
+@_exported import SwiftyUserDefaults

@@ -53,6 +53,7 @@ class YXPhotoPickerVC: YXBaseVC {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationView.titleLab.text = "相册数据"
         self.navigationView.backBtn.isHidden = false
         self.collectionView.reloadData()
     }
