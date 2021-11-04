@@ -42,6 +42,7 @@ public class YXBaseVC: UIViewController {
         super.viewWillAppear(animated)
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+//        self.rechBilityNotification()
     }
     
     public override func viewDidLoad() {
@@ -53,7 +54,7 @@ public class YXBaseVC: UIViewController {
     
 }
 
-//MARK: - 开放公共方法
+//MARK: - 开放公共方法-跳转相关
 public extension YXBaseVC {
     
     //MARK: - 推送至子控制器
@@ -83,6 +84,41 @@ public extension YXBaseVC {
         pickerController.modalPresentationStyle = .fullScreen
         self.present(pickerController, animated: true, completion: nil)
     }
+}
+
+//MARK: - 公共方法
+extension YXBaseVC {
+    
+    /** 开启网络状况通知 */
+    func rechBilityNotification() {
+        
+        let reachability = try! Reachability()
+        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
+        do {
+            try reachability.startNotifier()
+        }
+        catch {
+            print("could not start reachability notifier")
+        }
+    }
+    
+    /** 网络状况通知 */
+    @objc func reachabilityChanged(note: Notification) {
+        
+        let reachability = note.object as! Reachability
+        
+        switch reachability.connection {
+        case .wifi:
+            print("Reachable via WiFi")
+        case .cellular:
+            print("Reachable via Cellular")
+        case .unavailable:
+            print("Network not reachable")
+        case .none:
+            print("none")
+        }
+    }
+
 }
 
 

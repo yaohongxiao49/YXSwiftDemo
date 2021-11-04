@@ -50,6 +50,13 @@ class YXTableViewVC: YXBaseVC {
         return dataSourceArr
     }()
     
+    //MARK: - 初始化视图
+    func initView() {
+        
+        self.tableView.reloadData()
+        self.judgeRechBility()
+    }
+    
     //MARK: - 视图加载完毕
     override func viewDidLoad() {
         
@@ -185,10 +192,14 @@ private extension YXTableViewVC {
         self.pushToSonVC(vc: vc, animated: true)
     }
     
-    //MARK: - 初始化视图
-    func initView() {
+    //MARK: - 判断网络状态
+    func judgeRechBility() {
         
-        self.tableView.reloadData()
+        //闭包形式
+        YXRechBility.rechBility.yxRealTimeGetRechBility { boolRechable in
+        
+            print("网络状态", boolRechable)
+        }
     }
     
 }

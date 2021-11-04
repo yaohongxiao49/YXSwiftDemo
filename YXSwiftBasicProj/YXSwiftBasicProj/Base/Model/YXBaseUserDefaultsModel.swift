@@ -7,27 +7,6 @@
 
 import Foundation
 
-//MAKR: - 设置需要的枚举
-extension UserDefaults {
-    
-    /** 账户信息 */
-    struct AccountInfo: UserDefaultsSettable {
-        enum defaultKeys: String {
-            case userName
-            case age
-        }
-    }
-    
-    /** 登录信息 */
-    struct LoginInfo: UserDefaultsSettable {
-        enum defaultKeys: String {
-            case token
-            case userId
-        }
-    }
-    
-}
-
 //MARK: - 填充以及获取
 protocol UserDefaultsSettable {
     
@@ -58,5 +37,34 @@ extension UserDefaultsSettable where defaultKeys.RawValue == String {
         
         return UserDefaults.standard.array(forKey: key.rawValue)
     }
+ 
+    //MARK: - 自定义对象遵守Codable协议
+    /** 设置item */
+    static func setItem<T: Encodable>(_ object: T, forKey key: defaultKeys) {
+        
+        let encoder = JSONEncoder()
+        guard let encoded = try? encoder.encode(object) else {
+            return
+        }
+        
+        UserDefaults.standard.set(encoded, forKey: key.rawValue)
+    }
+    
+    /** 获取item */
+    static func getItem<T: Decodable>(_ type: T.Type, forKey key: defaultKeys) -> T? {
+        
+        guard let data = UserDefaults.standard.data(forKey: key.rawValue) else {
+            return nil
+        }
+        
+        let decoder = JSONDecoder()
+        guard let object = try? decoder.decode(type, from: data) else {
+            print("Couldnt find key")
+            return nil
+        }
+        
+        return object
+    }
+    
 }
 

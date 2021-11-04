@@ -30,6 +30,7 @@
 		003FD5422732596400391055 /* YXVideoPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FD5412732596400391055 /* YXVideoPlayerVC.swift */; };
 		0045A87627339BF200CF24B8 /* YXUserDefaultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045A87527339BF100CF24B8 /* YXUserDefaultVC.swift */; };
 		0045A87827339D5400CF24B8 /* YXSwiftyUserDefaultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045A87727339D5400CF24B8 /* YXSwiftyUserDefaultModel.swift */; };
+		0045A87B2733EC9F00CF24B8 /* YXRechBility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045A87A2733EC9F00CF24B8 /* YXRechBility.swift */; };
 		00C02854273381AE0050953F /* YXBaseUserDefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C02853273381AE0050953F /* YXBaseUserDefaultsModel.swift */; };
 		00C7C61D272F70B600BA5C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7C61C272F70B600BA5C97 /* AppDelegate.swift */; };
 		00C7C61F272F70B600BA5C97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7C61E272F70B600BA5C97 /* SceneDelegate.swift */; };
@@ -105,6 +106,7 @@
 		003FD5412732596400391055 /* YXVideoPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXVideoPlayerVC.swift; sourceTree = "<group>"; };
 		0045A87527339BF100CF24B8 /* YXUserDefaultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXUserDefaultVC.swift; sourceTree = "<group>"; };
 		0045A87727339D5400CF24B8 /* YXSwiftyUserDefaultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSwiftyUserDefaultModel.swift; sourceTree = "<group>"; };
+		0045A87A2733EC9F00CF24B8 /* YXRechBility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXRechBility.swift; sourceTree = "<group>"; };
 		00C02853273381AE0050953F /* YXBaseUserDefaultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseUserDefaultsModel.swift; sourceTree = "<group>"; };
 		00C7C619272F70B600BA5C97 /* YXSwiftBasicProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXSwiftBasicProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C7C61C272F70B600BA5C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -286,6 +288,14 @@
 			path = UserDefault;
 			sourceTree = "<group>";
 		};
+		0045A8792733EAF000CF24B8 /* YXReachbility */ = {
+			isa = PBXGroup;
+			children = (
+				0045A87A2733EC9F00CF24B8 /* YXRechBility.swift */,
+			);
+			path = YXReachbility;
+			sourceTree = "<group>";
+		};
 		00C7C610272F70B600BA5C97 = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +432,7 @@
 		00C7C660272F730600BA5C97 /* YXTools */ = {
 			isa = PBXGroup;
 			children = (
+				0045A8792733EAF000CF24B8 /* YXReachbility */,
 				00D95EE3273238E800CD0BAC /* YXToolPhotoAndVideo */,
 				00F8BA9827311B7200612B85 /* YXSegmentMenu */,
 				00C7C661272F730600BA5C97 /* YXToolFuncScroll */,
@@ -787,6 +798,7 @@
 				00C02854273381AE0050953F /* YXBaseUserDefaultsModel.swift in Sources */,
 				00C7C679272F730600BA5C97 /* YXBaseTabBarItemModel.swift in Sources */,
 				00C7C680272F730600BA5C97 /* YXAlertViewControllerFadeAnimation.swift in Sources */,
+				0045A87B2733EC9F00CF24B8 /* YXRechBility.swift in Sources */,
 				0021FA5C272FAC2C00574525 /* YXBaseTableViewCell.swift in Sources */,
 				003566432730F09A00FBFE09 /* YXSegmentView+Cinfiguration.swift in Sources */,
 				0035664527310CCB00FBFE09 /* YXSegmentTitleCell.swift in Sources */,

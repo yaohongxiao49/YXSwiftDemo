@@ -9,7 +9,7 @@ def pods
     pod 'SwiftyJSON' #json解析
     pod 'SwiftyUserDefaults' #NSUserdefaults
     pod 'Alamofire' #网络基础库
-    pod 'Reachability' #网络状况监测
+    pod 'ReachabilitySwift' #网络状况监测
     pod 'Kingfisher' #图片加载
     pod 'HXPHPicker' #相册图片选择
     pod 'SkeletonView' #骨架（待验证使用）
