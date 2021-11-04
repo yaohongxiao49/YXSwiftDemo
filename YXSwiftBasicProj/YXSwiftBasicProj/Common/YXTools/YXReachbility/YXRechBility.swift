@@ -17,10 +17,10 @@ class YXRechBility: NSObject {
         let reachability = try! Reachability()
 
         reachability.whenReachable = { reachability in
-            if reachability.connection == .wifi {
+            if reachability.connection == .wifi { //wifi
                 print("Reachable via WiFi")
             }
-            else {
+            else { //蜂窝网络
                 print("Reachable via Cellular")
             }
             
