@@ -8,6 +8,7 @@ def pods
     pod 'SnapKit' #适配
     pod 'SwiftyJSON' #json解析
     pod 'SwiftyUserDefaults' #NSUserdefaults
+    pod 'SQLite.swift' #数据库
     pod 'Alamofire' #网络基础库
     pod 'ReachabilitySwift' #网络状况监测
     pod 'Kingfisher' #图片加载

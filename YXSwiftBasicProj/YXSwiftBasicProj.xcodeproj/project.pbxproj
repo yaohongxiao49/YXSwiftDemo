@@ -107,6 +107,8 @@
 		0045A87527339BF100CF24B8 /* YXUserDefaultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXUserDefaultVC.swift; sourceTree = "<group>"; };
 		0045A87727339D5400CF24B8 /* YXSwiftyUserDefaultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSwiftyUserDefaultModel.swift; sourceTree = "<group>"; };
 		0045A87A2733EC9F00CF24B8 /* YXRechBility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXRechBility.swift; sourceTree = "<group>"; };
+		0045A87C2733F9A100CF24B8 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		0045A87E2733F9B800CF24B8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		00C02853273381AE0050953F /* YXBaseUserDefaultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseUserDefaultsModel.swift; sourceTree = "<group>"; };
 		00C7C619272F70B600BA5C97 /* YXSwiftBasicProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXSwiftBasicProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C7C61C272F70B600BA5C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -571,6 +573,8 @@
 		8A998BCE3A1009363B821138 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0045A87E2733F9B800CF24B8 /* libsqlite3.tbd */,
+				0045A87C2733F9A100CF24B8 /* libsqlite3.0.tbd */,
 				0DAE1599321B97F068DC75E1 /* libPods-YXSwiftBasicProj.a */,
 			);
 			name = Frameworks;
