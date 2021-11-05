@@ -12,7 +12,10 @@ class YXUserDefaultVC: YXBaseVC {
     //MARK: - 初始化视图
     func initView() {
         
-        
+        self.getAndSetNormal()
+        self.getAndSetItem()
+        self.swiftyUserDefault()
+        self.sqliteDefault()
     }
     
     override func viewDidLoad() {
@@ -22,10 +25,6 @@ class YXUserDefaultVC: YXBaseVC {
         self.navigationView.backBtn.isHidden = false
         
         self.initView()
-        
-        self.getAndSetNormal()
-        self.getAndSetItem()
-        self.swiftyUserDefault()
     }
 
 }
@@ -82,4 +81,36 @@ extension YXUserDefaultVC {
         NSLog("swiftyUserDefaultModelArr == %@", arr!)
     }
     
+    //MARK: - 数据库
+    func sqliteDefault() {
+        
+        let id = Expression<Int64>.init("uId")
+        let name = Expression<String>.init("userName")
+        let isMan = Expression<Bool>.init("isMan")
+        
+        let sqlPath = "/demo.sqlite".cacheDir()
+        let sql = SqLiteManager.init(sqlPath: sqlPath)
+        let table = sql.createTable(tableName: "User") { (builder) in
+            
+            builder.column(id, primaryKey: .autoincrement)
+            builder.column(name)
+            builder.column(isMan)
+        }
+            
+        if sql.insert(table: table, setters: [name <- "小红", isMan <- true]) {
+            print("添加成功")
+        }
+        if sql.delete(table: table, filter: name == "小红") {
+            print("删除成功")
+        }
+        if sql.update(table: table, setters: [name <- "小明"], filter: name == "小红") {
+            print("修改成功")
+        }
+        let rows = sql.select(table: table, selected: [id, name, isMan], filter: id >= 0)
+        for item in rows ?? [] {
+            print("查询成功", item[id], item[name], item[isMan])
+        }
+        let allRows = sql.select(table: table)
+        print("所有数据", allRows!)
+    }
 }

@@ -18,6 +18,7 @@ struct YXTableViewVCStruct {
     var YXTableViewVCStructLoadMusicVC = "加载音乐"
     var YXTableViewVCStructLoadVideoPlayerVC = "加载可自定义视图视频"
     var YXTableViewVCStructUserDefault = "UserDefault"
+    var YXTableViewVCStructPayment = "支付"
 }
 
 class YXTableViewVC: YXBaseVC {
@@ -45,7 +46,7 @@ class YXTableViewVC: YXBaseVC {
     lazy var dataSourceArr: [String] = {
         
         var yxTableViewVCStruct = YXTableViewVCStruct()
-        let dataSourceArr = [yxTableViewVCStruct.YXTableViewVCStructWKWebView, yxTableViewVCStruct.YXTableViewVCStructSegmentVC, yxTableViewVCStruct.YXTableViewVCStructHXPickerVC, yxTableViewVCStruct.YXTableViewVCStructHXPickerListVC, yxTableViewVCStruct.YXTableViewVCStructDiyPickerListVC, yxTableViewVCStruct.YXTableViewVCStructLoadImgVC, yxTableViewVCStruct.YXTableViewVCStructLoadVideoVC, yxTableViewVCStruct.YXTableViewVCStructLoadMusicVC, yxTableViewVCStruct.YXTableViewVCStructLoadVideoPlayerVC, yxTableViewVCStruct.YXTableViewVCStructUserDefault]
+        let dataSourceArr = [yxTableViewVCStruct.YXTableViewVCStructWKWebView, yxTableViewVCStruct.YXTableViewVCStructSegmentVC, yxTableViewVCStruct.YXTableViewVCStructHXPickerVC, yxTableViewVCStruct.YXTableViewVCStructHXPickerListVC, yxTableViewVCStruct.YXTableViewVCStructDiyPickerListVC, yxTableViewVCStruct.YXTableViewVCStructLoadImgVC, yxTableViewVCStruct.YXTableViewVCStructLoadVideoVC, yxTableViewVCStruct.YXTableViewVCStructLoadMusicVC, yxTableViewVCStruct.YXTableViewVCStructLoadVideoPlayerVC, yxTableViewVCStruct.YXTableViewVCStructUserDefault, yxTableViewVCStruct.YXTableViewVCStructPayment]
         
         return dataSourceArr
     }()
@@ -92,6 +93,8 @@ private extension YXTableViewVC {
             self.pushToVideoPlayerVC()
         case 9:
             self.pushToUserDefault()
+        case 10:
+            self.pushToPayment()
         default:
             print("跳转")
         }
@@ -166,7 +169,7 @@ private extension YXTableViewVC {
         
         switch index {
         case 5:
-            YXPhotoPickerTool.shareTool.choosePicture(self, editor: false) { (image) in
+            YXPhotoPickerTool.pickerTool.choosePicture(self, editor: false) { (image) in
 
             }
         case 6:
@@ -200,6 +203,13 @@ private extension YXTableViewVC {
         
             print("网络状态", boolRechable)
         }
+    }
+    
+    //MAKR: - 支付
+    func pushToPayment() {
+        
+        let paymentVC = YXPayment()
+        self.pushToSonVC(vc: paymentVC, animated: true)
     }
     
 }
