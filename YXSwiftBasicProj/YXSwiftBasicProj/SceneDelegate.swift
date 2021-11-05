@@ -19,6 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        guard let _ = (scene as? UIWindowScene) else { return }
         if let windowScene = scene as? UIWindowScene {
             
+            //微信注册
+            YXPaymentManager.paymentTool.registerWX(appId: "", universalLink: "")
+            
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = YXBaseTabBar()
 
@@ -38,6 +41,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 else {
                     YXSwiftGlobalNoti().postNotifiation(name: YXSwiftGlobalNotiStruct().yxPaymentAlipayResultNofi, object: "fail")
                 }
+            }
+        }
+        else {
+            YXPaymentManager.paymentTool.getWXResultByUrl(url: url) { boolSuccess in
+                
             }
         }
         return true

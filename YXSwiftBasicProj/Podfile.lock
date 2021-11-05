@@ -36,6 +36,7 @@ PODS:
   - SQLite.swift/standard (0.13.0)
   - SwiftyJSON (5.0.1)
   - SwiftyUserDefaults (5.3.0)
+  - WechatOpenSDK (1.8.7.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -49,6 +50,7 @@ DEPENDENCIES:
   - SQLite.swift
   - SwiftyJSON
   - SwiftyUserDefaults
+  - WechatOpenSDK
 
 SPEC REPOS:
   trunk:
@@ -63,6 +65,7 @@ SPEC REPOS:
     - SQLite.swift
     - SwiftyJSON
     - SwiftyUserDefaults
+    - WechatOpenSDK
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
@@ -76,7 +79,8 @@ SPEC CHECKSUMS:
   SQLite.swift: 8add701609fd0ef78d097dcc75d20a9782e6f5fc
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
+  WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
 
-PODFILE CHECKSUM: 1f38f25cc97ead271e8998db6c0368e36168f375
+PODFILE CHECKSUM: c2f2a0a960704ed622ec48251185b56dd3085776
 
 COCOAPODS: 1.11.2

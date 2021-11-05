@@ -13,6 +13,7 @@ class YXPayment: YXBaseVC {
     func initView() {
     
         self.getLocation()
+        self.getAlipay()
     }
     
     override func viewDidLoad() {
@@ -32,6 +33,13 @@ extension YXPayment {
     func getLocation() {
         
         YXLocationManager.locationTool.locationManagerWithCity { name in
+            
+        }
+    }
+    
+    func getAlipay() {
+        
+        YXPaymentManager.paymentTool.alipayWithPaymentInfoBase(sign: "", appScheme: "") { boolSuccess in
             
         }
     }

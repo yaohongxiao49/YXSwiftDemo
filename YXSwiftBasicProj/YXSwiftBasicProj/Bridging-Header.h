@@ -9,5 +9,6 @@
 #define Bridging_Header_h
 
 #import <AlipaySDK/AlipaySDK.h>
+#import <WechatOpenSDK/WXApi.h>
 
 #endif /* Bridging_Header_h */

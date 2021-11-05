@@ -36,6 +36,7 @@
 		0079920B2735121500614F9D /* YXLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079920A2735121500614F9D /* YXLocationManager.swift */; };
 		00799210273516FB00614F9D /* YXPaymentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079920F273516FB00614F9D /* YXPaymentManager.swift */; };
 		007992122735222900614F9D /* YXSwiftGlobalNoti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007992112735222900614F9D /* YXSwiftGlobalNoti.swift */; };
+		0079921427352D6300614F9D /* YXPaymentManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079921327352D6300614F9D /* YXPaymentManagerModel.swift */; };
 		00C02854273381AE0050953F /* YXUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C02853273381AE0050953F /* YXUserDefaults.swift */; };
 		00C7C61D272F70B600BA5C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7C61C272F70B600BA5C97 /* AppDelegate.swift */; };
 		00C7C61F272F70B600BA5C97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7C61E272F70B600BA5C97 /* SceneDelegate.swift */; };
@@ -120,6 +121,7 @@
 		0079920C273515BD00614F9D /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		0079920F273516FB00614F9D /* YXPaymentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPaymentManager.swift; sourceTree = "<group>"; };
 		007992112735222900614F9D /* YXSwiftGlobalNoti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSwiftGlobalNoti.swift; sourceTree = "<group>"; };
+		0079921327352D6300614F9D /* YXPaymentManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPaymentManagerModel.swift; sourceTree = "<group>"; };
 		00C02853273381AE0050953F /* YXUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXUserDefaults.swift; sourceTree = "<group>"; };
 		00C7C619272F70B600BA5C97 /* YXSwiftBasicProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXSwiftBasicProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C7C61C272F70B600BA5C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				0079920F273516FB00614F9D /* YXPaymentManager.swift */,
+				0079921327352D6300614F9D /* YXPaymentManagerModel.swift */,
 			);
 			path = YXPaymentManager;
 			sourceTree = "<group>";
@@ -853,6 +856,7 @@
 				0035664727310CE600FBFE09 /* YXSegmentPageView.swift in Sources */,
 				00C7C67B272F730600BA5C97 /* YXBaseNavigationView.swift in Sources */,
 				0021FA64272FDCB400574525 /* YXBaseCollectionView.swift in Sources */,
+				0079921427352D6300614F9D /* YXPaymentManagerModel.swift in Sources */,
 				00C7C687272F730600BA5C97 /* YXSizeCategory.swift in Sources */,
 				0045A87627339BF200CF24B8 /* YXUserDefaultVC.swift in Sources */,
 				00C7C67D272F730600BA5C97 /* YXToolPageControl.swift in Sources */,

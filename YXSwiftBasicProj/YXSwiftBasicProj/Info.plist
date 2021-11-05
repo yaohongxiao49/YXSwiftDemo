@@ -2,18 +2,37 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>weixin</string>
+		<string>weixinULAPI</string>
+		<string>alipay</string>
+		<string>alipayshare</string>
+	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLIconFile</key>
-			<string>YXAlipaymentIconImg</string>
+			<string>YXTargetsAlipayIconImg</string>
 			<key>CFBundleURLName</key>
 			<string>alipay</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>YXAlipayment</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLIconFile</key>
+			<string>YXTargetsWXIconImg</string>
+			<key>CFBundleURLName</key>
+			<string>weixin</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wx5d20f41b31f6fb4e</string>
 			</array>
 		</dict>
 	</array>
