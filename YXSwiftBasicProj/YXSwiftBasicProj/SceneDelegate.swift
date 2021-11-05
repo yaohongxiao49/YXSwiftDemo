@@ -26,6 +26,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.makeKeyAndVisible()
         }
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        if url.host == "safepay" {
+            YXPaymentManager.paymentTool.getAlipayResultByUrl(url: url) { boolSuccess in
+                
+                if boolSuccess {
+                    YXSwiftGlobalNoti().postNotifiation(name: YXSwiftGlobalNotiStruct().yxPaymentAlipayResultNofi, object: "success")
+                }
+                else {
+                    YXSwiftGlobalNoti().postNotifiation(name: YXSwiftGlobalNotiStruct().yxPaymentAlipayResultNofi, object: "fail")
+                }
+            }
+        }
+        return true
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
