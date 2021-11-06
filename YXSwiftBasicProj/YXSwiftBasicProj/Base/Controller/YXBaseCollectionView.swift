@@ -17,7 +17,15 @@ public enum YXBaseCollectionViewEnum: Int {
     case YXBaseCollectionViewEnumBox = 2
 }
 
+typealias YXBaseCollectionViewBlock = (_ boolHeader: Bool, _ boolFooter: Bool) ->(Void)
+
 class YXBaseCollectionView: UICollectionView {
+
+    /** 顶部刷新 */
+    let headerRefresh = MJRefreshNormalHeader()
+    /**底部刷新 */
+    let footerRefresh = MJRefreshAutoNormalFooter()
+    var yxBaseCollectionViewBlock: YXBaseCollectionViewBlock?
     
     var baseLayout: UICollectionViewLayout?
     let moduleArr: [YXBaseCollectionViewEnum] = [.YXBaseCollectionViewEnumWater, .YXBaseCollectionViewEnumLine, .YXBaseCollectionViewEnumBox]
@@ -56,6 +64,50 @@ class YXBaseCollectionView: UICollectionView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+}
+
+//MARK: - 刷新
+extension YXBaseCollectionView {
+    
+    /** 初始化刷新 */
+    func initRefresh(boolHeader: Bool, boolFooter: Bool) {
+        
+        //下拉刷新
+        self.headerRefresh.setRefreshingTarget(self, refreshingAction: #selector(headerRefreshMethod))
+        if boolHeader { self.mj_header = self.headerRefresh }
+        
+        // 上拉刷新
+        self.footerRefresh.setRefreshingTarget(self, refreshingAction: #selector(footerRefreshMethod))
+        if boolFooter { self.mj_footer = self.footerRefresh }
+    }
+    
+    /** 下拉刷新 */
+    @objc func headerRefreshMethod() {
+        
+        guard let block = self.yxBaseCollectionViewBlock else { return }
+        block(true, false)
+    }
+    
+    /** 上拉加载 */
+    @objc func footerRefreshMethod() {
+        
+        guard let block = self.yxBaseCollectionViewBlock else { return }
+        block(false, true)
+    }
+    
+    /** 结束刷新/加载 */
+    func endRefresh(boolHeader: Bool, boolFooter: Bool) {
+        
+        if boolHeader { self.mj_header?.endRefreshing() }
+        if boolFooter { self.mj_footer?.endRefreshing() }
+    }
+    
+    /** 没有更多数据显示 */
+    func noMoreData() {
+        
+        self.mj_footer?.endRefreshingWithNoMoreData()
     }
     
 }

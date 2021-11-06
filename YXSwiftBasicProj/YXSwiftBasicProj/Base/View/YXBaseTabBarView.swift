@@ -55,7 +55,9 @@ class YXBaseTabBarView: UIView {
                     }
                     forItemView.itemModel = forItemView.itemModel!
                 }
-                self.yxBaseTabBarViewTapBlock!(view.tag)
+                
+                guard let block = self.yxBaseTabBarViewTapBlock else { return }
+                block(view.tag)
             }
             self.addSubview(itemView)
             self.itemViewArr.add(itemView)

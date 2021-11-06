@@ -7,7 +7,15 @@
 
 import UIKit
 
+typealias YXBaseTableViewBlock = (_ boolHeader: Bool, _ boolFooter: Bool) ->(Void)
+
 class YXBaseTableView: UITableView {
+    
+    /** 顶部刷新 */
+    let headerRefresh = MJRefreshNormalHeader()
+    /**底部刷新 */
+    let footerRefresh = MJRefreshAutoNormalFooter()
+    var yxBaseTableViewBlock: YXBaseTableViewBlock?
     
     //MARK: - 初始化视图
     func initView() {
@@ -36,6 +44,50 @@ class YXBaseTableView: UITableView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
+    }
+    
+}
+
+//MARK: - 刷新
+extension YXBaseTableView {
+    
+    /** 初始化刷新 */
+    func initRefresh(boolHeader: Bool, boolFooter: Bool) {
+        
+        //下拉刷新
+        self.headerRefresh.setRefreshingTarget(self, refreshingAction: #selector(headerRefreshMethod))
+        if boolHeader { self.mj_header = self.headerRefresh }
+        
+        // 上拉刷新
+        self.footerRefresh.setRefreshingTarget(self, refreshingAction: #selector(footerRefreshMethod))
+        if boolFooter { self.mj_footer = self.footerRefresh }
+    }
+    
+    /** 下拉刷新 */
+    @objc func headerRefreshMethod() {
+        
+        guard let block = self.yxBaseTableViewBlock else { return }
+        block(true, false)
+    }
+    
+    /** 上拉加载 */
+    @objc func footerRefreshMethod() {
+        
+        guard let block = self.yxBaseTableViewBlock else { return }
+        block(false, true)
+    }
+    
+    /** 结束刷新/加载 */
+    func endRefresh(boolHeader: Bool, boolFooter: Bool) {
+        
+        if boolHeader { self.mj_header?.endRefreshing() }
+        if boolFooter { self.mj_footer?.endRefreshing() }
+    }
+    
+    /** 没有更多数据显示 */
+    func noMoreData() {
+        
+        self.mj_footer?.endRefreshingWithNoMoreData()
     }
     
 }

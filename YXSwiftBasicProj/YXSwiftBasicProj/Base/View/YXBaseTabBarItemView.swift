@@ -72,7 +72,8 @@ class YXBaseTabBarItemView: UIView {
     //MARK: - 点击按钮
     @objc func progressBtn(sender: UIButton) {
         
-        self.yxBaseTabBarItemViewTapBlock!(self)
+        guard let block = self.yxBaseTabBarItemViewTapBlock else { return }
+        block(self)
     }
     
     //MARK: - setting

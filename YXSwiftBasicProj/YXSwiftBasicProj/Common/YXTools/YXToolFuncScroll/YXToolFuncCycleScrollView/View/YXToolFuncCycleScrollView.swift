@@ -459,9 +459,8 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
     //MARK: - 滚动视图block
     func scrollViewBlock() {
         
-        if (self.yxToolFuncCycleScrollMoveBlock != nil) {
-            self.yxToolFuncCycleScrollMoveBlock!(self.pageControl.currentPage)
-        }
+        guard let block = self.yxToolFuncCycleScrollMoveBlock else { return }
+        block(self.pageControl.currentPage)
     }
     
     //MARK: - 更新第一条数据
@@ -551,11 +550,11 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
     //MARK: - 单击图片
     @objc func singleTapAction(gesture: UITapGestureRecognizer) {
         
-        if (self.yxToolFuncCycleScrollBlock != nil) {
-            var infoModel: YXToolFuncCycleScrollInfoModel = YXToolFuncCycleScrollInfoModel.init()
-            infoModel = self.imgValueArr![gesture.view!.tag] as! YXToolFuncCycleScrollInfoModel
-            self.yxToolFuncCycleScrollBlock!(infoModel)
-        }
+        guard let block = self.yxToolFuncCycleScrollBlock else { return }
+        
+        var infoModel: YXToolFuncCycleScrollInfoModel = YXToolFuncCycleScrollInfoModel.init()
+        infoModel = self.imgValueArr![gesture.view!.tag] as! YXToolFuncCycleScrollInfoModel
+        block(infoModel)
     }
     
     //MARK: - 点击分页控制器

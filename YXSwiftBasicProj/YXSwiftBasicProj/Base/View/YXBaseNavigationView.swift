@@ -82,9 +82,8 @@ class YXBaseNavigationView: UIView {
     //MARK: - 返回按钮事件
     @objc func progressBackBtn() {
         
-        if (self.yxBaseNavigationViewBackBlock != nil) {
-            self.yxBaseNavigationViewBackBlock!()
-        }
+        guard let block = self.yxBaseNavigationViewBackBlock else { return }
+        block()
     }
     
     //MARK: - 初始化视图

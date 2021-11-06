@@ -62,11 +62,25 @@ class YXTableViewVC: YXBaseVC {
     override func viewDidLoad() {
         
         self.initView()
+        self.initTableViewRefresh()
     }
 
 }
 
-//MARK: - 私有方法
+//MARK: - 刷新
+extension YXTableViewVC {
+    
+    func initTableViewRefresh() {
+        
+        self.tableView.initRefresh(boolHeader: true, boolFooter: true)
+        self.tableView.yxBaseTableViewBlock = { (boolHeader, boolFooter) in
+            
+        }
+    }
+    
+}
+
+//MARK: - 跳转
 private extension YXTableViewVC {
     
     //MARK: - 点击跳转

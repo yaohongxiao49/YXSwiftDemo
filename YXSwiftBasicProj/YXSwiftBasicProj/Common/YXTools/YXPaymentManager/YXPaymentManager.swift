@@ -132,10 +132,12 @@ extension YXPaymentManager: WXApiDelegate {
             switch payResp.errCode {
             case WXSuccess.rawValue:
                 print("支付成功")
-                self.yxPaymentManagerAlipayBlock!(true)
+                guard let block = self.yxPaymentManagerAlipayBlock else { return }
+                block(true)
             default:
                 print("支付失败")
-                self.yxPaymentManagerAlipayBlock!(false)
+                guard let block = self.yxPaymentManagerAlipayBlock else { return }
+                block(false)
             }
         }
     }

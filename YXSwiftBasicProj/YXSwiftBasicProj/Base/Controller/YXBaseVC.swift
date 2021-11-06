@@ -135,7 +135,8 @@ extension YXBaseVC: PhotoPickerControllerDelegate {
      */
     public func pickerController(_ pickerController: PhotoPickerController, didFinishSelection result: PickerResult) {
         
-        self.yxBaseVCPickerFinishedBlock?(pickerController, result)
+        guard let block = self.yxBaseVCPickerFinishedBlock else { return }
+        block(pickerController, result)
     }
     
     //MARK: - 点击取消时调用
