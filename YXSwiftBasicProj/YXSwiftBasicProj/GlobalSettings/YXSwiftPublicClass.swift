@@ -8,8 +8,9 @@
 
 import Foundation
 
-@_exported import RxSwift
 @_exported import SnapKit
+@_exported import Alamofire
+@_exported import RxSwift
 @_exported import HXPHPicker
 @_exported import SwiftyUserDefaults
 @_exported import Reachability

@@ -13,7 +13,7 @@ class YXBaseTableView: UITableView {
     
     /** 顶部刷新 */
     let headerRefresh = MJRefreshNormalHeader()
-    /**底部刷新 */
+    /** 底部刷新 */
     let footerRefresh = MJRefreshAutoNormalFooter()
     var yxBaseTableViewBlock: YXBaseTableViewBlock?
     

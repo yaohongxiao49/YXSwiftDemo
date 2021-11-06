@@ -38,6 +38,7 @@
 		007992122735222900614F9D /* YXSwiftGlobalNoti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007992112735222900614F9D /* YXSwiftGlobalNoti.swift */; };
 		0079921427352D6300614F9D /* YXPaymentManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079921327352D6300614F9D /* YXPaymentManagerModel.swift */; };
 		008721072736339400A6A9B0 /* YXPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008721062736339400A6A9B0 /* YXPermissionManager.swift */; };
+		0087210C27367D0900A6A9B0 /* YXAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087210B27367D0900A6A9B0 /* YXAlamofireManager.swift */; };
 		00C02854273381AE0050953F /* YXUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C02853273381AE0050953F /* YXUserDefaults.swift */; };
 		00C7C61D272F70B600BA5C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7C61C272F70B600BA5C97 /* AppDelegate.swift */; };
 		00C7C61F272F70B600BA5C97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7C61E272F70B600BA5C97 /* SceneDelegate.swift */; };
@@ -124,6 +125,7 @@
 		007992112735222900614F9D /* YXSwiftGlobalNoti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSwiftGlobalNoti.swift; sourceTree = "<group>"; };
 		0079921327352D6300614F9D /* YXPaymentManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPaymentManagerModel.swift; sourceTree = "<group>"; };
 		008721062736339400A6A9B0 /* YXPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPermissionManager.swift; sourceTree = "<group>"; };
+		0087210B27367D0900A6A9B0 /* YXAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXAlamofireManager.swift; sourceTree = "<group>"; };
 		00C02853273381AE0050953F /* YXUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXUserDefaults.swift; sourceTree = "<group>"; };
 		00C7C619272F70B600BA5C97 /* YXSwiftBasicProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXSwiftBasicProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C7C61C272F70B600BA5C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -215,9 +217,9 @@
 		0021FA50272F9C1500574525 /* GlobalSettings */ = {
 			isa = PBXGroup;
 			children = (
-				0021FA4C272F978B00574525 /* YXSwiftPublicClass.swift */,
 				0021FA4E272F979E00574525 /* YXSwiftGlobalSettings.swift */,
 				007992112735222900614F9D /* YXSwiftGlobalNoti.swift */,
+				0021FA4C272F978B00574525 /* YXSwiftPublicClass.swift */,
 			);
 			path = GlobalSettings;
 			sourceTree = "<group>";
@@ -363,6 +365,14 @@
 			path = YXPermissionManager;
 			sourceTree = "<group>";
 		};
+		0087210927367CD600A6A9B0 /* YXAlamofireManager */ = {
+			isa = PBXGroup;
+			children = (
+				0087210B27367D0900A6A9B0 /* YXAlamofireManager.swift */,
+			);
+			path = YXAlamofireManager;
+			sourceTree = "<group>";
+		};
 		00C7C610272F70B600BA5C97 = {
 			isa = PBXGroup;
 			children = (
@@ -500,6 +510,7 @@
 		00C7C660272F730600BA5C97 /* YXTools */ = {
 			isa = PBXGroup;
 			children = (
+				0087210927367CD600A6A9B0 /* YXAlamofireManager */,
 				008721052736335C00A6A9B0 /* YXPermissionManager */,
 				0079920D273516E100614F9D /* YXPaymentManager */,
 				00799209273511F700614F9D /* YXLocationManager */,
@@ -847,6 +858,7 @@
 				00C7C67E272F730600BA5C97 /* YXToolFuncCycleScrollInfoModel.swift in Sources */,
 				0021FA68272FE01400574525 /* YXCollectionViewVCCell.swift in Sources */,
 				0035663F2730EF5E00FBFE09 /* YXSegmentTitleView.swift in Sources */,
+				0087210C27367D0900A6A9B0 /* YXAlamofireManager.swift in Sources */,
 				00D95EE0273229C200CD0BAC /* YXPhotoPickerCell.swift in Sources */,
 				0021FA5A272FAAA600574525 /* YXBaseTableView.swift in Sources */,
 				0021FA6B272FE71000574525 /* YXBaseCollectionViewFlowLayout.swift in Sources */,
