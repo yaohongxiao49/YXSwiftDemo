@@ -10,5 +10,6 @@
 
 #import <AlipaySDK/AlipaySDK.h>
 #import <WechatOpenSDK/WXApi.h>
+#import <MJRefresh/MJRefresh.h>
 
 #endif /* Bridging_Header_h */

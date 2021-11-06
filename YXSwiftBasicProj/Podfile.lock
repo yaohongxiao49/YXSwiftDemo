@@ -27,6 +27,7 @@ PODS:
   - HXPHPicker/Picker/Lite (1.2.4):
     - HXPHPicker/Core
   - Kingfisher (7.1.1)
+  - MJRefresh (3.7.2)
   - ReachabilitySwift (5.0.0)
   - RxSwift (6.2.0)
   - SkeletonView (1.25.2)
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - AlipaySDK-iOS
   - HXPHPicker
   - Kingfisher
+  - MJRefresh
   - ReachabilitySwift
   - RxSwift
   - SkeletonView
@@ -58,6 +60,7 @@ SPEC REPOS:
     - AlipaySDK-iOS
     - HXPHPicker
     - Kingfisher
+    - MJRefresh
     - ReachabilitySwift
     - RxSwift
     - SkeletonView
@@ -72,6 +75,7 @@ SPEC CHECKSUMS:
   AlipaySDK-iOS: 94ff4c0e17c5e7d126b8207596d5033006534c25
   HXPHPicker: 5b5f9a0b330fb7cbe050ac4a6cd15350a42f8cdd
   Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
+  MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SkeletonView: 820b2bbd180d7408f3f03b6462cfc3cac39d2ef2
@@ -81,6 +85,6 @@ SPEC CHECKSUMS:
   SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
   WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
 
-PODFILE CHECKSUM: c2f2a0a960704ed622ec48251185b56dd3085776
+PODFILE CHECKSUM: 005ffaef67a5f835b343fba4cb919b9eb2086285
 
 COCOAPODS: 1.11.2

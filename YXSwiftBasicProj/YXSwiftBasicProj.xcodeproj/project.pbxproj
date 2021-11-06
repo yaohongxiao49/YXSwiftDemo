@@ -37,6 +37,7 @@
 		00799210273516FB00614F9D /* YXPaymentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079920F273516FB00614F9D /* YXPaymentManager.swift */; };
 		007992122735222900614F9D /* YXSwiftGlobalNoti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007992112735222900614F9D /* YXSwiftGlobalNoti.swift */; };
 		0079921427352D6300614F9D /* YXPaymentManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079921327352D6300614F9D /* YXPaymentManagerModel.swift */; };
+		008721072736339400A6A9B0 /* YXPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008721062736339400A6A9B0 /* YXPermissionManager.swift */; };
 		00C02854273381AE0050953F /* YXUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C02853273381AE0050953F /* YXUserDefaults.swift */; };
 		00C7C61D272F70B600BA5C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7C61C272F70B600BA5C97 /* AppDelegate.swift */; };
 		00C7C61F272F70B600BA5C97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7C61E272F70B600BA5C97 /* SceneDelegate.swift */; };
@@ -122,6 +123,7 @@
 		0079920F273516FB00614F9D /* YXPaymentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPaymentManager.swift; sourceTree = "<group>"; };
 		007992112735222900614F9D /* YXSwiftGlobalNoti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSwiftGlobalNoti.swift; sourceTree = "<group>"; };
 		0079921327352D6300614F9D /* YXPaymentManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPaymentManagerModel.swift; sourceTree = "<group>"; };
+		008721062736339400A6A9B0 /* YXPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPermissionManager.swift; sourceTree = "<group>"; };
 		00C02853273381AE0050953F /* YXUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXUserDefaults.swift; sourceTree = "<group>"; };
 		00C7C619272F70B600BA5C97 /* YXSwiftBasicProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXSwiftBasicProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C7C61C272F70B600BA5C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -353,6 +355,14 @@
 			path = YXPaymentManager;
 			sourceTree = "<group>";
 		};
+		008721052736335C00A6A9B0 /* YXPermissionManager */ = {
+			isa = PBXGroup;
+			children = (
+				008721062736339400A6A9B0 /* YXPermissionManager.swift */,
+			);
+			path = YXPermissionManager;
+			sourceTree = "<group>";
+		};
 		00C7C610272F70B600BA5C97 = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +500,7 @@
 		00C7C660272F730600BA5C97 /* YXTools */ = {
 			isa = PBXGroup;
 			children = (
+				008721052736335C00A6A9B0 /* YXPermissionManager */,
 				0079920D273516E100614F9D /* YXPaymentManager */,
 				00799209273511F700614F9D /* YXLocationManager */,
 				007991FE2734CA7800614F9D /* YXUserDefaults */,
@@ -848,6 +859,7 @@
 				00C7C688272F730600BA5C97 /* YXColorCategory.swift in Sources */,
 				00C7C686272F730600BA5C97 /* YXAlertViewControllerScaleFadeAnimation.swift in Sources */,
 				00C7C61D272F70B600BA5C97 /* AppDelegate.swift in Sources */,
+				008721072736339400A6A9B0 /* YXPermissionManager.swift in Sources */,
 				007992122735222900614F9D /* YXSwiftGlobalNoti.swift in Sources */,
 				00C7C684272F730600BA5C97 /* YXAlertViewControllerTransitionAnimation.swift in Sources */,
 				00C7C677272F730600BA5C97 /* YXBaseVC.swift in Sources */,

@@ -23,6 +23,7 @@ class YXPayment: YXBaseVC {
         self.navigationView.backBtn.isHidden = false
         
         self.initView()
+        
     }
 
 }
