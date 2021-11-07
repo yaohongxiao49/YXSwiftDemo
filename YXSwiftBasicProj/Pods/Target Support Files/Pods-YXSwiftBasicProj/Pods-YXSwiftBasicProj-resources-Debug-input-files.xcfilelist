@@ -2,3 +2,4 @@ ${PODS_ROOT}/Target Support Files/Pods-YXSwiftBasicProj/Pods-YXSwiftBasicProj-re
 ${PODS_ROOT}/AlipaySDK-iOS/AlipaySDK.bundle
 ${PODS_ROOT}/HXPHPicker/Sources/HXPHPicker/Resources/HXPHPicker.bundle
 ${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle
+${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle

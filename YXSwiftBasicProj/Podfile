@@ -4,20 +4,23 @@ platform :ios, "13.0"
 inhibit_all_warnings!
 
 def pods
-    pod 'RxSwift' #线程
-    pod 'SnapKit' #适配
-    pod 'Alamofire' #网络基础库
-    pod 'SwiftyJSON' #json解析
-    pod 'Kingfisher' #图片加载
-    pod 'MJRefresh' #刷新
-    pod 'SwiftyUserDefaults' #NSUserdefaults
-    pod 'SQLite.swift' #数据库
-    pod 'ReachabilitySwift' #网络状况监测
-    
-    pod 'HXPHPicker' #相册图片选择
-    pod 'SkeletonView' #骨架（待验证使用）
-    pod 'AlipaySDK-iOS' #支付宝支付
-    pod 'WechatOpenSDK' #微信支付
+  #swift
+  pod 'RxSwift' #线程
+  pod 'SnapKit' #适配
+  pod 'Alamofire' #网络基础库
+  pod 'SwiftyJSON' #json解析
+  pod 'Kingfisher' #图片加载
+  pod 'SwiftyUserDefaults' #NSUserdefaults
+  pod 'SQLite.swift' #数据库
+  pod 'ReachabilitySwift' #网络状况监测
+  pod 'HXPHPicker' #相册图片选择
+  pod 'SkeletonView' #骨架（待验证使用）
+  
+  #oc
+  pod 'MJRefresh' #刷新
+  pod 'AlipaySDK-iOS' #支付宝支付
+  pod 'WechatOpenSDK' #微信支付
+  pod 'SVProgressHUD' #提示框
 end
 
 target 'YXSwiftBasicProj' do

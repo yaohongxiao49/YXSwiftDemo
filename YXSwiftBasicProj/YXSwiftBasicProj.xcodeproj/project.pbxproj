@@ -37,8 +37,12 @@
 		00799210273516FB00614F9D /* YXPaymentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079920F273516FB00614F9D /* YXPaymentManager.swift */; };
 		007992122735222900614F9D /* YXSwiftGlobalNoti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007992112735222900614F9D /* YXSwiftGlobalNoti.swift */; };
 		0079921427352D6300614F9D /* YXPaymentManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079921327352D6300614F9D /* YXPaymentManagerModel.swift */; };
+		007FEC222737737E0005B1A9 /* YXAlamofireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007FEC212737737E0005B1A9 /* YXAlamofireVC.swift */; };
+		007FEC2427379DDE0005B1A9 /* YXNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007FEC2327379DDE0005B1A9 /* YXNetworkError.swift */; };
+		007FEC2627379E0C0005B1A9 /* YXNetworkMulipartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007FEC2527379E0C0005B1A9 /* YXNetworkMulipartData.swift */; };
+		007FEC282737CA380005B1A9 /* YXNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007FEC272737CA380005B1A9 /* YXNetworkManager.swift */; };
 		008721072736339400A6A9B0 /* YXPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008721062736339400A6A9B0 /* YXPermissionManager.swift */; };
-		0087210C27367D0900A6A9B0 /* YXAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087210B27367D0900A6A9B0 /* YXAlamofireManager.swift */; };
+		0087210C27367D0900A6A9B0 /* YXNetworkBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087210B27367D0900A6A9B0 /* YXNetworkBaseManager.swift */; };
 		00C02854273381AE0050953F /* YXUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C02853273381AE0050953F /* YXUserDefaults.swift */; };
 		00C7C61D272F70B600BA5C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7C61C272F70B600BA5C97 /* AppDelegate.swift */; };
 		00C7C61F272F70B600BA5C97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7C61E272F70B600BA5C97 /* SceneDelegate.swift */; };
@@ -124,8 +128,12 @@
 		0079920F273516FB00614F9D /* YXPaymentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPaymentManager.swift; sourceTree = "<group>"; };
 		007992112735222900614F9D /* YXSwiftGlobalNoti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSwiftGlobalNoti.swift; sourceTree = "<group>"; };
 		0079921327352D6300614F9D /* YXPaymentManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPaymentManagerModel.swift; sourceTree = "<group>"; };
+		007FEC212737737E0005B1A9 /* YXAlamofireVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXAlamofireVC.swift; sourceTree = "<group>"; };
+		007FEC2327379DDE0005B1A9 /* YXNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXNetworkError.swift; sourceTree = "<group>"; };
+		007FEC2527379E0C0005B1A9 /* YXNetworkMulipartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXNetworkMulipartData.swift; sourceTree = "<group>"; };
+		007FEC272737CA380005B1A9 /* YXNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXNetworkManager.swift; sourceTree = "<group>"; };
 		008721062736339400A6A9B0 /* YXPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPermissionManager.swift; sourceTree = "<group>"; };
-		0087210B27367D0900A6A9B0 /* YXAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXAlamofireManager.swift; sourceTree = "<group>"; };
+		0087210B27367D0900A6A9B0 /* YXNetworkBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXNetworkBaseManager.swift; sourceTree = "<group>"; };
 		00C02853273381AE0050953F /* YXUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXUserDefaults.swift; sourceTree = "<group>"; };
 		00C7C619272F70B600BA5C97 /* YXSwiftBasicProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXSwiftBasicProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C7C61C272F70B600BA5C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -357,6 +365,14 @@
 			path = YXPaymentManager;
 			sourceTree = "<group>";
 		};
+		007FEC20273773640005B1A9 /* YXAlamofire */ = {
+			isa = PBXGroup;
+			children = (
+				007FEC212737737E0005B1A9 /* YXAlamofireVC.swift */,
+			);
+			path = YXAlamofire;
+			sourceTree = "<group>";
+		};
 		008721052736335C00A6A9B0 /* YXPermissionManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,12 +381,15 @@
 			path = YXPermissionManager;
 			sourceTree = "<group>";
 		};
-		0087210927367CD600A6A9B0 /* YXAlamofireManager */ = {
+		0087210927367CD600A6A9B0 /* YXNetworkManager */ = {
 			isa = PBXGroup;
 			children = (
-				0087210B27367D0900A6A9B0 /* YXAlamofireManager.swift */,
+				007FEC272737CA380005B1A9 /* YXNetworkManager.swift */,
+				0087210B27367D0900A6A9B0 /* YXNetworkBaseManager.swift */,
+				007FEC2327379DDE0005B1A9 /* YXNetworkError.swift */,
+				007FEC2527379E0C0005B1A9 /* YXNetworkMulipartData.swift */,
 			);
-			path = YXAlamofireManager;
+			path = YXNetworkManager;
 			sourceTree = "<group>";
 		};
 		00C7C610272F70B600BA5C97 = {
@@ -432,6 +451,7 @@
 		00C7C650272F712E00BA5C97 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				007FEC20273773640005B1A9 /* YXAlamofire */,
 				00799205273510F600614F9D /* YXPayment */,
 				0045A87427339B6300CF24B8 /* UserDefault */,
 				00F8BA992731246F00612B85 /* YXPhotoPicker */,
@@ -510,7 +530,7 @@
 		00C7C660272F730600BA5C97 /* YXTools */ = {
 			isa = PBXGroup;
 			children = (
-				0087210927367CD600A6A9B0 /* YXAlamofireManager */,
+				0087210927367CD600A6A9B0 /* YXNetworkManager */,
 				008721052736335C00A6A9B0 /* YXPermissionManager */,
 				0079920D273516E100614F9D /* YXPaymentManager */,
 				00799209273511F700614F9D /* YXLocationManager */,
@@ -858,7 +878,7 @@
 				00C7C67E272F730600BA5C97 /* YXToolFuncCycleScrollInfoModel.swift in Sources */,
 				0021FA68272FE01400574525 /* YXCollectionViewVCCell.swift in Sources */,
 				0035663F2730EF5E00FBFE09 /* YXSegmentTitleView.swift in Sources */,
-				0087210C27367D0900A6A9B0 /* YXAlamofireManager.swift in Sources */,
+				0087210C27367D0900A6A9B0 /* YXNetworkBaseManager.swift in Sources */,
 				00D95EE0273229C200CD0BAC /* YXPhotoPickerCell.swift in Sources */,
 				0021FA5A272FAAA600574525 /* YXBaseTableView.swift in Sources */,
 				0021FA6B272FE71000574525 /* YXBaseCollectionViewFlowLayout.swift in Sources */,
@@ -878,15 +898,19 @@
 				0079920B2735121500614F9D /* YXLocationManager.swift in Sources */,
 				00C7C67F272F730600BA5C97 /* YXToolFuncCycleScrollView.swift in Sources */,
 				0035664727310CE600FBFE09 /* YXSegmentPageView.swift in Sources */,
+				007FEC2627379E0C0005B1A9 /* YXNetworkMulipartData.swift in Sources */,
 				00C7C67B272F730600BA5C97 /* YXBaseNavigationView.swift in Sources */,
+				007FEC282737CA380005B1A9 /* YXNetworkManager.swift in Sources */,
 				0021FA64272FDCB400574525 /* YXBaseCollectionView.swift in Sources */,
 				0079921427352D6300614F9D /* YXPaymentManagerModel.swift in Sources */,
 				00C7C687272F730600BA5C97 /* YXSizeCategory.swift in Sources */,
 				0045A87627339BF200CF24B8 /* YXUserDefaultVC.swift in Sources */,
 				00C7C67D272F730600BA5C97 /* YXToolPageControl.swift in Sources */,
 				00C7C67C272F730600BA5C97 /* YXBaseTabBarItemView.swift in Sources */,
+				007FEC2427379DDE0005B1A9 /* YXNetworkError.swift in Sources */,
 				00356649273111CB00FBFE09 /* YXSegmentVC.swift in Sources */,
 				003566332730C92800FBFE09 /* YXBaseWKWebView.swift in Sources */,
+				007FEC222737737E0005B1A9 /* YXAlamofireVC.swift in Sources */,
 				007992082735112400614F9D /* YXPayment.swift in Sources */,
 				00C02854273381AE0050953F /* YXUserDefaults.swift in Sources */,
 				00C7C679272F730600BA5C97 /* YXBaseTabBarItemModel.swift in Sources */,

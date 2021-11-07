@@ -19,6 +19,7 @@ struct YXTableViewVCStruct {
     var YXTableViewVCStructLoadVideoPlayerVC = "加载可自定义视图视频"
     var YXTableViewVCStructUserDefault = "UserDefault"
     var YXTableViewVCStructPayment = "支付"
+    var YXTableViewVCSTructAlamofireVC = "网络请求"
 }
 
 class YXTableViewVC: YXBaseVC {
@@ -46,7 +47,7 @@ class YXTableViewVC: YXBaseVC {
     lazy var dataSourceArr: [String] = {
         
         var yxTableViewVCStruct = YXTableViewVCStruct()
-        let dataSourceArr = [yxTableViewVCStruct.YXTableViewVCStructWKWebView, yxTableViewVCStruct.YXTableViewVCStructSegmentVC, yxTableViewVCStruct.YXTableViewVCStructHXPickerVC, yxTableViewVCStruct.YXTableViewVCStructHXPickerListVC, yxTableViewVCStruct.YXTableViewVCStructDiyPickerListVC, yxTableViewVCStruct.YXTableViewVCStructLoadImgVC, yxTableViewVCStruct.YXTableViewVCStructLoadVideoVC, yxTableViewVCStruct.YXTableViewVCStructLoadMusicVC, yxTableViewVCStruct.YXTableViewVCStructLoadVideoPlayerVC, yxTableViewVCStruct.YXTableViewVCStructUserDefault, yxTableViewVCStruct.YXTableViewVCStructPayment]
+        let dataSourceArr = [yxTableViewVCStruct.YXTableViewVCStructWKWebView, yxTableViewVCStruct.YXTableViewVCStructSegmentVC, yxTableViewVCStruct.YXTableViewVCStructHXPickerVC, yxTableViewVCStruct.YXTableViewVCStructHXPickerListVC, yxTableViewVCStruct.YXTableViewVCStructDiyPickerListVC, yxTableViewVCStruct.YXTableViewVCStructLoadImgVC, yxTableViewVCStruct.YXTableViewVCStructLoadVideoVC, yxTableViewVCStruct.YXTableViewVCStructLoadMusicVC, yxTableViewVCStruct.YXTableViewVCStructLoadVideoPlayerVC, yxTableViewVCStruct.YXTableViewVCStructUserDefault, yxTableViewVCStruct.YXTableViewVCStructPayment, yxTableViewVCStruct.YXTableViewVCSTructAlamofireVC]
         
         return dataSourceArr
     }()
@@ -109,6 +110,8 @@ private extension YXTableViewVC {
             self.pushToUserDefault()
         case 10:
             self.pushToPayment()
+        case 11:
+            self.pushToAlamofireVC()
         default:
             print("跳转")
         }
@@ -224,6 +227,13 @@ private extension YXTableViewVC {
         
         let paymentVC = YXPayment()
         self.pushToSonVC(vc: paymentVC, animated: true)
+    }
+    
+    //MARK: - 网络请求
+    func pushToAlamofireVC() {
+        
+        let alamofireVC = YXAlamofireVC()
+        self.pushToSonVC(vc: alamofireVC, animated: true)
     }
     
 }

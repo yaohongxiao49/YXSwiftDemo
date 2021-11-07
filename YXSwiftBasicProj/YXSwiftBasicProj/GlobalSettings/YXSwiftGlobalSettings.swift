@@ -25,7 +25,7 @@ public var kHostUrl: String = {
     
     switch kServerDebug {
     case .YXServerDebugEnumDevelopment:
-        return "开发"
+        return "https://en-api-qf.qiufa.com/v2_7_2"
     case .YXServerDebugEnumTest:
         return "测试"
     case .YXServerDebugEnumPublic:
