@@ -75,10 +75,10 @@ extension YXUserDefaultVC {
         let swiftyOnesMore = Defaults[\.onesMore]
         NSLog("swiftyUserDefaults == %@, swiftyOnesMore == %@", swiftyUserName!, swiftyOnesMore!)
         
-        let defaultModel = SwiftyUserDefaultModel(name: "1")
-        Defaults[\.swiftyUserDefaultModelArr] = [defaultModel, defaultModel]
-        let arr = Defaults[\.swiftyUserDefaultModelArr]
-        NSLog("swiftyUserDefaultModelArr == %@", arr!)
+//        let defaultModel = SwiftyUserDefaultArrModel(name: "1")
+//        Defaults[\.swiftyUserDefaultModelArr] = [defaultModel, defaultModel]
+//        let arr = Defaults[\.swiftyUserDefaultModelArr]
+//        NSLog("swiftyUserDefaultModelArr == %@", arr!)
     }
     
     //MARK: - 数据库

@@ -8,10 +8,13 @@
 import Foundation
 
 //MARK: - SwiftyUserDefault
-struct SwiftyUserDefaultModel: Codable, DefaultsSerializable {
-    
+struct SwiftyUserDefaultArrModel: Codable, DefaultsSerializable {
+
+    static var _defaults: DefaultsKeyedArchiverBridge<Any> { DefaultsKeyedArchiverBridge() }
+    static var _defaultsArray: DefaultsKeyedArchiverBridge<Any> { DefaultsKeyedArchiverBridge() }
+                                                       
     let name: String
-    
+
 }
 
 extension DefaultsKeys {
@@ -19,7 +22,7 @@ extension DefaultsKeys {
     var username: DefaultsKey<String?> { .init("username") }
     var launchCount: DefaultsKey<Int> { .init("launchCount", defaultValue: 0) }
     var onesMore: DefaultsKey<String?> { .init("onesMore") }
-    var swiftyUserDefaultModelArr: DefaultsKey<[SwiftyUserDefaultModel]?> { .init("swiftyUserDefaultModelArr") }
+    var swiftyUserDefaultModelArr: DefaultsKey<[SwiftyUserDefaultArrModel]?> { .init("swiftyUserDefaultModelArr") }
     
 }
 
