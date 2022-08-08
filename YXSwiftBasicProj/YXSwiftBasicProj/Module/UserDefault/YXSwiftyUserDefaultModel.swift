@@ -8,10 +8,51 @@
 import Foundation
 
 //MARK: - SwiftyUserDefault
-struct SwiftyUserDefaultArrModel: Codable, DefaultsSerializable {
+/** 实现SwiftyUserDefault协议 */
+final class DefaultsFrogBridge: DefaultsBridge {
+    
+    func get(key: String, userDefaults: UserDefaults) -> SwiftyUserDefaultArrModel? {
+        let name = userDefaults.string(forKey: key)
+        return name.map(SwiftyUserDefaultArrModel.init)
+    }
 
-    static var _defaults: DefaultsKeyedArchiverBridge<Any> { DefaultsKeyedArchiverBridge() }
-    static var _defaultsArray: DefaultsKeyedArchiverBridge<Any> { DefaultsKeyedArchiverBridge() }
+    func save(key: String, value: SwiftyUserDefaultArrModel?, userDefaults: UserDefaults) {
+        userDefaults.set(value?.name, forKey: key)
+    }
+
+    func deserialize(_ object: Any) -> SwiftyUserDefaultArrModel? {
+        guard let name = object as? String else { return nil }
+        return SwiftyUserDefaultArrModel(name: name)
+    }
+    
+}
+/** 实现SwiftyUserDefault协议 */
+final class DefaultsFrogArrayBridge: DefaultsBridge {
+    
+    func get(key: String, userDefaults: UserDefaults) -> [SwiftyUserDefaultArrModel]? {
+        return userDefaults.array(forKey: key)?
+            .compactMap { $0 as? String }
+            .map(SwiftyUserDefaultArrModel.init)
+        
+    }
+
+    func save(key: String, value: [SwiftyUserDefaultArrModel]?, userDefaults: UserDefaults) {
+        let values = value?.map { $0.name }
+        userDefaults.set(values, forKey: key)
+    }
+
+    func deserialize(_ object: Any) -> [SwiftyUserDefaultArrModel]? {
+        guard let names = object as? [String] else { return nil }
+        return names.map(SwiftyUserDefaultArrModel.init)
+    }
+    
+}
+
+/** 定义SwiftyUserDefault模型 */
+struct SwiftyUserDefaultArrModel: DefaultsSerializable, Codable {
+
+    static var _defaults: DefaultsFrogBridge { return DefaultsFrogBridge() }
+    static var _defaultsArray: DefaultsFrogArrayBridge { return DefaultsFrogArrayBridge() }
                                                        
     let name: String
 
