@@ -8,6 +8,15 @@
 import Foundation
 
 //MARK: - SwiftyUserDefault
+extension DefaultsKeys {
+    
+    var username: DefaultsKey<String?> { .init("username") }
+    var launchCount: DefaultsKey<Int> { .init("launchCount", defaultValue: 0) }
+    var onesMore: DefaultsKey<String?> { .init("onesMore") }
+    var swiftyUserDefaultModelArr: DefaultsKey<[SwiftyUserDefaultArrModel]?> { .init("swiftyUserDefaultModelArr") }
+    
+}
+
 /** 实现SwiftyUserDefault协议 */
 final class DefaultsFrogBridge: DefaultsBridge {
     
@@ -56,15 +65,6 @@ struct SwiftyUserDefaultArrModel: DefaultsSerializable, Codable {
                                                        
     let name: String
 
-}
-
-extension DefaultsKeys {
-    
-    var username: DefaultsKey<String?> { .init("username") }
-    var launchCount: DefaultsKey<Int> { .init("launchCount", defaultValue: 0) }
-    var onesMore: DefaultsKey<String?> { .init("onesMore") }
-    var swiftyUserDefaultModelArr: DefaultsKey<[SwiftyUserDefaultArrModel]?> { .init("swiftyUserDefaultModelArr") }
-    
 }
 
 //MARK : - 自定义模型
