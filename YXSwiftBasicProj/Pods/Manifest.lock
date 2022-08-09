@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.4.4)
   - AlipaySDK-iOS (15.7.9)
+  - GKPageScrollViewSwift (1.4.2)
   - HXPHPicker (1.2.4):
     - HXPHPicker/Full (= 1.2.4)
   - HXPHPicker/Camera (1.2.4):
@@ -43,6 +44,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlipaySDK-iOS
+  - GKPageScrollViewSwift
   - HXPHPicker
   - Kingfisher
   - MJRefresh
@@ -60,6 +62,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlipaySDK-iOS
+    - GKPageScrollViewSwift
     - HXPHPicker
     - Kingfisher
     - MJRefresh
@@ -76,6 +79,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   AlipaySDK-iOS: 94ff4c0e17c5e7d126b8207596d5033006534c25
+  GKPageScrollViewSwift: 677939400ca324b34eeec6853ebebba0a4318c4b
   HXPHPicker: 5b5f9a0b330fb7cbe050ac4a6cd15350a42f8cdd
   Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
@@ -89,6 +93,6 @@ SPEC CHECKSUMS:
   SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
   WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
 
-PODFILE CHECKSUM: 6d39bd3258cbf69f56b0c9f26bbcc952f1623359
+PODFILE CHECKSUM: 364543b311437e3788f9b1059c34707ea9c767ef
 
 COCOAPODS: 1.11.2
