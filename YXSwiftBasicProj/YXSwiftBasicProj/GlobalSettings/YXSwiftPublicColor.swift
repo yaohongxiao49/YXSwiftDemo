@@ -8,14 +8,24 @@
 import Foundation
 import UIKit
 
-struct YXPublicColorStruct {
-    
-    let yxWhiteColor = UIColor.white
-    let yxClearColor = UIColor.clear
-    
-}
+let kYXWhiteColor = UIColor.white
+let kYXClearColor = UIColor.clear
 
-func kYXDiyColor(hex: NSString, alpha: CGFloat) -> UIColor {
+//MARK: - 自定义色值
+public func kYXDiyColor(hex: NSString, alpha: CGFloat) -> UIColor {
     
     return UIColor.yxColorWithHexString(hex: hex, alpha: alpha)
+}
+
+//MARK: - 自定义字体大小
+/** 系统字体 */
+public func kYXSystemFont(size: CGFloat) -> UIFont {
+    
+    return UIFont.systemFont(ofSize: size)
+}
+
+/** 加粗字体 */
+public func kYXBoldSystemFont(size: CGFloat) -> UIFont {
+    
+    return UIFont.boldSystemFont(ofSize: size)
 }

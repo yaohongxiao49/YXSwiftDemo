@@ -15,7 +15,8 @@ def pods
   pod 'ReachabilitySwift' #网络状况监测
   pod 'HXPHPicker' #相册图片选择
   pod 'SkeletonView' #骨架（待验证使用）
-  pod 'GKPageScrollViewSwift' #分类切换
+  pod 'GKPageScrollViewSwift' #联合滑动
+  pod 'JXSegmentedView' #分类切换
   
   #oc
   pod 'MJRefresh' #刷新
