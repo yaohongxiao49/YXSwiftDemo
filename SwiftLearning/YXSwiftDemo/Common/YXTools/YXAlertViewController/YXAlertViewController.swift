@@ -27,6 +27,7 @@ typealias DismissComplete = () ->(Void)
 
 class YXAlertViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
+    //内部可变，外部只读
     private(set) var alertView: UIView?
     
     var _backgroundView: UIView?
