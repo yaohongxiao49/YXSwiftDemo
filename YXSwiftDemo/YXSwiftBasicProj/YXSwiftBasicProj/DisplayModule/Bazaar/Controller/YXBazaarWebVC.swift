@@ -1,13 +1,13 @@
 //
-//  YXWarehouseVC.swift
+//  YXBazaarWebVC.swift
 //  YXSwiftBasicProj
 //
-//  Created by Augus on 2022/10/8.
+//  Created by Augus on 2023/2/6.
 //
 
 import UIKit
 
-class YXWarehouseVC: YXBaseVC {
+class YXBazaarWebVC: YXBaseWKWebView {
 
     override func viewDidLoad() {
         super.viewDidLoad()

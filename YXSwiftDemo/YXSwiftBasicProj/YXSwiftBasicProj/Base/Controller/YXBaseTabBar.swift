@@ -43,17 +43,17 @@ class YXBaseTabBar: UITabBarController {
     lazy var itemModelArr: NSMutableArray = {
        
         let homeVC = YXHomePageBaseVC.init()
-        let recommendVC = YXRecommendVC.init()
-        let mallVC = YXMallVC.init()
-        let warehouseVC = YXWarehouseVC.init()
+        let bazaarVC = YXBazaarWebVC.init()
+        let hatchingVC = YXHatchingBaseVC.init()
+        let warehouseBaseVC = YXWarehouseBaseVC.init()
         let userCenterVC = YXUserCenterVC.init()
         
         let itemModelArr = NSMutableArray.init()
-        let itemArr = [["vc": homeVC, "title": "开箱", "norIcon": "YXHomeTabNorImg", "selIcon": "YXHomeTabSelImg"],
-                       ["vc": recommendVC, "title": "推荐", "norIcon": "YXRecommendTabNorImg", "selIcon": "YXRecommendTabSelImg"],
-                       ["vc": mallVC, "title": "商城", "norIcon": "YXMallTabNorImg", "selIcon": "YXMallTabSelImg"],
-                       ["vc": warehouseVC, "title": "仓库", "norIcon": "YXWarehouseTabNorImg", "selIcon": "YXWarehouseTabSelImg"],
-                       ["vc": userCenterVC, "title": "我的", "norIcon": "YXUserCenterTabNorImg", "selIcon": "YXUserCenterTabSelImg"]]
+        let itemArr = [["vc": homeVC, "title": "首页", "norIcon": "YXHomeTabIconNorImg", "selIcon": "YXHomeTabIconSelImg"],
+                       ["vc": bazaarVC, "title": "集市", "norIcon": "YXBazzarTabIconNorImg", "selIcon": "YXBazzarTabIconSelImg"],
+                       ["vc": hatchingVC, "title": "孵化", "norIcon": "YXHatchingTabIconNorImg", "selIcon": "YXHatchingTabIconSelImg"],
+                       ["vc": warehouseBaseVC, "title": "仓库", "norIcon": "YXWarehouseTabIconNorImg", "selIcon": "YXWarehouseTabIconSelImg"],
+                       ["vc": userCenterVC, "title": "我的", "norIcon": "YXUserTabIconNorImg", "selIcon": "YXUserTabIconSelImg"]]
         
         //项目数据
         for i in 0 ..< itemArr.count {
@@ -62,8 +62,8 @@ class YXBaseTabBar: UITabBarController {
             model.itemTitle = (itemArr[i]["title"] as! NSString)
             model.norIcon = (itemArr[i]["norIcon"] as! NSString)
             model.selIcon = (itemArr[i]["selIcon"] as! NSString)
-            model.norTitleColor = UIColor.yxColorWithHexString(hex: "#AAAAAA")
-            model.selTitleColor = UIColor.yxColorWithHexString(hex: "#222222")
+            model.norTitleColor = kYXMainTextColor
+            model.selTitleColor = kYXMainThemeColor
             model.type = i == 0 ? .YXBaseTabBarItemStateTypeSel : .YXBaseTabBarItemStateTypeNor
             itemModelArr.add(model)
         }

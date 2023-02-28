@@ -69,9 +69,9 @@
 		B1A78AF728A24566004E628E /* YXSwiftPublicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A78AF628A24566004E628E /* YXSwiftPublicColor.swift */; };
 		B1A78AFB28A258A9004E628E /* YXHomePageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A78AFA28A258A9004E628E /* YXHomePageListCell.swift */; };
 		B1A78B0028A26246004E628E /* YXCategoryUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A78AFF28A26246004E628E /* YXCategoryUIView.swift */; };
-		B1D6E5E328F11756003DA3A9 /* YXRecommendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D6E5E228F11756003DA3A9 /* YXRecommendVC.swift */; };
-		B1D6E5E528F11761003DA3A9 /* YXMallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D6E5E428F11761003DA3A9 /* YXMallVC.swift */; };
-		B1D6E5E728F1176D003DA3A9 /* YXWarehouseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D6E5E628F1176D003DA3A9 /* YXWarehouseVC.swift */; };
+		B1CE214729AD9BFD0049B0CB /* YXBazaarWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE214029AD9BFD0049B0CB /* YXBazaarWebVC.swift */; };
+		B1CE214829AD9BFD0049B0CB /* YXHatchingBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE214329AD9BFD0049B0CB /* YXHatchingBaseVC.swift */; };
+		B1CE214929AD9BFD0049B0CB /* YXWarehouseBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE214629AD9BFD0049B0CB /* YXWarehouseBaseVC.swift */; };
 		B1D6E5F028F11B81003DA3A9 /* YXUserCenterBaseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D6E5EF28F11B81003DA3A9 /* YXUserCenterBaseHeaderView.swift */; };
 		B1EEB74A28F26EBA00076833 /* YXUserCenterOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EEB74928F26EBA00076833 /* YXUserCenterOrderCell.swift */; };
 		B1EEB74C28F26EDD00076833 /* YXUserCenterAdvertingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EEB74B28F26EDD00076833 /* YXUserCenterAdvertingCell.swift */; };
@@ -166,9 +166,9 @@
 		B1A78AF628A24566004E628E /* YXSwiftPublicColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSwiftPublicColor.swift; sourceTree = "<group>"; };
 		B1A78AFA28A258A9004E628E /* YXHomePageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXHomePageListCell.swift; sourceTree = "<group>"; };
 		B1A78AFF28A26246004E628E /* YXCategoryUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXCategoryUIView.swift; sourceTree = "<group>"; };
-		B1D6E5E228F11756003DA3A9 /* YXRecommendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXRecommendVC.swift; sourceTree = "<group>"; };
-		B1D6E5E428F11761003DA3A9 /* YXMallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXMallVC.swift; sourceTree = "<group>"; };
-		B1D6E5E628F1176D003DA3A9 /* YXWarehouseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXWarehouseVC.swift; sourceTree = "<group>"; };
+		B1CE214029AD9BFD0049B0CB /* YXBazaarWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXBazaarWebVC.swift; sourceTree = "<group>"; };
+		B1CE214329AD9BFD0049B0CB /* YXHatchingBaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXHatchingBaseVC.swift; sourceTree = "<group>"; };
+		B1CE214629AD9BFD0049B0CB /* YXWarehouseBaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXWarehouseBaseVC.swift; sourceTree = "<group>"; };
 		B1D6E5EF28F11B81003DA3A9 /* YXUserCenterBaseHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXUserCenterBaseHeaderView.swift; sourceTree = "<group>"; };
 		B1EEB74928F26EBA00076833 /* YXUserCenterOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXUserCenterOrderCell.swift; sourceTree = "<group>"; };
 		B1EEB74B28F26EDD00076833 /* YXUserCenterAdvertingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXUserCenterAdvertingCell.swift; sourceTree = "<group>"; };
@@ -316,11 +316,7 @@
 		00C7C61B272F70B600BA5C97 /* YXSwiftBasicProj */ = {
 			isa = PBXGroup;
 			children = (
-				B185594F28B710E000B66349 /* UserCenter */,
-				B1D6E5E128F116DB003DA3A9 /* Warehouse */,
-				B1D6E5E028F116D6003DA3A9 /* Mall */,
-				B1D6E5DF28F116C8003DA3A9 /* Recommend */,
-				B1A78AEE28A23BB8004E628E /* HomePage */,
+				B1CE214A29AD9CF30049B0CB /* DisplayModule */,
 				00C7C650272F712E00BA5C97 /* Module */,
 				00C7C65F272F730600BA5C97 /* Common */,
 				00C7C654272F730600BA5C97 /* Base */,
@@ -578,52 +574,64 @@
 			path = YXCategoryUIView;
 			sourceTree = "<group>";
 		};
-		B1D6E5DF28F116C8003DA3A9 /* Recommend */ = {
+		B1CE213E29AD9BFD0049B0CB /* Bazaar */ = {
 			isa = PBXGroup;
 			children = (
-				B1D6E5E828F11774003DA3A9 /* Controller */,
+				B1CE213F29AD9BFD0049B0CB /* Controller */,
 			);
-			path = Recommend;
+			path = Bazaar;
 			sourceTree = "<group>";
 		};
-		B1D6E5E028F116D6003DA3A9 /* Mall */ = {
+		B1CE213F29AD9BFD0049B0CB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B1D6E5E928F1177E003DA3A9 /* Controller */,
+				B1CE214029AD9BFD0049B0CB /* YXBazaarWebVC.swift */,
 			);
-			path = Mall;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		B1D6E5E128F116DB003DA3A9 /* Warehouse */ = {
+		B1CE214129AD9BFD0049B0CB /* Hatching */ = {
 			isa = PBXGroup;
 			children = (
-				B1D6E5EA28F11785003DA3A9 /* Controller */,
+				B1CE214229AD9BFD0049B0CB /* Controller */,
+			);
+			path = Hatching;
+			sourceTree = "<group>";
+		};
+		B1CE214229AD9BFD0049B0CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B1CE214329AD9BFD0049B0CB /* YXHatchingBaseVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B1CE214429AD9BFD0049B0CB /* Warehouse */ = {
+			isa = PBXGroup;
+			children = (
+				B1CE214529AD9BFD0049B0CB /* Controller */,
 			);
 			path = Warehouse;
 			sourceTree = "<group>";
 		};
-		B1D6E5E828F11774003DA3A9 /* Controller */ = {
+		B1CE214529AD9BFD0049B0CB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B1D6E5E228F11756003DA3A9 /* YXRecommendVC.swift */,
+				B1CE214629AD9BFD0049B0CB /* YXWarehouseBaseVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		B1D6E5E928F1177E003DA3A9 /* Controller */ = {
+		B1CE214A29AD9CF30049B0CB /* DisplayModule */ = {
 			isa = PBXGroup;
 			children = (
-				B1D6E5E428F11761003DA3A9 /* YXMallVC.swift */,
+				B185594F28B710E000B66349 /* UserCenter */,
+				B1CE214429AD9BFD0049B0CB /* Warehouse */,
+				B1CE214129AD9BFD0049B0CB /* Hatching */,
+				B1CE213E29AD9BFD0049B0CB /* Bazaar */,
+				B1A78AEE28A23BB8004E628E /* HomePage */,
 			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		B1D6E5EA28F11785003DA3A9 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B1D6E5E628F1176D003DA3A9 /* YXWarehouseVC.swift */,
-			);
-			path = Controller;
+			path = DisplayModule;
 			sourceTree = "<group>";
 		};
 		B1D6E5EB28F1178E003DA3A9 /* Controller */ = {
@@ -852,16 +860,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1D6E5E728F1176D003DA3A9 /* YXWarehouseVC.swift in Sources */,
 				0035663D2730EEA200FBFE09 /* YXSegmentCollectionView.swift in Sources */,
 				B18AA67128A0A0F90001ECB3 /* YXNetworkUseManager.swift in Sources */,
 				007992042734DFC000614F9D /* YXCategoryString.swift in Sources */,
+				B1CE214929AD9BFD0049B0CB /* YXWarehouseBaseVC.swift in Sources */,
 				00C7C685272F730600BA5C97 /* YXAlertViewControllerDropDownAnimation.swift in Sources */,
 				00C7C676272F730600BA5C97 /* YXBaseNavigationVC.swift in Sources */,
 				00C7C678272F730600BA5C97 /* YXBaseTabBar.swift in Sources */,
 				0045A87827339D5400CF24B8 /* YXSwiftyUserDefaultModel.swift in Sources */,
 				B1EEB74E28F26EEE00076833 /* YXUserCenterModuleCell.swift in Sources */,
-				B1D6E5E528F11761003DA3A9 /* YXMallVC.swift in Sources */,
 				0021FA6D272FF4CD00574525 /* YXBaseCollectionViewHorizontal.swift in Sources */,
 				00C7C67E272F730600BA5C97 /* YXToolFuncCycleScrollInfoModel.swift in Sources */,
 				0035663F2730EF5E00FBFE09 /* YXSegmentTitleView.swift in Sources */,
@@ -881,11 +888,12 @@
 				00C7C677272F730600BA5C97 /* YXBaseVC.swift in Sources */,
 				B1D6E5F028F11B81003DA3A9 /* YXUserCenterBaseHeaderView.swift in Sources */,
 				0079920B2735121500614F9D /* YXLocationManager.swift in Sources */,
+				B1CE214729AD9BFD0049B0CB /* YXBazaarWebVC.swift in Sources */,
 				00C7C67F272F730600BA5C97 /* YXToolFuncCycleScrollView.swift in Sources */,
 				0035664727310CE600FBFE09 /* YXSegmentPageView.swift in Sources */,
-				B1D6E5E328F11756003DA3A9 /* YXRecommendVC.swift in Sources */,
 				007FEC2627379E0C0005B1A9 /* YXNetworkMulipartData.swift in Sources */,
 				00C7C67B272F730600BA5C97 /* YXBaseNavigationView.swift in Sources */,
+				B1CE214829AD9BFD0049B0CB /* YXHatchingBaseVC.swift in Sources */,
 				B1EEB74A28F26EBA00076833 /* YXUserCenterOrderCell.swift in Sources */,
 				007FEC282737CA380005B1A9 /* YXNetworkManager.swift in Sources */,
 				0021FA64272FDCB400574525 /* YXBaseCollectionView.swift in Sources */,
