@@ -1098,26 +1098,29 @@
 				GCC_PREFIX_HEADER = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YXSwiftBasicProj/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "潮狗-Swift";
+				INFOPLIST_KEY_CFBundleDisplayName = "nft-Swift";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "访问蓝牙权限以用于设备数据读取和发送";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "访问蓝牙权限以用于设备数据读取和发送";
 				INFOPLIST_KEY_NSCameraUsageDescription = "用于拍摄照片来设置头像、发布图片内容、聊天发送图片消息";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "用于根据你的位置精确的为你推荐附近的美容信息、医疗机构、促销商品";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "用于在后台运行期间根据你的位置精确的为你实时推荐附近的美容信息、医疗机构、促销商品";
-				INFOPLIST_KEY_NSLocationUsageDescription = "用于根据你的位置精确的为你推荐附近的美容信息、医疗机构、促销商品";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "用于在使用期间根据你的位置精确的为你推荐附近的美容信息、医疗机构、促销商品";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "用于根据你的位置精确的为你推荐附近的促销商品";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "用于在后台运行期间根据你的位置精确的为你实时推荐附近的促销商品";
+				INFOPLIST_KEY_NSLocationUsageDescription = "用于根据你的位置精确的为你推荐附近的促销商品";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "用于在使用期间根据你的位置精确的为你推荐附近的促销商品";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "用于录制语音来发布语音内容、聊天发送语音消息";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "用于将拍摄和编辑的图片或视频保存到相册";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "用于从相册读取照片来设置头像、发布图片内容、聊天发送图片消息";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yhx.YXSwiftBasicProjChao;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yhx.-DragonIsLand";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/YXSwiftBasicProj/Bridging-Header.h";
@@ -1138,26 +1141,29 @@
 				GCC_PREFIX_HEADER = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YXSwiftBasicProj/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "潮狗-Swift";
+				INFOPLIST_KEY_CFBundleDisplayName = "nft-Swift";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "访问蓝牙权限以用于设备数据读取和发送";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "访问蓝牙权限以用于设备数据读取和发送";
 				INFOPLIST_KEY_NSCameraUsageDescription = "用于拍摄照片来设置头像、发布图片内容、聊天发送图片消息";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "用于根据你的位置精确的为你推荐附近的美容信息、医疗机构、促销商品";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "用于在后台运行期间根据你的位置精确的为你实时推荐附近的美容信息、医疗机构、促销商品";
-				INFOPLIST_KEY_NSLocationUsageDescription = "用于根据你的位置精确的为你推荐附近的美容信息、医疗机构、促销商品";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "用于在使用期间根据你的位置精确的为你推荐附近的美容信息、医疗机构、促销商品";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "用于根据你的位置精确的为你推荐附近的促销商品";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "用于在后台运行期间根据你的位置精确的为你实时推荐附近的促销商品";
+				INFOPLIST_KEY_NSLocationUsageDescription = "用于根据你的位置精确的为你推荐附近的促销商品";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "用于在使用期间根据你的位置精确的为你推荐附近的促销商品";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "用于录制语音来发布语音内容、聊天发送语音消息";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "用于将拍摄和编辑的图片或视频保存到相册";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "用于从相册读取照片来设置头像、发布图片内容、聊天发送图片消息";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yhx.YXSwiftBasicProjChao;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yhx.-DragonIsLand";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/YXSwiftBasicProj/Bridging-Header.h";

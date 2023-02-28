@@ -59,6 +59,6 @@ public extension String {
         return path
     }
     
-    //MAKR: - 系统信息
+    //MARK: - 系统信息
     
 }

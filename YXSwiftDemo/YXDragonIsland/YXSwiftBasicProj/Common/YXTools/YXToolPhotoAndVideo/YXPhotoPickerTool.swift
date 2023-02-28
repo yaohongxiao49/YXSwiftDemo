@@ -8,6 +8,7 @@
 import UIKit
 import AVKit
 import AVFoundation
+import Photos
 
 struct PhotoSource: OptionSet {
     let rawValue:Int
@@ -194,4 +195,45 @@ extension YXPhotoPickerTool: UIImagePickerControllerDelegate, UINavigationContro
         picker.dismiss(animated: true, completion: nil)
     }
     
+}
+
+//MARK: - 存储音视频/图片
+public enum YXToolLocalSaveMediaType: Int {
+    /** 图片 */
+    case yxToolLocalSaveMediaTypeImg = 0
+    /** 视频 */
+    case yxToolLocalSaveMediaTypeVideo = 1
+    /** 音频 */
+    case yxToolLocalSaveMediaTypeAudio = 2
+}
+extension YXPhotoPickerTool {
+    
+    public func yxSaveMediaByPath(path: String, mediaType: YXToolLocalSaveMediaType, successBlock: @escaping ((_ isSuccess: Bool) -> Void), failBlock: @escaping ((_ isFail: Any) -> Void)) {
+        
+        let url = NSURL.init(string: path)
+        var resourceType: PHAssetResourceType = .photo
+        switch (mediaType) {
+        case .yxToolLocalSaveMediaTypeImg:
+            resourceType = .photo
+        case .yxToolLocalSaveMediaTypeVideo:
+            resourceType = .video
+        case .yxToolLocalSaveMediaTypeAudio:
+            resourceType = .audio
+        }
+        
+        PHPhotoLibrary.shared().performChanges {
+            
+            let options = PHAssetResourceCreationOptions.init()
+            PHAssetCreationRequest.forAsset().addResource(with: resourceType, fileURL: url! as URL, options: options)
+        } completionHandler: { success, error in
+            
+            if (success) {
+                successBlock(success)
+            }
+            else {
+                failBlock(error?.localizedDescription as Any)
+            }
+        }
+
+    }
 }

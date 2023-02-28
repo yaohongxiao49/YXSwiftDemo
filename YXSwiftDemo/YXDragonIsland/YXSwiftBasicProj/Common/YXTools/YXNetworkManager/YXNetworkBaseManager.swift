@@ -43,7 +43,7 @@ public class YXNetworkBaseManager {
     /** 网络状态 */
     var networkStatus: YXReachabilityStatus = .unknown
 
-    //MAKR: - 设置会话信息
+    //MARK: - 设置会话信息
     private init() {
         
         let config = URLSessionConfiguration.af.default
@@ -130,7 +130,7 @@ public class YXNetworkBaseManager {
     
 }
 
-//MAKR: - 请求分类
+//MARK: - 请求分类
 extension YXNetworkBaseManager {
 
     //MARK: - Post Json类请求
@@ -188,7 +188,7 @@ extension YXNetworkBaseManager {
         })
     }
 
-    //MAKR: - 停止网络监听
+    //MARK: - 停止网络监听
     public func stopMonitoring() {
         
         guard self.reachability != nil else { return }
@@ -253,7 +253,7 @@ public class YXNetworkRequest: Equatable {
         return self
     }
 
-    //MAKR: - 失败
+    //MARK: - 失败
     @discardableResult public func failed(_ closure: @escaping YXFailedClosure) -> Self {
         
         self.failedHandler = closure

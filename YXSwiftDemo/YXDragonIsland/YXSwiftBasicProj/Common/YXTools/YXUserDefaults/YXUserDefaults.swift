@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 //MARK: - UserDefault
 /** 填充以及获取 */
 protocol UserDefaultsSettable {
@@ -68,7 +69,7 @@ extension UserDefaultsSettable where defaultKeys.RawValue == String {
     
 }
 
-//MAKR: - Sqlite
+//MARK: - Sqlite
 struct TableColumn {
     var cid: Int64?
     var name: String?
