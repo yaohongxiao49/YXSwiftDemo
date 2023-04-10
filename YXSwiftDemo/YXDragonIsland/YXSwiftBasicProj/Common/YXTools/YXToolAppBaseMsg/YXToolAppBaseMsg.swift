@@ -21,8 +21,19 @@ class YXToolAppBaseMsg: NSObject {
     /** 版本号（用以区分是否发生更新） */
     var version: String! = (UserDefaults().object(forKey: "YXToolAppBaseMsgVersion") as! String)
     /** 延时结束 */
-    var boolDelayStartDone: Bool!;
-
+    var boolDelayStartDone: Bool!
+    /** 首次启动是否未进入首页 */
+    var _boolNotInHomeFirstUse: Bool?
+    var boolNotInHomeFirstUse: Bool? {
+        
+        get {
+            return _boolNotInHomeFirstUse
+        }
+        set {
+            _boolNotInHomeFirstUse = newValue
+        }
+    }
+    
     /** 单例 */
     static let defaults = YXToolAppBaseMsg()
     

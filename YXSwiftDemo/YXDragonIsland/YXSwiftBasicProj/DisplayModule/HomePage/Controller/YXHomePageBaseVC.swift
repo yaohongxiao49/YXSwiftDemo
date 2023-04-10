@@ -12,7 +12,6 @@ class YXHomePageBaseVC: YXBaseVC {
     let segmentHeight: CGFloat! = 40.0
     
     lazy var headerView: UIImageView! = {
-        
         let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.yxScreenWidth, height: 100))
         imgView.contentMode = .scaleAspectFill
         imgView.clipsToBounds = true
@@ -24,7 +23,6 @@ class YXHomePageBaseVC: YXBaseVC {
     }()
     
     lazy var pageView: UIView! = {
-        
         let pageView = UIView()
         pageView.addSubview(self.segmentedView)
         pageView.addSubview(self.contentScrollView)
@@ -34,7 +32,6 @@ class YXHomePageBaseVC: YXBaseVC {
     }()
     
     lazy var childVCs: [YXHomePageListVC] = {
-        
         var childVCs = [YXHomePageListVC]()
         
         for var title in self.titleDataSource.titles {
@@ -48,7 +45,6 @@ class YXHomePageBaseVC: YXBaseVC {
     var titleDataSource = JXSegmentedTitleDataSource()
     
     public lazy var pageScrollView: GKPageScrollView! = {
-        
         var pageScrollView = GKPageScrollView(delegate: self)
         pageScrollView.ceilPointHeight = self.headerView.height;
         pageScrollView.isAllowListRefresh = true
@@ -124,6 +120,10 @@ class YXHomePageBaseVC: YXBaseVC {
         
         self.segmentedView.reloadData()
         self.pageScrollView.reloadData()
+        
+        if (YXToolAppBaseMsg.defaults.boolNotInHomeFirstUse) {
+            
+        }
     }
 }
 
@@ -147,6 +147,7 @@ extension YXHomePageBaseVC: GKPageScrollViewDelegate {
     }
 }
 
+//MARK: - UIScrollViewDelegate
 extension YXHomePageBaseVC: UIScrollViewDelegate {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.pageScrollView.horizonScrollViewWillBeginScroll()
