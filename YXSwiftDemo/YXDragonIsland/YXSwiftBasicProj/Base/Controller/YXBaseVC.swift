@@ -42,7 +42,7 @@ public class YXBaseVC: UIViewController {
         super.viewWillAppear(animated)
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-//        self.rechBilityNotification()
+        self.rechBilityNotification()
     }
     
     public override func viewDidLoad() {

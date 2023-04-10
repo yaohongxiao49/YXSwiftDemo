@@ -62,6 +62,7 @@
 		00C7C688272F730600BA5C97 /* YXColorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7C675272F730600BA5C97 /* YXColorCategory.swift */; };
 		00D95EE227322EDA00CD0BAC /* YXPhotoPickerTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D95EE127322EDA00CD0BAC /* YXPhotoPickerTool.swift */; };
 		1A07E6AF18C73B0788121A62 /* libPods-YXSwiftBasicProj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DAE1599321B97F068DC75E1 /* libPods-YXSwiftBasicProj.a */; };
+		B16BA2AB29B5801700705B19 /* YXToolAppBaseMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BA2AA29B5801700705B19 /* YXToolAppBaseMsg.swift */; };
 		B185595128B7110400B66349 /* YXUserCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B185595028B7110400B66349 /* YXUserCenterVC.swift */; };
 		B18AA67128A0A0F90001ECB3 /* YXNetworkUseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18AA67028A0A0F90001ECB3 /* YXNetworkUseManager.swift */; };
 		B1A78AF228A23C30004E628E /* YXHomePageBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A78AF128A23C30004E628E /* YXHomePageBaseVC.swift */; };
@@ -159,6 +160,7 @@
 		00D95EE127322EDA00CD0BAC /* YXPhotoPickerTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPhotoPickerTool.swift; sourceTree = "<group>"; };
 		0DAE1599321B97F068DC75E1 /* libPods-YXSwiftBasicProj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXSwiftBasicProj.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7E9EE5A662C92008C0A35B /* Pods-YXSwiftBasicProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXSwiftBasicProj.release.xcconfig"; path = "Target Support Files/Pods-YXSwiftBasicProj/Pods-YXSwiftBasicProj.release.xcconfig"; sourceTree = "<group>"; };
+		B16BA2AA29B5801700705B19 /* YXToolAppBaseMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXToolAppBaseMsg.swift; sourceTree = "<group>"; };
 		B185595028B7110400B66349 /* YXUserCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXUserCenterVC.swift; sourceTree = "<group>"; };
 		B18AA67028A0A0F90001ECB3 /* YXNetworkUseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXNetworkUseManager.swift; sourceTree = "<group>"; };
 		B1A78AF128A23C30004E628E /* YXHomePageBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXHomePageBaseVC.swift; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 		00C7C660272F730600BA5C97 /* YXTools */ = {
 			isa = PBXGroup;
 			children = (
+				B16BA2A929B57FFE00705B19 /* YXToolAppBaseMsg */,
 				0087210927367CD600A6A9B0 /* YXNetworkManager */,
 				008721052736335C00A6A9B0 /* YXPermissionManager */,
 				0079920D273516E100614F9D /* YXPaymentManager */,
@@ -537,6 +540,14 @@
 				0DAE1599321B97F068DC75E1 /* libPods-YXSwiftBasicProj.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B16BA2A929B57FFE00705B19 /* YXToolAppBaseMsg */ = {
+			isa = PBXGroup;
+			children = (
+				B16BA2AA29B5801700705B19 /* YXToolAppBaseMsg.swift */,
+			);
+			path = YXToolAppBaseMsg;
 			sourceTree = "<group>";
 		};
 		B185594F28B710E000B66349 /* UserCenter */ = {
@@ -863,6 +874,7 @@
 				0035663D2730EEA200FBFE09 /* YXSegmentCollectionView.swift in Sources */,
 				B18AA67128A0A0F90001ECB3 /* YXNetworkUseManager.swift in Sources */,
 				007992042734DFC000614F9D /* YXCategoryString.swift in Sources */,
+				B16BA2AB29B5801700705B19 /* YXToolAppBaseMsg.swift in Sources */,
 				B1CE214929AD9BFD0049B0CB /* YXWarehouseBaseVC.swift in Sources */,
 				00C7C685272F730600BA5C97 /* YXAlertViewControllerDropDownAnimation.swift in Sources */,
 				00C7C676272F730600BA5C97 /* YXBaseNavigationVC.swift in Sources */,
