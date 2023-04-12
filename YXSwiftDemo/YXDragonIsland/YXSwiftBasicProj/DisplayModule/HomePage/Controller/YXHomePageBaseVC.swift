@@ -121,7 +121,7 @@ class YXHomePageBaseVC: YXBaseVC {
         self.segmentedView.reloadData()
         self.pageScrollView.reloadData()
         
-        if (YXToolAppBaseMsg.defaults.boolNotInHomeFirstUse) {
+        if (YXToolAppBaseMsg.defaults.boolNotInHomeFirstUse == true) {
             
         }
     }
