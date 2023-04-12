@@ -127,6 +127,40 @@ class YXHomePageBaseVC: YXBaseVC {
     }
 }
 
+//MARK: - Method
+extension YXHomePageBaseVC {
+    //MARK: - 初始刷新
+    func initRefresh() {
+        self.pageScrollView.mainTableView.mj_header = MJRefreshHeader(refreshingBlock: { [weak self] in
+            self?.page = 1
+        });
+        self.pageScrollView.mainTableView.mj_header?.beginRefreshing()
+    }
+    
+    //MARK: - 刷新方法
+    func getHttpMethod() {
+        let group = DispatchGroup()
+        let queue = DispatchQueue(label: "request_queue")
+        queue.async {
+            group.enter()
+            self.getBannerHTTPMethod { finished in
+                group.leave()
+            }
+        }
+        queue.async {
+            
+        }
+        group.notify(queue: queue) {
+            
+        }
+    }
+    
+    //MARK: - 获取banner
+    func getBannerHTTPMethod(block: @escaping (Bool) -> Void) {
+        
+    }
+}
+
 //MARK: - JXSegmentedViewDelegate
 extension YXHomePageBaseVC: JXSegmentedViewDelegate {
     

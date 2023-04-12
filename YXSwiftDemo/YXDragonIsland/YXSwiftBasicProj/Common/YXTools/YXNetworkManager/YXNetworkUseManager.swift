@@ -14,13 +14,37 @@ public class YXNetworkUseManager {
     public static let shared = YXNetworkUseManager()
     
     //MARK: - 登录
-    public static func yxGetRequestAlamofireUse(showText: String? = nil, boolShowSuccess: Bool, boolShowError: Bool, block: @escaping YXNetworkUseManagerFinishBlock) {
+    public static func yxGetRequestLogainHTTPByAccount(account: String?, code: String?, invitecode:String?, showText: String?, boolShowSuccess: Bool? = false, boolShowError: Bool? = false, block: @escaping YXNetworkUseManagerFinishBlock) {
         
-        let url = kHostUrl.appending("/Login/get_forum_group")
-        YXNetworkManager.shared.requestWithUrl(url: url, params: nil, showText: nil, boolShowSuccess: false, boolShowError: false) { dic, isSuccess in
-            
+        let url = kYXGetLogainAPI
+        var params = [String: Any]()
+        params["account"] = account
+        params["code"] = code
+        if (!invitecode!.isEmpty) {
+            params["invitecode"] = invitecode
         }
         
+        YXNetworkManager.shared.requestWithUrl(url: url, params: params, showText: showText, boolShowSuccess: boolShowSuccess!, boolShowError: boolShowError!) { dic, isSuccess in
+            
+        }
     }
     
+    //MARK: - 获取广告
+    public static func yxGetAdvertingHTTPByCode(code: String?, boolPage: Bool? = false, page: Int? = 1, showText: String?, boolShowSuccess: Bool? = false, boolShowError: Bool? = false, block: @escaping YXNetworkUseManagerFinishBlock) {
+        
+        let url = kYXGetAdvertingAPI
+        var params = [String: Any]()
+        params["advertisementCode"] = code
+        if (boolPage == true) {
+            params["pageSize"] = 10
+            params["pageNum"] = page
+        }
+        else {
+            params["pageSize"] = 100
+        }
+        
+        YXNetworkManager.shared.requestWithUrl(url: url, params: params, showText: showText, boolShowSuccess: boolShowSuccess!, boolShowError: boolShowError!) { dic, isSuccess in
+            
+        }
+    }
 }

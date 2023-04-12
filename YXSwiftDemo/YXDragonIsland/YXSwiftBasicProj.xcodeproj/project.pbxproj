@@ -64,6 +64,7 @@
 		1A07E6AF18C73B0788121A62 /* libPods-YXSwiftBasicProj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DAE1599321B97F068DC75E1 /* libPods-YXSwiftBasicProj.a */; };
 		B16BA2AB29B5801700705B19 /* YXToolAppBaseMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BA2AA29B5801700705B19 /* YXToolAppBaseMsg.swift */; };
 		B185595128B7110400B66349 /* YXUserCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B185595028B7110400B66349 /* YXUserCenterVC.swift */; };
+		B187E3F629E6500E00A1F449 /* YXNetWorkingMarco.swift in Sources */ = {isa = PBXBuildFile; fileRef = B187E3F529E6500E00A1F449 /* YXNetWorkingMarco.swift */; };
 		B18AA67128A0A0F90001ECB3 /* YXNetworkUseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18AA67028A0A0F90001ECB3 /* YXNetworkUseManager.swift */; };
 		B1A78AF228A23C30004E628E /* YXHomePageBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A78AF128A23C30004E628E /* YXHomePageBaseVC.swift */; };
 		B1A78AF528A24504004E628E /* YXHomePageListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A78AF428A24503004E628E /* YXHomePageListVC.swift */; };
@@ -162,6 +163,7 @@
 		2F7E9EE5A662C92008C0A35B /* Pods-YXSwiftBasicProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXSwiftBasicProj.release.xcconfig"; path = "Target Support Files/Pods-YXSwiftBasicProj/Pods-YXSwiftBasicProj.release.xcconfig"; sourceTree = "<group>"; };
 		B16BA2AA29B5801700705B19 /* YXToolAppBaseMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXToolAppBaseMsg.swift; sourceTree = "<group>"; };
 		B185595028B7110400B66349 /* YXUserCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXUserCenterVC.swift; sourceTree = "<group>"; };
+		B187E3F529E6500E00A1F449 /* YXNetWorkingMarco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXNetWorkingMarco.swift; sourceTree = "<group>"; };
 		B18AA67028A0A0F90001ECB3 /* YXNetworkUseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXNetworkUseManager.swift; sourceTree = "<group>"; };
 		B1A78AF128A23C30004E628E /* YXHomePageBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXHomePageBaseVC.swift; sourceTree = "<group>"; };
 		B1A78AF428A24503004E628E /* YXHomePageListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXHomePageListVC.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 		00C7C650272F712E00BA5C97 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				B187E3F429E64FB800A1F449 /* NetWorking */,
 				0045A87427339B6300CF24B8 /* UserDefault */,
 			);
 			path = Module;
@@ -557,6 +560,14 @@
 				B1D6E5EB28F1178E003DA3A9 /* Controller */,
 			);
 			path = UserCenter;
+			sourceTree = "<group>";
+		};
+		B187E3F429E64FB800A1F449 /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				B187E3F529E6500E00A1F449 /* YXNetWorkingMarco.swift */,
+			);
+			path = NetWorking;
 			sourceTree = "<group>";
 		};
 		B1A78AEE28A23BB8004E628E /* HomePage */ = {
@@ -905,6 +916,7 @@
 				0035664727310CE600FBFE09 /* YXSegmentPageView.swift in Sources */,
 				007FEC2627379E0C0005B1A9 /* YXNetworkMulipartData.swift in Sources */,
 				00C7C67B272F730600BA5C97 /* YXBaseNavigationView.swift in Sources */,
+				B187E3F629E6500E00A1F449 /* YXNetWorkingMarco.swift in Sources */,
 				B1CE214829AD9BFD0049B0CB /* YXHatchingBaseVC.swift in Sources */,
 				B1EEB74A28F26EBA00076833 /* YXUserCenterOrderCell.swift in Sources */,
 				007FEC282737CA380005B1A9 /* YXNetworkManager.swift in Sources */,

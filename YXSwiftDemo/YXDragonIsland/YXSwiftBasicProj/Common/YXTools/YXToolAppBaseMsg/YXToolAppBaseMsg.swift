@@ -19,7 +19,7 @@ class YXToolAppBaseMsg: NSObject {
     /** 0，普通情况；1，初次启用；2，系统更新(该值不做保存，每次启动临时使用) */
     var appState: YXToolAppBaseTypeEnum?
     /** 版本号（用以区分是否发生更新） */
-    var version: String! = (UserDefaults().object(forKey: "YXToolAppBaseMsgVersion") as! String)
+    var version: String! //= (UserDefaults().object(forKey: "YXToolAppBaseMsgVersion") as! String)
     /** 延时结束 */
     var boolDelayStartDone: Bool!
     /** 首次启动是否未进入首页 */
