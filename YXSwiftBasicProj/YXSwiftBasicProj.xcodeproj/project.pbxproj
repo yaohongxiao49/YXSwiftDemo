@@ -76,6 +76,8 @@
 		00F8BA9B2731249000612B85 /* YXPhotoPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F8BA9A2731249000612B85 /* YXPhotoPickerVC.swift */; };
 		1A07E6AF18C73B0788121A62 /* libPods-YXSwiftBasicProj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DAE1599321B97F068DC75E1 /* libPods-YXSwiftBasicProj.a */; };
 		B1A78AF928A24935004E628E /* YXSwiftPublicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A78AF828A24935004E628E /* YXSwiftPublicColor.swift */; };
+		B1EE7F0E29EF840300E572D2 /* YXNetworkUseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EE7F0D29EF840300E572D2 /* YXNetworkUseManager.swift */; };
+		B1EE7F1029EF845400E572D2 /* YXNetWorkingMarco.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EE7F0F29EF845400E572D2 /* YXNetWorkingMarco.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +175,8 @@
 		0DAE1599321B97F068DC75E1 /* libPods-YXSwiftBasicProj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXSwiftBasicProj.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7E9EE5A662C92008C0A35B /* Pods-YXSwiftBasicProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXSwiftBasicProj.release.xcconfig"; path = "Target Support Files/Pods-YXSwiftBasicProj/Pods-YXSwiftBasicProj.release.xcconfig"; sourceTree = "<group>"; };
 		B1A78AF828A24935004E628E /* YXSwiftPublicColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXSwiftPublicColor.swift; sourceTree = "<group>"; };
+		B1EE7F0D29EF840300E572D2 /* YXNetworkUseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YXNetworkUseManager.swift; path = ../../../../../YXSwiftDemo/YXDragonIsland/YXSwiftBasicProj/Common/YXTools/YXNetworkManager/YXNetworkUseManager.swift; sourceTree = "<group>"; };
+		B1EE7F0F29EF845400E572D2 /* YXNetWorkingMarco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YXNetWorkingMarco.swift; path = ../../../YXSwiftDemo/YXDragonIsland/YXSwiftBasicProj/GlobalSettings/YXNetWorkingMarco.swift; sourceTree = "<group>"; };
 		D7290E37D31675E51ED48A0B /* Pods-YXSwiftBasicProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXSwiftBasicProj.debug.xcconfig"; path = "Target Support Files/Pods-YXSwiftBasicProj/Pods-YXSwiftBasicProj.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,6 +231,7 @@
 		0021FA50272F9C1500574525 /* GlobalSettings */ = {
 			isa = PBXGroup;
 			children = (
+				B1EE7F0F29EF845400E572D2 /* YXNetWorkingMarco.swift */,
 				0021FA4E272F979E00574525 /* YXSwiftGlobalSettings.swift */,
 				007992112735222900614F9D /* YXSwiftGlobalNoti.swift */,
 				0021FA4C272F978B00574525 /* YXSwiftPublicClass.swift */,
@@ -387,6 +392,7 @@
 		0087210927367CD600A6A9B0 /* YXNetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				B1EE7F0D29EF840300E572D2 /* YXNetworkUseManager.swift */,
 				007FEC272737CA380005B1A9 /* YXNetworkManager.swift */,
 				0087210B27367D0900A6A9B0 /* YXNetworkBaseManager.swift */,
 				007FEC2327379DDE0005B1A9 /* YXNetworkError.swift */,
@@ -902,6 +908,7 @@
 				00C7C67F272F730600BA5C97 /* YXToolFuncCycleScrollView.swift in Sources */,
 				0035664727310CE600FBFE09 /* YXSegmentPageView.swift in Sources */,
 				007FEC2627379E0C0005B1A9 /* YXNetworkMulipartData.swift in Sources */,
+				B1EE7F1029EF845400E572D2 /* YXNetWorkingMarco.swift in Sources */,
 				00C7C67B272F730600BA5C97 /* YXBaseNavigationView.swift in Sources */,
 				007FEC282737CA380005B1A9 /* YXNetworkManager.swift in Sources */,
 				0021FA64272FDCB400574525 /* YXBaseCollectionView.swift in Sources */,
@@ -923,6 +930,7 @@
 				0045A87B2733EC9F00CF24B8 /* YXRechBility.swift in Sources */,
 				0021FA5C272FAC2C00574525 /* YXBaseTableViewCell.swift in Sources */,
 				003566432730F09A00FBFE09 /* YXSegmentView+Cinfiguration.swift in Sources */,
+				B1EE7F0E29EF840300E572D2 /* YXNetworkUseManager.swift in Sources */,
 				0035664527310CCB00FBFE09 /* YXSegmentTitleCell.swift in Sources */,
 				00C7C67A272F730600BA5C97 /* YXBaseTabBarView.swift in Sources */,
 				0021FA4F272F979E00574525 /* YXSwiftGlobalSettings.swift in Sources */,

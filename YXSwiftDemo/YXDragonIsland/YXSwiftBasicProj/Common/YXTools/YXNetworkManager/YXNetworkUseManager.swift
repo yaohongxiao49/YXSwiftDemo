@@ -30,7 +30,7 @@ public class YXNetworkUseManager {
     }
     
     //MARK: - 获取广告
-    public static func yxGetAdvertingHTTPByCode(code: String?, boolPage: Bool? = false, page: Int? = 1, showText: String?, boolShowSuccess: Bool? = false, boolShowError: Bool? = false, block: @escaping YXNetworkUseManagerFinishBlock) {
+    public static func yxGetAdvertingHTTPByCode(code: String?, boolPage: Bool? = false, page: Int? = 1, showText: String?, boolShowSuccess: Bool, boolShowError: Bool, block: @escaping YXNetworkUseManagerFinishBlock) {
         
         let url = kYXGetAdvertingAPI
         var params = [String: Any]()
@@ -43,8 +43,14 @@ public class YXNetworkUseManager {
             params["pageSize"] = 100
         }
         
-        YXNetworkManager.shared.requestWithUrl(url: url, params: params, showText: showText, boolShowSuccess: boolShowSuccess!, boolShowError: boolShowError!) { dic, isSuccess in
+        YXNetworkManager.shared.requestWithUrl(url: url, params: params, showText: showText, boolShowSuccess: boolShowSuccess, boolShowError: boolShowError) { dic, isSuccess in
             
+            if (isSuccess == true) {
+                block(dic?["data"] as? [String : Any], isSuccess);
+            }
+            else {
+                block(nil, isSuccess);
+            }
         }
     }
 }

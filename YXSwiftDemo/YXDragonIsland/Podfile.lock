@@ -4,6 +4,7 @@ PODS:
   - GKNavigationBarSwift (1.5.1)
   - GKPageScrollViewSwift (1.4.2)
   - GKPageSmoothViewSwift (1.4.2)
+  - HandyJSON (5.0.2)
   - HXPHPicker (1.2.4):
     - HXPHPicker/Full (= 1.2.4)
   - HXPHPicker/Camera (1.2.4):
@@ -50,6 +51,7 @@ DEPENDENCIES:
   - GKNavigationBarSwift
   - GKPageScrollViewSwift
   - GKPageSmoothViewSwift
+  - HandyJSON
   - HXPHPicker
   - JXSegmentedView
   - Kingfisher
@@ -71,6 +73,7 @@ SPEC REPOS:
     - GKNavigationBarSwift
     - GKPageScrollViewSwift
     - GKPageSmoothViewSwift
+    - HandyJSON
     - HXPHPicker
     - JXSegmentedView
     - Kingfisher
@@ -91,6 +94,7 @@ SPEC CHECKSUMS:
   GKNavigationBarSwift: 4348306725596c82558282301de0077014048d03
   GKPageScrollViewSwift: 677939400ca324b34eeec6853ebebba0a4318c4b
   GKPageSmoothViewSwift: a025dc22eae577f1af1722f5f9ef1c58934c9453
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   HXPHPicker: 5b5f9a0b330fb7cbe050ac4a6cd15350a42f8cdd
   JXSegmentedView: fec0d335355b6e019c494fe2e030bde8a36d2df6
   Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
@@ -105,6 +109,6 @@ SPEC CHECKSUMS:
   SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
   WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
 
-PODFILE CHECKSUM: 04b2c9ce34143d3646bba2ad5a8da3a1031859da
+PODFILE CHECKSUM: 78c0dbbebdad2f4e230ffb568bc9a7d3e0061794
 
 COCOAPODS: 1.11.2

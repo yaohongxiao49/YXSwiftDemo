@@ -122,8 +122,10 @@ class YXHomePageBaseVC: YXBaseVC {
         self.pageScrollView.reloadData()
         
         if (YXToolAppBaseMsg.defaults.boolNotInHomeFirstUse == true) {
-            
+            let view = UIView.init(frame: CGRect(x: 10, y: 10, width: 100, height: 100))
+            self.view.addSubview(view);
         }
+        self.initRefresh()
     }
 }
 
@@ -133,6 +135,7 @@ extension YXHomePageBaseVC {
     func initRefresh() {
         self.pageScrollView.mainTableView.mj_header = MJRefreshHeader(refreshingBlock: { [weak self] in
             self?.page = 1
+            self?.getHttpMethod()
         });
         self.pageScrollView.mainTableView.mj_header?.beginRefreshing()
     }
@@ -157,7 +160,21 @@ extension YXHomePageBaseVC {
     
     //MARK: - 获取banner
     func getBannerHTTPMethod(block: @escaping (Bool) -> Void) {
-        
+        YXNetworkUseManager.yxGetAdvertingHTTPByCode(code: "nft_home_top", showText: nil, boolShowSuccess: false, boolShowError: false) {[weak self] (dic, isSuccess) in
+            
+            if (isSuccess) {
+                //JSONModel
+                let jsonData = JSON.init(dic!)
+                let diyJsonData = JSON.init(jsonData["list"])
+                let bannerModel = YXBannerSwiftyJsonModel(diyJsonData[0])
+                print("bannerModel == \(bannerModel)")
+                
+//                //HandyModel
+//                if var bannerModel = YXBannerHandyJsonModel.deserialize(dic!) {
+//                    print("bannerModel == \(bannerModel)")
+//                }
+            }
+        }
     }
 }
 

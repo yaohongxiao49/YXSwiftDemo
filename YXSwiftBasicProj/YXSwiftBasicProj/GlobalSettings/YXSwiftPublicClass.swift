@@ -15,3 +15,8 @@ import Foundation
 @_exported import SwiftyUserDefaults
 @_exported import Reachability
 @_exported import SQLite
+@_exported import JXSegmentedView
+@_exported import GKPageScrollViewSwift
+@_exported import GKNavigationBarSwift
+@_exported import GKPageSmoothViewSwift
+@_exported import SwiftyJSON

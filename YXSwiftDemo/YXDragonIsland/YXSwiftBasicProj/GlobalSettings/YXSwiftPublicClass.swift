@@ -19,3 +19,4 @@ import Foundation
 @_exported import GKPageScrollViewSwift
 @_exported import GKNavigationBarSwift
 @_exported import GKPageSmoothViewSwift
+@_exported import SwiftyJSON

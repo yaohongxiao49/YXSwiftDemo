@@ -20,16 +20,16 @@ public class YXNetworkManager {
     
     lazy var headers: [String : String] = {
        
-        var token = Defaults[\.token]!
+        var token = Defaults[\.token] ?? ""
         let headers = ["Accept":"application/json", "Content-Type":"application/json", "version":kMajorVersion, "token": token]
         return headers
     }()
     
     //MARK: - 网络请求
-    public func requestWithUrl(url: String, method: HTTPMethod = .get, params: [String : Any]? = nil, showText: String? = nil, boolShowSuccess: Bool, boolShowError: Bool, block: @escaping YXNetworkManagerFinishBlock) {
+    public func requestWithUrl(url: String, method: HTTPMethod = .get, params: [String : Any]?, showText: String?, boolShowSuccess: Bool, boolShowError: Bool, block: @escaping YXNetworkManagerFinishBlock) {
         
         if (kServerDebug ==  .YXServerDebugEnumDevelopment) {
-            print("接口请求：\(url)\n params：\(String(describing: params))\n headerField：\(self.headers)")
+            print("接口请求：\n\(url)\n params：\(String(describing: params))\n headerField：\(self.headers)")
         }
         
         if let showTexts = showText {
@@ -45,16 +45,16 @@ public class YXNetworkManager {
             
             let dic: Dictionary = response as! [String : Any]
             let code = dic["code"] as! Int
-            let msg = dic["msg"] as! String
+            let msg = dic["msg"] ?? ""
             if code == YXNetworkManagerFinishedEnum.success.rawValue {
                 if (boolShowSuccess) {
-                    SVProgressHUD.showSuccess(withStatus: msg)
+                    SVProgressHUD.showSuccess(withStatus: msg as? String)
                 }
                 block(dic, true)
             }
             else {
                 if (boolShowError) {
-                    SVProgressHUD.showError(withStatus: msg)
+                    SVProgressHUD.showError(withStatus: msg as? String)
                 }
                 block(dic, false)
             }
