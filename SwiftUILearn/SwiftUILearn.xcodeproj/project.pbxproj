@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B12BCFB42AAAB6AB005E03B9 /* CanvasLearnManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BCFB32AAAB6AB005E03B9 /* CanvasLearnManager.swift */; };
+		B12BCFB62AAAB886005E03B9 /* CanvasLearn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BCFB52AAAB886005E03B9 /* CanvasLearn.swift */; };
+		B12BCFB82AAABAD8005E03B9 /* CanvasLearn1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BCFB72AAABAD8005E03B9 /* CanvasLearn1.swift */; };
+		B12BCFBA2AAABAE2005E03B9 /* CanvasLearn2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BCFB92AAABAE2005E03B9 /* CanvasLearn2.swift */; };
 		B19BDA252AA9BC5200FB7292 /* SwiftUILearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19BDA242AA9BC5200FB7292 /* SwiftUILearnApp.swift */; };
 		B19BDA272AA9BC5200FB7292 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19BDA262AA9BC5200FB7292 /* ContentView.swift */; };
 		B19BDA292AA9BC5400FB7292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B19BDA282AA9BC5400FB7292 /* Assets.xcassets */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B12BCFB32AAAB6AB005E03B9 /* CanvasLearnManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasLearnManager.swift; sourceTree = "<group>"; };
+		B12BCFB52AAAB886005E03B9 /* CanvasLearn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasLearn.swift; sourceTree = "<group>"; };
+		B12BCFB72AAABAD8005E03B9 /* CanvasLearn1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasLearn1.swift; sourceTree = "<group>"; };
+		B12BCFB92AAABAE2005E03B9 /* CanvasLearn2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasLearn2.swift; sourceTree = "<group>"; };
 		B19BDA212AA9BC5200FB7292 /* SwiftUILearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19BDA242AA9BC5200FB7292 /* SwiftUILearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearnApp.swift; sourceTree = "<group>"; };
 		B19BDA262AA9BC5200FB7292 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +85,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B12BCFB22AAAB681005E03B9 /* CanvasLearn */ = {
+			isa = PBXGroup;
+			children = (
+				B12BCFB32AAAB6AB005E03B9 /* CanvasLearnManager.swift */,
+				B12BCFB52AAAB886005E03B9 /* CanvasLearn.swift */,
+				B12BCFB72AAABAD8005E03B9 /* CanvasLearn1.swift */,
+				B12BCFB92AAABAE2005E03B9 /* CanvasLearn2.swift */,
+			);
+			path = CanvasLearn;
+			sourceTree = "<group>";
+		};
 		B19BDA182AA9BC5200FB7292 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +156,7 @@
 		B19BDA512AA9C44D00FB7292 /* Learning */ = {
 			isa = PBXGroup;
 			children = (
+				B12BCFB22AAAB681005E03B9 /* CanvasLearn */,
 				B19BDA562AA9C6B000FB7292 /* MapLearn */,
 				B19BDA532AA9C4CE00FB7292 /* ImageLearn */,
 				B19BDA522AA9C4B100FB7292 /* TextLearn */,
@@ -298,8 +318,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B12BCFB42AAAB6AB005E03B9 /* CanvasLearnManager.swift in Sources */,
+				B12BCFB62AAAB886005E03B9 /* CanvasLearn.swift in Sources */,
 				B19BDA582AA9C6BB00FB7292 /* MapLearn.swift in Sources */,
 				B19BDA552AA9C4E600FB7292 /* ImageLearn.swift in Sources */,
+				B12BCFBA2AAABAE2005E03B9 /* CanvasLearn2.swift in Sources */,
+				B12BCFB82AAABAD8005E03B9 /* CanvasLearn1.swift in Sources */,
 				B19BDA502AA9C44600FB7292 /* TextLearn.swift in Sources */,
 				B19BDA272AA9BC5200FB7292 /* ContentView.swift in Sources */,
 				B19BDA252AA9BC5200FB7292 /* SwiftUILearnApp.swift in Sources */,
