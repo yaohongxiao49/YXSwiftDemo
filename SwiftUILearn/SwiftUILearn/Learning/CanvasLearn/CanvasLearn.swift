@@ -26,7 +26,7 @@ struct CanvasLearn: View {
             CanvasLearn1()
             
             GeometryReader { geometry in
-                CanvasLearn2
+                CanvasLearn2()
                     .padding()
                     .opacity(0.5)
                     .rotationEffect(angle, anchor: .bottom)
