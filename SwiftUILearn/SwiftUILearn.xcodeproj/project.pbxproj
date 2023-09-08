@@ -11,6 +11,7 @@
 		B12BCFB62AAAB886005E03B9 /* CanvasLearn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BCFB52AAAB886005E03B9 /* CanvasLearn.swift */; };
 		B12BCFB82AAABAD8005E03B9 /* CanvasLearn1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BCFB72AAABAD8005E03B9 /* CanvasLearn1.swift */; };
 		B12BCFBA2AAABAE2005E03B9 /* CanvasLearn2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BCFB92AAABAE2005E03B9 /* CanvasLearn2.swift */; };
+		B12BCFBE2AAB061F005E03B9 /* CanvasLearn3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BCFBD2AAB061F005E03B9 /* CanvasLearn3.swift */; };
 		B19BDA252AA9BC5200FB7292 /* SwiftUILearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19BDA242AA9BC5200FB7292 /* SwiftUILearnApp.swift */; };
 		B19BDA272AA9BC5200FB7292 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19BDA262AA9BC5200FB7292 /* ContentView.swift */; };
 		B19BDA292AA9BC5400FB7292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B19BDA282AA9BC5400FB7292 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		B12BCFB52AAAB886005E03B9 /* CanvasLearn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasLearn.swift; sourceTree = "<group>"; };
 		B12BCFB72AAABAD8005E03B9 /* CanvasLearn1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasLearn1.swift; sourceTree = "<group>"; };
 		B12BCFB92AAABAE2005E03B9 /* CanvasLearn2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasLearn2.swift; sourceTree = "<group>"; };
+		B12BCFBD2AAB061F005E03B9 /* CanvasLearn3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasLearn3.swift; sourceTree = "<group>"; };
 		B19BDA212AA9BC5200FB7292 /* SwiftUILearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19BDA242AA9BC5200FB7292 /* SwiftUILearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearnApp.swift; sourceTree = "<group>"; };
 		B19BDA262AA9BC5200FB7292 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				B12BCFB52AAAB886005E03B9 /* CanvasLearn.swift */,
 				B12BCFB72AAABAD8005E03B9 /* CanvasLearn1.swift */,
 				B12BCFB92AAABAE2005E03B9 /* CanvasLearn2.swift */,
+				B12BCFBD2AAB061F005E03B9 /* CanvasLearn3.swift */,
 			);
 			path = CanvasLearn;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				B12BCFB62AAAB886005E03B9 /* CanvasLearn.swift in Sources */,
 				B19BDA582AA9C6BB00FB7292 /* MapLearn.swift in Sources */,
 				B19BDA552AA9C4E600FB7292 /* ImageLearn.swift in Sources */,
+				B12BCFBE2AAB061F005E03B9 /* CanvasLearn3.swift in Sources */,
 				B12BCFBA2AAABAE2005E03B9 /* CanvasLearn2.swift in Sources */,
 				B12BCFB82AAABAD8005E03B9 /* CanvasLearn1.swift in Sources */,
 				B19BDA502AA9C44600FB7292 /* TextLearn.swift in Sources */,
