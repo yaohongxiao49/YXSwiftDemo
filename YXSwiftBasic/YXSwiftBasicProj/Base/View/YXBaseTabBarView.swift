@@ -11,7 +11,7 @@ typealias YXBaseTabBarViewTapBlock = (Int) ->(Void)
 
 class YXBaseTabBarView: UIView {
     
-    var itemViewArr = NSMutableArray.init()
+    var itemViewArr = Array<Any>()
     var itemModelArr: Array<Any>? {
         
         didSet {
@@ -60,7 +60,7 @@ class YXBaseTabBarView: UIView {
                 block(view.tag)
             }
             self.addSubview(itemView)
-            self.itemViewArr.add(itemView)
+            self.itemViewArr.append(itemView)
         }
     }
     

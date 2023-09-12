@@ -38,7 +38,7 @@ public class YXBaseVC: UIViewController {
     }()
     
     /** 页码 */
-    var page: NSInteger!
+    var page: Int!
 
     //MARK: - 视图将要显示
     public override func viewWillAppear(_ animated: Bool) {
