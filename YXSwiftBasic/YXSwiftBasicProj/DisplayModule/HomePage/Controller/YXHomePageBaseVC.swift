@@ -163,16 +163,23 @@ extension YXHomePageBaseVC {
         YXNetworkUseManager.yxGetAdvertingHTTPByCode(code: "nft_home_top", showText: nil, boolShowSuccess: false, boolShowError: false) { dic, isSuccess in
             
             if (isSuccess) {
-                //JSONModel
-                let jsonData = JSON.init(dic!)
-                let diyJsonData = JSON.init(jsonData["list"])
-                let bannerModel = YXBannerSwiftyJsonModel(diyJsonData[0])
-                print("bannerModel == \(bannerModel)")
+//                //JSONModel
+//                let jsonData = JSON.init(dic!)
+//                let diyJsonData = JSON.init(jsonData["list"])
+//                let bannerModel = YXBannerSwiftyJsonModel(diyJsonData[0])
+//                print("bannerModel == \(bannerModel)")
                 
-//                //HandyModel
-//                if var bannerModel = YXBannerHandyJsonModel.deserialize(dic!) {
+                //HandyModel
+//                //字典模型
+//                if let bannerModel = YXBannerHandyJsonModel.deserialize(from: dic) {
 //                    print("bannerModel == \(bannerModel)")
 //                }
+//                //数组模型
+//                let dataSourceArr = Array<YXBannerHandyJsonModel>.deserialize(from: dic?["list"] as? Array<Any>)
+//                let bannerModel = (dataSourceArr?[0])! as YXBannerHandyJsonModel;
+//                print("bannerModel == \(String(describing: bannerModel.advertisementImgUrl))")
+                
+//                let cats = JsonUtil.jsonArrayToModel(dic["list"], YXBannerHandyJsonModel.self) as! [YXBannerHandyJsonModel]
             }
         }
     }
