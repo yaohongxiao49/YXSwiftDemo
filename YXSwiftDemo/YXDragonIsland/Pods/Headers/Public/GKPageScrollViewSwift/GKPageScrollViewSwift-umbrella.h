@@ -1,1 +1,0 @@
-../../../Target Support Files/GKPageScrollViewSwift/GKPageScrollViewSwift-umbrella.h
