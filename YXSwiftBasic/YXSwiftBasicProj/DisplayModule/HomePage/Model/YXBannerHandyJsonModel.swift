@@ -16,7 +16,7 @@ class YXBannerHandyJsonModel: HandyJSON {
      */
     var jumpType: Int?
     /** 显示的广告图 */
-    var advertisementImgUrl: String?
+    var advertisementImgUrl: String!
     /** 显示的广告标题 */
     var title: String?
     /** h5跳转页 */

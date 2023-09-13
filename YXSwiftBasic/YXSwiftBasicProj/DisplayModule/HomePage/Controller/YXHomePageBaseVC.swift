@@ -160,6 +160,7 @@ extension YXHomePageBaseVC {
     
     //MARK: - 获取banner
     func getBannerHTTPMethod(block: @escaping (Bool) -> Void) {
+        weak var weakSelf = self
         YXNetworkUseManager.yxGetAdvertingHTTPByCode(code: "nft_home_top", showText: nil, boolShowSuccess: false, boolShowError: false) { dic, isSuccess in
             
             if (isSuccess) {
@@ -174,10 +175,13 @@ extension YXHomePageBaseVC {
 //                if let bannerModel = YXBannerHandyJsonModel.deserialize(from: dic) {
 //                    print("bannerModel == \(bannerModel)")
 //                }
-//                //数组模型
-//                let dataSourceArr = Array<YXBannerHandyJsonModel>.deserialize(from: dic?["list"] as? Array<Any>)
-//                let bannerModel = (dataSourceArr?[0])! as YXBannerHandyJsonModel;
-//                print("bannerModel == \(String(describing: bannerModel.advertisementImgUrl))")
+                //数组模型
+                let dataSourceArr = Array<YXBannerHandyJsonModel>.deserialize(from: dic?["list"] as? Array<Any>)
+                let bannerModel = (dataSourceArr?[0])! as YXBannerHandyJsonModel;
+                print("bannerModel == \(String(describing: bannerModel.advertisementImgUrl))")
+                if let url = URL(string: bannerModel.advertisementImgUrl) {
+                    weakSelf?.headerView.kf.setImage(with: url)
+                }
                 
 //                let cats = JsonUtil.jsonArrayToModel(dic["list"], YXBannerHandyJsonModel.self) as! [YXBannerHandyJsonModel]
             }
