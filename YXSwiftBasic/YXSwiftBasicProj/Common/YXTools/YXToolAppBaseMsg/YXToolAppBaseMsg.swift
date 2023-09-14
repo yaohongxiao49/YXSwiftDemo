@@ -22,15 +22,15 @@ class YXToolAppBaseMsg: NSObject {
     var version: String! //= (UserDefaults().object(forKey: "YXToolAppBaseMsgVersion") as! String)
     /** 延时结束 */
     var boolDelayStartDone: Bool!
-    /** 首次启动是否未进入首页 */
-    var _boolNotInHomeFirstUse: Bool?
-    var boolNotInHomeFirstUse: Bool? {
+    /** 首次启动是否未首次使用 */
+    var _boolNotFirstUse: Bool?
+    var boolNotFirstUse: Bool? {
         
         get {
-            return _boolNotInHomeFirstUse
+            return _boolNotFirstUse
         }
         set {
-            _boolNotInHomeFirstUse = newValue
+            _boolNotFirstUse = newValue
         }
     }
     

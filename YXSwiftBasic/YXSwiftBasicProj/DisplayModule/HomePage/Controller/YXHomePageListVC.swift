@@ -58,7 +58,7 @@ extension YXHomePageListVC {
     
     func initTableViewRefresh() {
         
-        self.tableView.initRefresh(boolHeader: true, boolFooter: true)
+        self.tableView.initRefresh(boolHeader: false, boolFooter: true)
         self.tableView.yxBaseTableViewBlock = { (boolHeader, boolFooter) in
             
         }

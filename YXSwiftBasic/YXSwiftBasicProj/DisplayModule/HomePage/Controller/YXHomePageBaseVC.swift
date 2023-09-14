@@ -15,7 +15,6 @@ class YXHomePageBaseVC: YXBaseVC {
         let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.yxScreenWidth, height: 100))
         imgView.contentMode = .scaleAspectFill
         imgView.clipsToBounds = true
-        imgView.image = UIImage(named: "test")
         imgView.backgroundColor = .red
         
         return imgView
@@ -47,11 +46,14 @@ class YXHomePageBaseVC: YXBaseVC {
     public lazy var pageScrollView: GKPageScrollView! = {
         var pageScrollView = GKPageScrollView(delegate: self)
         pageScrollView.ceilPointHeight = self.headerView.height;
-        pageScrollView.isAllowListRefresh = true
+        pageScrollView.isAllowListRefresh = false
         self.view.addSubview(pageScrollView)
         
         pageScrollView.snp.makeConstraints { (make) in
-            make.edges.equalTo(self.view)
+            
+            make.left.right.equalToSuperview()
+            make.bottom.equalTo(self.view).offset(-self.yxToolHeight)
+            make.top.equalTo(self.view).offset(self.yxStatusBarHeight)
         }
         
         pageScrollView.setNeedsLayout()
@@ -59,6 +61,7 @@ class YXHomePageBaseVC: YXBaseVC {
         
         return pageScrollView
     }()
+    
     public lazy var segmentedView: JXSegmentedView = {
         self.titleDataSource.titles = ["TableView", "CollectionView", "ScrollView", "WebView"]
         self.titleDataSource.titleNormalColor = UIColor.gray
@@ -99,9 +102,7 @@ class YXHomePageBaseVC: YXBaseVC {
         scrollView.isPagingEnabled = true
         scrollView.bounces = false
 //        scrollView.gk_openGestureHandle = true
-        if #available(iOS 11.0, *) {
-            scrollView.contentInsetAdjustmentBehavior = .never
-        }
+//        scrollView.contentInsetAdjustmentBehavior = .never
         
         for (index, vc) in self.childVCs.enumerated() {
             self.addChild(vc)
@@ -121,7 +122,7 @@ class YXHomePageBaseVC: YXBaseVC {
         self.segmentedView.reloadData()
         self.pageScrollView.reloadData()
         
-        if (YXToolAppBaseMsg.defaults.boolNotInHomeFirstUse == true) {
+        if (YXToolAppBaseMsg.defaults.boolNotFirstUse == true) {
             let view = UIView.init(frame: CGRect(x: 10, y: 10, width: 100, height: 100))
             self.view.addSubview(view);
         }
@@ -133,10 +134,13 @@ class YXHomePageBaseVC: YXBaseVC {
 extension YXHomePageBaseVC {
     //MARK: - 初始刷新
     func initRefresh() {
-        self.pageScrollView.mainTableView.mj_header = MJRefreshHeader(refreshingBlock: { [weak self] in
-            self?.page = 1
-            self?.getHttpMethod()
-        });
+        weak var weakSelf = self
+        self.pageScrollView.mainTableView.mj_header = MJRefreshHeader(refreshingBlock: {
+            
+            weakSelf?.page = 1
+            weakSelf?.getHttpMethod()
+        })
+        
         self.pageScrollView.mainTableView.mj_header?.beginRefreshing()
     }
     
