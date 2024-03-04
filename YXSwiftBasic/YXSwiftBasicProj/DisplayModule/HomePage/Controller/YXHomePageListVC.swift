@@ -58,9 +58,26 @@ extension YXHomePageListVC {
     
     func initTableViewRefresh() {
         
-        self.tableView.initRefresh(boolHeader: false, boolFooter: true)
+        weak var weakSelf = self
+        self.tableView.initRefresh(boolHeader: true, boolFooter: true)
         self.tableView.yxBaseTableViewBlock = { (boolHeader, boolFooter) in
             
+            if (boolHeader) {
+                weakSelf!.page = 1
+                weakSelf?.getValueListHTTP(page: weakSelf!.page)
+            }
+        }
+        
+        self.tableView.headerRefresh.beginRefreshing()
+    }
+    
+    func getValueListHTTP(page: Int) {
+        
+        YXNetworkUseManager.yxGetOldListHTTPByPage(page: page, showText: nil, boolShowSuccess: false, boolShowError: false) { dic, isSuccess in
+            
+            if (isSuccess) {
+                
+            }
         }
     }
 
@@ -85,7 +102,6 @@ extension YXHomePageListVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

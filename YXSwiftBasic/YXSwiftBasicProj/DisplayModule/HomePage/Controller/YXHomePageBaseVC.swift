@@ -27,14 +27,19 @@ class YXHomePageBaseVC: YXBaseVC {
         pageView.addSubview(self.contentScrollView)
         
         return pageView
-        
+            
     }()
     
-    lazy var childVCs: [YXHomePageListVC] = {
+    lazy var childVCs: Array = {
         var childVCs = [YXHomePageListVC]()
         
         for var title in self.titleDataSource.titles {
-            childVCs.append(YXHomePageListVC.init())
+            switch title {
+            case "往期记录":
+                childVCs.append(YXHomePageListVC.init())
+            default:
+                childVCs.append(YXHomePageListVC.init())
+            }
         }
         
         return childVCs
@@ -46,7 +51,7 @@ class YXHomePageBaseVC: YXBaseVC {
     public lazy var pageScrollView: GKPageScrollView! = {
         var pageScrollView = GKPageScrollView(delegate: self)
         pageScrollView.ceilPointHeight = self.headerView.height;
-        pageScrollView.isAllowListRefresh = false
+        pageScrollView.isAllowListRefresh = true
         self.view.addSubview(pageScrollView)
         
         pageScrollView.snp.makeConstraints { (make) in
@@ -63,7 +68,7 @@ class YXHomePageBaseVC: YXBaseVC {
     }()
     
     public lazy var segmentedView: JXSegmentedView = {
-        self.titleDataSource.titles = ["TableView", "CollectionView", "ScrollView", "WebView"]
+        self.titleDataSource.titles = ["往期记录", "CollectionView", "ScrollView", "WebView"]
         self.titleDataSource.titleNormalColor = UIColor.gray
         self.titleDataSource.titleSelectedColor = UIColor.red
         self.titleDataSource.titleNormalFont = UIFont.systemFont(ofSize: 15.0)

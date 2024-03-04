@@ -46,10 +46,31 @@ public class YXNetworkUseManager {
         YXNetworkManager.shared.requestWithUrl(url: url, params: params, showText: showText, boolShowSuccess: boolShowSuccess, boolShowError: boolShowError) { dic, isSuccess in
             
             if (isSuccess == true) {
-                block(dic?["data"] as? [String : Any], isSuccess);
+                block(dic?["data"] as? [String : Any], isSuccess)
             }
             else {
-                block(nil, isSuccess);
+                block(nil, isSuccess)
+            }
+        }
+    }
+    
+    //MARK: - 获取往期列表数据
+    public static func yxGetOldListHTTPByPage(page: Int? = 1, showText: String?, boolShowSuccess: Bool, boolShowError: Bool, block: @escaping YXNetworkUseManagerFinishBlock) {
+     
+        let url = "http://www.cwl.gov.cn/cwl_admin/kjxx/findDrawNotice"
+        let pageValue = page! * 10
+        var params = [String: Any]()
+        
+        params["name"] = "ssq"
+        params["issueCount"] = pageValue
+        
+        YXNetworkManager.shared.requestWithUrl(url: url, method: .get, params: params, showText: showText, boolShowSuccess: boolShowSuccess, boolShowError: boolShowError) { dic, isSuccess in
+            
+            if (isSuccess == true) {
+                block(dic?["result"] as? [String : Any], isSuccess)
+            }
+            else {
+                block(nil, isSuccess)
             }
         }
     }

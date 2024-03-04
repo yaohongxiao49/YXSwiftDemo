@@ -4,3 +4,4 @@ ${PODS_ROOT}/GKNavigationBarSwift/Sources/GKNavigationBarSwift.bundle
 ${PODS_ROOT}/HXPHPicker/Sources/HXPHPicker/Resources/HXPHPicker.bundle
 ${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle
 ${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle
+${PODS_ROOT}/SVProgressHUD/SVProgressHUD/PrivacyInfo.xcprivacy
